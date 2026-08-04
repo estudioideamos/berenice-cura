@@ -1,13 +1,11 @@
-@import "@fontsource/cormorant-garamond/latin-400.css";
-@import "@fontsource/cormorant-garamond/latin-500.css";
-@import "@fontsource/cormorant-garamond/latin-600.css";
-@import "@fontsource/manrope/latin-400.css";
-@import "@fontsource/manrope/latin-500.css";
-@import "@fontsource/manrope/latin-600.css";
+@import "@fontsource-variable/bodoni-moda/wght.css";
+@import "@fontsource-variable/bodoni-moda/wght-italic.css";
+@import "@fontsource-variable/space-grotesk/wght.css";
 
 @import "./styles/core.css";
 @import "./styles/header-hero.css";
-@import "./styles/sections.css";
-@import "./styles/responsive.css";
-@import "./styles/premium.css";
-@import "./styles/mobile-polish.css";
+@import "./styles/atelier.css";
+@import "./styles/association-focus.css";
+@import "./styles/association-mobile-fix.css";
+@import "./styles/responsive-finish.css";
+@import "./styles/desktop-navigation.css";

@@ -1,0 +1,9 @@
+@media (max-width: 767px) {
+  .listening__header > * {
+    min-width: 0;
+  }
+
+  .listening__header h2 {
+    font-size: clamp(3.25rem, 15.5vw, 5.2rem);
+  }
+}

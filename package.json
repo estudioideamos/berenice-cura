@@ -10,8 +10,8 @@
     "assets": "python scripts/process-assets.py"
   },
   "dependencies": {
-    "@fontsource/cormorant-garamond": "^5.3.0",
-    "@fontsource/manrope": "^5.3.0",
+    "@fontsource-variable/bodoni-moda": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
