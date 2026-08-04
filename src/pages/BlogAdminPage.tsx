@@ -75,6 +75,7 @@ export function BlogAdminPage() {
     const title = String(data.get("title") || "").trim();
     const slug = slugify(title);
     const paragraphs = String(data.get("body") || "").split(/\n\s*\n/).map((item) => item.trim()).filter(Boolean);
+    const takeaways = String(data.get("takeaways") || "").split(/\n/).map((item) => item.trim()).filter(Boolean);
     const image = data.get("image");
 
     if (!token.trim()) {
@@ -115,8 +116,11 @@ export function BlogAdminPage() {
         category: String(data.get("category") || "Novedades").trim(),
         summary: String(data.get("summary") || "").trim(),
         body: paragraphs,
+        takeaways,
+        sources: [],
         image: imageName,
         imageAlt: String(data.get("imageAlt") || "").trim() || "Imagen de la publicación " + title,
+        imageCredit: image instanceof File && image.size > 0 ? "Imagen provista para esta publicación." : undefined,
         featured: Boolean(data.get("featured")),
         publishedAt: String(data.get("publishedAt") || ""),
       };
@@ -170,6 +174,10 @@ export function BlogAdminPage() {
             <label>Contenido
               <textarea name="body" rows={10} required aria-describedby="body-help" />
               <small id="body-help">Separá los párrafos con una línea en blanco.</small>
+            </label>
+            <label>Claves infográficas
+              <textarea name="takeaways" rows={5} aria-describedby="takeaways-help" />
+              <small id="takeaways-help">Escribí una clave breve por línea. Se mostrarán como una síntesis visual.</small>
             </label>
             <div className="blog-admin__row">
               <label>Imagen

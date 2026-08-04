@@ -48,17 +48,17 @@
   display: flex;
   width: min(100% - 2rem, 1080px);
   min-height: 0;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: clamp(6.5rem, 12vh, 9rem) 1rem clamp(7rem, 12vh, 9rem);
+  padding: clamp(3.5rem, 7vh, 5.5rem) clamp(1.5rem, 3vw, 3rem) clamp(5.5rem, 9vh, 7rem) clamp(2.2rem, 4vw, 4.5rem);
   margin-inline: auto;
   color: var(--paper);
-  text-align: center;
+  text-align: left;
 }
 .hero--association .hero__content::after { display: none; }
 .hero--association .hero__identity {
-  justify-content: center;
-  margin: 0 0 clamp(2rem,4vh,3rem);
+  justify-content: flex-start;
+  margin: 0 0 clamp(1.15rem,2.4vh,1.8rem);
   color: var(--paper);
 }
 .hero--association .hero__identity > .association-brand {
@@ -72,18 +72,18 @@
   max-width: 780px;
   margin: 0 0 1.5rem;
   color: var(--signal);
-  font-size: clamp(1.4rem,2vw,2rem);
+  font-size: clamp(1.2rem,1.65vw,1.65rem);
   line-height: 1.12;
 }
 .hero--association h1 {
   max-width: 1060px;
   margin: 0;
-  font-size: clamp(4.6rem,7.8vw,8.6rem);
+  font-size: clamp(3.7rem,4.35vw,6.2rem);
   font-weight: 520;
   letter-spacing: -.065em;
   line-height: .87;
 }
-.hero--association h1 span { margin-left: 0 !important; }
+.hero--association h1 span { display: block; margin-left: 0 !important; white-space: nowrap; }
 .hero--association h1 span:nth-child(2) {
   color: var(--signal);
   font-style: italic;
@@ -92,12 +92,12 @@
 .hero--association .hero__mission {
   max-width: 650px;
   padding: 0;
-  margin: 1.8rem auto 0;
+  margin: 1.15rem 0 0;
   border: 0;
   color: rgba(251,247,237,.75);
   font-size: clamp(.88rem,1.2vw,1.02rem);
 }
-.hero--association .hero__actions { justify-content: center; margin-top: 2.2rem; }
+.hero--association .hero__actions { justify-content: flex-start; margin-top: 1.35rem; }
 .hero--association .button--signal {
   border-color: var(--paper);
   color: var(--ink);
@@ -138,9 +138,14 @@
   .hero--association .hero__layout.shell { min-height: calc(100svh - var(--header-height)); }
   .hero--association .hero__content {
     min-height: 0;
-    padding: 7rem 1rem 8rem;
+    align-items: center;
+    padding: 4.5rem 1rem 7rem;
+    text-align: center;
   }
-  .hero--association h1 { font-size: clamp(4.2rem,10vw,7rem); }
+  .hero--association .hero__identity { justify-content: center; }
+  .hero--association .hero__mission { margin-inline: auto; }
+  .hero--association .hero__actions { justify-content: center; }
+  .hero--association h1 { font-size: clamp(3.8rem,8vw,6.2rem); }
 }
 
 @media (max-width: 767px) {
@@ -157,12 +162,32 @@
     border-right: 0;
   }
   .hero--association .hero__question { max-width: 320px; margin-bottom: 1.2rem; font-size: 1.22rem; }
-  .hero--association h1 { font-size: clamp(3.5rem,15.2vw,5rem); line-height: .88; }
+  .hero--association h1 { font-size: clamp(3.15rem,14vw,4.6rem); line-height: .9; }
+  .hero--association h1 span { white-space: normal; }
   .hero--association h1 span:nth-child(2) { margin-top: .08em; }
   .hero--association .hero__mission { max-width: 330px; margin-top: 1.4rem; font-size: .82rem; }
   .hero--association .hero__actions { width: min(100%,330px); grid-template-columns: 1fr; margin-top: 1.7rem; }
   .hero--association .hero__concept { right: 1rem; bottom: 1.1rem; left: 1rem; }
   .hero--association .hero__coordinate { display: none; }
+}
+
+
+@media (min-width: 768px) and (max-height: 820px) {
+  .hero--association { min-height: 760px; }
+  .hero--association .hero__layout.shell { min-height: 700px; }
+  .hero--association .hero__content { padding: 2.1rem clamp(1.5rem,3vw,3rem) 4.8rem clamp(2.2rem,4vw,4.5rem); }
+  .hero--association .hero__identity { margin-bottom: .9rem; }
+  .hero--association .hero__identity > .association-brand { padding-right: 1rem; }
+  .hero--association .hero__identity .association-brand > img { width: 34px; height: 45px; }
+  .hero--association .hero__identity .association-brand__type strong { font-size: .82rem; }
+  .hero--association .hero__identity .association-brand__type small { max-width: 190px; font-size: .39rem; }
+  .hero--association .hero__identity > p { font-size: .5rem; }
+  .hero--association .hero__question { margin-bottom: .8rem; font-size: 1.16rem; }
+  .hero--association h1 { max-width: 940px; font-size: clamp(3.5rem,4.15vw,5.2rem); line-height: .9; }
+  .hero--association .hero__mission { max-width: 590px; margin-top: .85rem; font-size: .8rem; }
+  .hero--association .hero__actions { margin-top: 1rem; }
+  .hero--association .hero__actions .button { min-height: 42px; padding-block: .68rem; }
+  .hero--association .hero__concept { bottom: 1.1rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

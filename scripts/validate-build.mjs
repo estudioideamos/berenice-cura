@@ -19,6 +19,11 @@ const requiredAssets = [
   "isotipo-accsht-original.png", "logo-primero-mis-manos.webp", "qr-instagram.webp",
   "manos-conexion.webp", "home-comunidad-editorial.webp", "home-fondo-conexion.webp",
   "berenice-home-editorial.webp", "whatsapp.svg",
+  "blog/accesibilidad-comunicacional.webp", "blog/lengua-de-senas-argentina.webp",
+  "blog/educacion-inclusiva.webp", "blog/familias-comunicacion.webp",
+  "blog/mitos-comunicacion.webp", "blog/actividades-accesibles.webp",
+  "blog/contenidos-digitales-accesibles.webp", "blog/escuchar-otros-sentidos.webp",
+  "blog/participacion-comunitaria.webp", "blog/cruzando-puentes.webp",
   "og-asociacion.png", "favicon.png",
 ];
 const sourceFiles = [
@@ -62,6 +67,8 @@ if (!source.includes("home-comunidad-editorial.webp") || !source.includes("HomeS
 if (!source.includes("footer-cta__orbit") || !source.includes("aria-controls=\"footer-routes\"")) failures.push("Premium footer or accessible mobile navigation is missing");
 if (!source.includes("EditorialMarquee") || !source.includes("WhatsAppFloat")) failures.push("Editorial marquee or floating WhatsApp contact is missing");
 if (!source.includes("BlogHighlights") || !source.includes("BlogAdminPage")) failures.push("Blog carousel or administration page is missing");
+const blogPosts = JSON.parse(readFileSync(fromRoot("src", "data", "blog.json"), "utf8"));
+if (blogPosts.length !== 10 || blogPosts.some((post) => !post.takeaways?.length || !post.imageCredit)) failures.push("The ten infographic blog publications are incomplete");
 if (!["ListeningAtlas", "AudienceExplorer", "FragmentReader"].every((name) => source.includes(name))) failures.push("An interactive editorial module is missing");
 
 const distFiles = readdirSync(fromRoot("dist", "assets"));

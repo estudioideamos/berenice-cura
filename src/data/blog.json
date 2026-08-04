@@ -1,41 +1,311 @@
 [
   {
-    "slug": "cruzando-puentes",
-    "title": "Cruzando Puentes",
-    "category": "Proyecto institucional",
-    "summary": "Una iniciativa que vincula accesibilidad comunicacional, educación y participación para acercar a la comunidad.",
+    "slug": "accesibilidad-comunicacional-guia-practica",
+    "title": "Accesibilidad comunicacional: una guía para empezar",
+    "category": "Accesibilidad",
+    "summary": "Una hoja de ruta concreta para reconocer barreras y ofrecer más de una forma de comprender, expresarse y participar.",
     "body": [
-      "Cruzando Puentes expresa una forma de trabajar: acercar personas, instituciones y organizaciones a través de una comunicación más accesible.",
-      "La propuesta se integra a las acciones de sensibilización, capacitación y educación que desarrolla la Asociación Civil Comunidad Sorda e Hipoacúsica Tandilense."
+      "La accesibilidad comunicacional comienza con una pregunta sencilla: ¿todas las personas pueden recibir la información, comprenderla y responder de una manera autónoma? Cuando una actividad depende de un único canal —solo una explicación oral, solo una llamada o solo un audio— aparecen barreras que pueden excluir a personas sordas e hipoacúsicas.",
+      "El primer paso no es adivinar qué necesita alguien, sino preguntar y acordar. Algunas personas utilizan Lengua de Señas Argentina; otras prefieren lectura labial, texto, apoyos visuales o una combinación de recursos. No existe una solución universal: la accesibilidad se construye con alternativas y con la participación de quienes van a usarlas.",
+      "En una conversación presencial ayudan acciones muy concretas: mantener el rostro visible, buscar una iluminación pareja, respetar los turnos, evitar hablar desde otra habitación y acompañar la información central por escrito. Gritar no mejora la comprensión y puede volver el intercambio incómodo.",
+      "En trámites, reuniones o capacitaciones conviene anticipar materiales, explicar cómo se pedirá la palabra y definir un canal escrito para consultas. Si participa una persona intérprete, hay que dirigirse a la persona sorda, no a quien interpreta, y sostener una ubicación con buena visibilidad.",
+      "La accesibilidad no es un agregado final: es una forma de diseñar la comunicación desde el inicio. Cuando la información circula por más de un canal, mejora la experiencia de toda la comunidad y aumenta la posibilidad de una participación real."
     ],
-    "image": "home-fondo-conexion.webp",
-    "imageAlt": "Composición editorial abstracta inspirada en puentes y conexión",
+    "takeaways": [
+      "Preguntar antes de suponer",
+      "Ofrecer canales visuales y escritos",
+      "Cuidar rostro, luz y turnos",
+      "Planificar la accesibilidad desde el inicio"
+    ],
+    "sources": [
+      {
+        "label": "OMS: comunicación amigable con personas con pérdida auditiva",
+        "url": "https://www.who.int/news-room/questions-and-answers/item/how-to-be-hearing-loss-friendly"
+      },
+      {
+        "label": "ONU: derecho a la información y la comunicación accesible",
+        "url": "https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities/article-21-freedom-of-expression-and-opinion-and-access-to-information.html"
+      }
+    ],
+    "image": "blog/accesibilidad-comunicacional.webp",
+    "imageAlt": "Ilustración editorial con distintos caminos de comunicación entre personas, manos, mirada y escritura",
+    "imageCredit": "Ilustración editorial generada para esta publicación.",
     "featured": true
   },
   {
-    "slug": "lengua-de-senas-argentina",
-    "title": "Lengua de Señas Argentina",
-    "category": "Formación",
-    "summary": "Talleres y capacitaciones que promueven nuevas formas de comunicación en ámbitos educativos y sociales.",
+    "slug": "lengua-de-senas-argentina-lengua-identidad",
+    "title": "Lengua de Señas Argentina: lengua, identidad y participación",
+    "category": "Lengua de Señas Argentina",
+    "summary": "Claves para comprender por qué la LSA es una lengua natural, visual y espacial, y no una traducción palabra por palabra.",
     "body": [
-      "La asociación desarrolla talleres de Lengua de Señas Argentina, capacitaciones y actividades de sensibilización dirigidas a instituciones, organizaciones y a la comunidad.",
-      "Estas acciones buscan eliminar barreras de comunicación y fomentar la igualdad de oportunidades para las personas sordas e hipoacúsicas."
+      "La Lengua de Señas Argentina es una lengua natural y originaria que se expresa en una modalidad visual y espacial. Tiene una estructura gramatical propia y forma parte del patrimonio cultural y lingüístico de la comunidad sorda en nuestro país. Reconocerla como lengua cambia la manera de pensar la accesibilidad: no se trata de sumar gestos aislados, sino de respetar una forma completa de comunicación.",
+      "La Ley 27.710 reconoce a la LSA en todo el territorio argentino y promueve su acceso para favorecer la comunicación, la participación y la eliminación de barreras. Este marco también ayuda a entender que las decisiones sobre la lengua deben contar con la comunidad sorda y sus organizaciones.",
+      "Aprender algunas señas puede ser una puerta de entrada valiosa, pero una capacitación responsable también debe abordar cultura, identidad, turnos conversacionales, expresión corporal y contexto. Memorizar vocabulario sin comprender cómo funciona la lengua puede generar falsas expectativas y no reemplaza una formación sostenida.",
+      "Tampoco todas las personas sordas o hipoacúsicas se comunican de la misma manera. Algunas usan LSA como lengua principal; otras se apoyan en lectura labial, lengua oral, escritura, tecnología o combinaciones diversas. Preguntar qué modalidad prefiere cada persona sigue siendo una buena práctica.",
+      "Promover la LSA en espacios educativos y sociales amplía los caminos de encuentro. La Asociación desarrolla talleres y capacitaciones para acercar estas herramientas a instituciones, organizaciones y a la comunidad, siempre desde una mirada de inclusión y accesibilidad comunicacional."
     ],
-    "image": "manos-conexion.webp",
-    "imageAlt": "Manos en una composición visual vinculada con la comunicación",
+    "takeaways": [
+      "Es una lengua natural",
+      "Tiene gramática propia",
+      "Es visual y espacial",
+      "Su aprendizaje incluye cultura y contexto"
+    ],
+    "sources": [
+      {
+        "label": "Ley 27.710: reconocimiento de la Lengua de Señas Argentina",
+        "url": "https://www.argentina.gob.ar/normativa/nacional/ley-27710-383041/texto"
+      },
+      {
+        "label": "SENADIS: la Lengua de Señas, un derecho innegable",
+        "url": "https://www.argentina.gob.ar/salud/senadis/la-lengua-de-senas-derecho-innegable"
+      }
+    ],
+    "image": "blog/lengua-de-senas-argentina.webp",
+    "imageAlt": "Ilustración editorial de manos, mirada y comunidad conectadas en un espacio visual",
+    "imageCredit": "Ilustración editorial generada para esta publicación; no representa una seña específica.",
     "featured": true
   },
   {
-    "slug": "accesibilidad-comunicacional",
-    "title": "Accesibilidad comunicacional",
+    "slug": "educacion-inclusiva-remover-barreras",
+    "title": "Educación inclusiva: diseñar para remover barreras",
+    "category": "Educación",
+    "summary": "Una mirada práctica sobre el aula, los materiales y la participación para que la inclusión no dependa de improvisaciones.",
+    "body": [
+      "Una educación inclusiva no consiste solamente en compartir el mismo espacio. También requiere que cada estudiante pueda acceder a las consignas, intercambiar con otras personas, hacer preguntas y demostrar lo aprendido mediante canales comprensibles. La barrera suele estar en la propuesta, no en la persona.",
+      "Antes de una clase o actividad es útil identificar dónde se concentra la información: ¿la explicación es únicamente oral?, ¿los videos tienen subtítulos?, ¿las consignas quedan disponibles por escrito?, ¿hay una ubicación con buena visión del docente y de quienes participan? Este mapa inicial permite corregir problemas antes de que aparezcan.",
+      "Los apoyos visuales funcionan mejor cuando organizan y no recargan. Una agenda visible, palabras clave, ejemplos gráficos y materiales anticipados pueden dar contexto sin reemplazar la explicación. En los intercambios grupales, ordenar los turnos y evitar varias voces simultáneas mejora la comprensión.",
+      "Si se utiliza video, los subtítulos deben incluir el contenido hablado y la información sonora relevante. Los subtítulos automáticos pueden servir como punto de partida, pero necesitan revisión. Cuando corresponde, la interpretación en LSA debe planificarse con tiempo y con condiciones adecuadas de visibilidad.",
+      "La inclusión se vuelve sostenible cuando no depende de una sola persona. Registrar acuerdos, compartir criterios dentro del equipo y consultar a estudiantes y familias ayuda a construir prácticas que puedan repetirse y mejorar con cada experiencia."
+    ],
+    "takeaways": [
+      "Mapear barreras antes de la clase",
+      "Dejar consignas por escrito",
+      "Ordenar turnos y líneas de visión",
+      "Revisar subtítulos y apoyos visuales"
+    ],
+    "sources": [
+      {
+        "label": "W3C WAI: cómo hacer accesible el contenido audiovisual",
+        "url": "https://www.w3.org/WAI/media/av/"
+      },
+      {
+        "label": "ONU: Convención sobre los derechos de las personas con discapacidad, artículo 21",
+        "url": "https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities/article-21-freedom-of-expression-and-opinion-and-access-to-information.html"
+      }
+    ],
+    "image": "blog/educacion-inclusiva.webp",
+    "imageAlt": "Aula inclusiva con estudiantes diversos y apoyos visuales conectados",
+    "imageCredit": "Ilustración editorial generada para esta publicación.",
+    "featured": true
+  },
+  {
+    "slug": "familias-acuerdos-para-comunicarnos",
+    "title": "Familias: pequeños acuerdos para comunicarnos mejor",
+    "category": "Familias",
+    "summary": "Hábitos cotidianos que favorecen una comunicación más clara, respetuosa y disponible para cada integrante de la familia.",
+    "body": [
+      "La comunicación familiar ocurre en momentos rápidos: durante una comida, al salir de casa, frente a una pantalla o desde otra habitación. Cuando no hay contacto visual o varias personas hablan al mismo tiempo, parte de la conversación puede perderse. Hacer una pausa y reorganizar el intercambio es una forma concreta de cuidado.",
+      "Conviene llamar la atención de manera respetuosa antes de empezar a hablar, ubicarse de frente y evitar taparse la boca. Una luz pareja facilita ver el rostro, los gestos y las manos. Si algo no se comprende, repetir exactamente lo mismo no siempre ayuda: puede ser mejor reformular, escribir una palabra clave o mostrar el contexto.",
+      "Los acuerdos también pueden ser visuales. Un calendario compartido, mensajes escritos y avisos visibles reducen la dependencia de recordatorios exclusivamente orales. En situaciones importantes, resumir lo conversado permite que todas las personas confirmen la misma información.",
+      "Cada familia construye su propio repertorio. La LSA puede ocupar un lugar central, complementarse con otros recursos o iniciar un camino de aprendizaje conjunto. Lo importante es no convertir a una sola persona en responsable permanente de adaptar la comunicación para el resto.",
+      "Escuchar en otros sentidos implica prestar atención a la mirada, las manos, los tiempos y las respuestas. Esos gestos cotidianos no sustituyen las soluciones de accesibilidad que cada persona necesita, pero crean un entorno más disponible para encontrarlas y sostenerlas."
+    ],
+    "takeaways": [
+      "Llamar la atención con respeto",
+      "Hablar de frente y con buena luz",
+      "Reformular cuando sea necesario",
+      "Confirmar por escrito la información importante"
+    ],
+    "sources": [
+      {
+        "label": "OMS: recomendaciones para una comunicación accesible",
+        "url": "https://www.who.int/news-room/questions-and-answers/item/how-to-be-hearing-loss-friendly"
+      }
+    ],
+    "image": "blog/familias-comunicacion.webp",
+    "imageAlt": "Familia reunida alrededor de una mesa comunicándose mediante miradas, gestos y escritura",
+    "imageCredit": "Ilustración editorial generada para esta publicación.",
+    "featured": true
+  },
+  {
+    "slug": "mitos-sobre-personas-sordas-e-hipoacusicas",
+    "title": "Cinco mitos que crean barreras de comunicación",
+    "category": "Sensibilización",
+    "summary": "Ideas frecuentes que conviene revisar para relacionarnos con personas sordas e hipoacúsicas desde el respeto y no desde las suposiciones.",
+    "body": [
+      "Primer mito: todas las personas sordas utilizan lengua de señas. Las experiencias y preferencias son diversas. La LSA es central para muchas personas, mientras otras recurren a lengua oral, lectura labial, escritura, tecnologías o combinaciones. La pregunta adecuada es qué forma de comunicación prefiere la persona.",
+      "Segundo mito: leer los labios permite comprender cualquier conversación. La lectura labial depende del contexto, la iluminación, la visibilidad del rostro y el conocimiento previo del tema. No debería usarse como excusa para omitir subtítulos, textos u otros apoyos.",
+      "Tercer mito: hablar más fuerte resuelve el problema. Elevar la voz puede distorsionar la articulación y no garantiza comprensión. Es más útil hablar con naturalidad, de frente, sin exagerar movimientos y con una alternativa escrita disponible.",
+      "Cuarto mito: los subtítulos automáticos siempre alcanzan. Las herramientas automáticas pueden cometer errores en nombres, acentos, términos específicos o cuando hay ruido. Para información importante necesitan revisión humana e incluir quién habla y los sonidos relevantes.",
+      "Quinto mito: la accesibilidad beneficia a un grupo reducido. Un entorno con mensajes claros, apoyos visuales, turnos ordenados y opciones de contacto mejora la experiencia de muchas personas. La inclusión real aparece cuando esas decisiones forman parte del diseño habitual."
+    ],
+    "takeaways": [
+      "No todas las personas usan la misma modalidad",
+      "Leer labios no reemplaza la accesibilidad",
+      "Hablar más fuerte no garantiza comprensión",
+      "Los subtítulos automáticos deben revisarse",
+      "Diseñar con alternativas beneficia a la comunidad"
+    ],
+    "sources": [
+      {
+        "label": "W3C WAI: percepción y diversidad de formas de comunicación",
+        "url": "https://www.w3.org/WAI/people-use-web/tools-techniques/perception/"
+      },
+      {
+        "label": "W3C WAI: subtítulos para contenido audiovisual",
+        "url": "https://www.w3.org/WAI/perspective-videos/captions/"
+      }
+    ],
+    "image": "blog/mitos-comunicacion.webp",
+    "imageAlt": "Barreras abstractas que se transforman en puentes y caminos de comunicación",
+    "imageCredit": "Ilustración editorial generada para esta publicación.",
+    "featured": true
+  },
+  {
+    "slug": "actividades-y-eventos-accesibles",
+    "title": "Cómo preparar una actividad o evento más accesible",
+    "category": "Instituciones",
+    "summary": "Una lista de decisiones para incorporar accesibilidad comunicacional desde la invitación hasta el cierre de una actividad.",
+    "body": [
+      "La accesibilidad de un evento empieza antes de abrir las puertas. La invitación debe explicar con claridad el tema, los horarios, la ubicación y los recursos disponibles. También conviene ofrecer un canal para que cada persona pueda comunicar sus requerimientos con anticipación.",
+      "En el espacio, la visibilidad es tan importante como el sonido. Hay que cuidar la iluminación del escenario y del rostro de quienes hablan, evitar contraluces y reservar líneas de visión despejadas. Si hay interpretación en LSA, su ubicación debe permitir ver simultáneamente a la persona intérprete y al contenido principal.",
+      "Las presentaciones funcionan mejor con ideas organizadas, tipografía legible y poco texto por pantalla. Los videos necesitan subtítulos revisados y, cuando el contenido lo requiere, una transcripción. Compartir materiales antes y después de la actividad ayuda a recuperar información sin depender de la memoria auditiva.",
+      "Durante las preguntas, un sistema de turnos evita voces superpuestas. La persona que modera puede repetir o mostrar por escrito cada consulta antes de responder. En talleres pequeños, ubicar a las personas en círculo facilita ver rostros y manos.",
+      "Al finalizar, pedir una devolución sobre la accesibilidad permite detectar lo que no fue evidente para la organización. Registrar esas observaciones transforma una solución puntual en un criterio para futuras actividades."
+    ],
+    "takeaways": [
+      "Informar recursos desde la convocatoria",
+      "Cuidar iluminación y líneas de visión",
+      "Subtitular y compartir materiales",
+      "Ordenar los turnos de participación",
+      "Evaluar y registrar aprendizajes"
+    ],
+    "sources": [
+      {
+        "label": "W3C WAI: medios audiovisuales accesibles",
+        "url": "https://www.w3.org/WAI/media/av/"
+      },
+      {
+        "label": "OMS: entornos y comunicación amigables",
+        "url": "https://www.who.int/news-room/questions-and-answers/item/how-to-be-hearing-loss-friendly"
+      }
+    ],
+    "image": "blog/actividades-accesibles.webp",
+    "imageAlt": "Infografía editorial de un evento con líneas de visión, apoyos visuales y participación accesible",
+    "imageCredit": "Ilustración editorial generada para esta publicación.",
+    "featured": false
+  },
+  {
+    "slug": "contenidos-digitales-accesibles",
+    "title": "Contenidos digitales que también se pueden escuchar con la mirada",
+    "category": "Comunicación digital",
+    "summary": "Subtítulos, transcripciones, estructura y alternativas visuales para que un mensaje no dependa únicamente del sonido.",
+    "body": [
+      "Publicar un video sin subtítulos deja afuera información central. Los subtítulos deben reflejar el diálogo, identificar a quien habla cuando no es evidente e incluir sonidos que aportan significado. Una generación automática puede acelerar el trabajo, pero no reemplaza la revisión.",
+      "La transcripción ofrece otra forma de acceso. Permite leer el contenido a otro ritmo, buscar una idea y reutilizar información. En un material exclusivamente sonoro, la transcripción debería estar disponible cerca del reproductor y no escondida en un enlace difícil de encontrar.",
+      "El diseño del texto también importa. Títulos descriptivos, párrafos breves, listas y enlaces que explican su destino ayudan a anticipar la estructura. Expresiones como “hacé clic acá” pierden contexto; es mejor nombrar la acción o el contenido que se abrirá.",
+      "Las historias y publicaciones efímeras requieren el mismo cuidado. Si el mensaje está hablado, puede incorporarse texto legible con contraste suficiente. Si una placa contiene información esencial, ese contenido debe repetirse en el texto de la publicación y contar con una descripción alternativa útil.",
+      "Una comunicación digital accesible combina recursos: imagen, texto, subtítulos, transcripción y, cuando corresponde, LSA. Esa redundancia no repite por repetir; permite que cada persona elija el canal que necesita en cada contexto."
+    ],
+    "takeaways": [
+      "Revisar los subtítulos automáticos",
+      "Ofrecer transcripciones cercanas",
+      "Usar títulos y enlaces descriptivos",
+      "No dejar información esencial solo en una imagen",
+      "Combinar más de un canal"
+    ],
+    "sources": [
+      {
+        "label": "W3C WAI: transcripciones",
+        "url": "https://www.w3.org/WAI/media/av/transcripts/"
+      },
+      {
+        "label": "W3C WAI: consejos para escribir contenido accesible",
+        "url": "https://www.w3.org/WAI/tips/writing/"
+      }
+    ],
+    "image": "blog/contenidos-digitales-accesibles.webp",
+    "imageAlt": "Teléfono y computadora conectados con subtítulos visuales, transcripción y alertas",
+    "imageCredit": "Ilustración editorial generada para esta publicación.",
+    "featured": false
+  },
+  {
+    "slug": "escuchar-en-otros-sentidos",
+    "title": "Escuchar en otros sentidos: mirada, manos y presencia",
+    "category": "Reflexiones",
+    "summary": "Una invitación a ampliar la idea de escucha y reconocer el valor de los gestos, los tiempos y la empatía en cada encuentro.",
+    "body": [
+      "“Escuchar no siempre comienza con los oídos, sino con la intención.” La frase abre una manera más amplia de pensar el encuentro: escuchar también puede ser mirar con atención, dar tiempo, observar una respuesta y estar disponible para cambiar la propia forma de comunicar.",
+      "Las manos participan de esa escucha. En la Lengua de Señas Argentina construyen sentido junto con el espacio, el rostro y el cuerpo. En otras situaciones también escriben, señalan, muestran y acercan recursos. No son un adorno del mensaje: pueden ser parte central de su expresión.",
+      "La mirada tampoco significa exigir contacto visual permanente. Significa cuidar las condiciones para que la comunicación sea visible cuando la persona la necesita: no hablar de espaldas, no ocultar el rostro y reconocer cuándo es necesario pausar o reformular.",
+      "La presencia se demuestra respetando el modo de comunicación elegido por la otra persona. Preguntar, esperar y confirmar son acciones pequeñas que evitan que la urgencia de quien habla se convierta en una barrera para quien recibe el mensaje.",
+      "El libro “Escuchar en otros sentidos: Primero mis manos”, de Berenice Cura, propone reflexiones y herramientas para docentes, familias e instituciones. Su propósito se enlaza con el trabajo de la Asociación: construir una educación y una comunicación que no dejen a nadie afuera."
+    ],
+    "takeaways": [
+      "Mirar con atención",
+      "Dar tiempo a la respuesta",
+      "Reconocer las manos como lenguaje",
+      "Preguntar qué canal necesita la otra persona",
+      "Confirmar que el mensaje fue compartido"
+    ],
+    "sources": [],
+    "image": "blog/escuchar-otros-sentidos.webp",
+    "imageAlt": "Composición editorial sobre mirada, manos, presencia y distintas formas de escuchar",
+    "imageCredit": "Ilustración editorial generada para esta publicación.",
+    "featured": false
+  },
+  {
+    "slug": "participacion-comunitaria-y-accesibilidad",
+    "title": "La accesibilidad crece cuando la comunidad participa",
     "category": "Comunidad",
-    "summary": "La inclusión se construye cuando todas las personas encuentran una forma real de expresarse y participar.",
+    "summary": "Por qué escuchar a las personas involucradas y articular con organizaciones vuelve más pertinentes y sostenibles las decisiones.",
     "body": [
-      "La Asociación Civil Comunidad Sorda e Hipoacúsica Tandilense promueve la inclusión y la accesibilidad comunicacional desde 2024.",
-      "Su objetivo es eliminar barreras de comunicación y garantizar la participación plena de las personas sordas e hipoacúsicas en la sociedad."
+      "Una política, una actividad o un servicio pueden tener buenas intenciones y aun así conservar barreras. La participación de las personas sordas e hipoacúsicas permite reconocer obstáculos que no siempre son visibles para quienes diseñan desde afuera.",
+      "Participar no es solamente responder una encuesta al final. También implica formar parte de las conversaciones iniciales, probar materiales, evaluar recorridos y decidir prioridades. Cuando la consulta ocurre demasiado tarde, muchas soluciones se limitan a corregir lo que ya estaba definido.",
+      "Las organizaciones comunitarias cumplen un papel de articulación. Acercan experiencias, generan espacios de formación y ayudan a que instituciones educativas, sociales y culturales transformen una inquietud general en acciones concretas.",
+      "La Asociación Civil Comunidad Sorda e Hipoacúsica Tandilense funciona desde 2024. Desarrolla talleres de LSA, capacitaciones, actividades de sensibilización, proyectos educativos y acciones dirigidas a instituciones, organizaciones y a la comunidad.",
+      "Su objetivo es eliminar barreras de comunicación, fomentar la igualdad de oportunidades y garantizar la participación plena de las personas sordas en la sociedad. Cada alianza puede ser un puente, siempre que se construya con diálogo y continuidad."
     ],
-    "image": "home-comunidad-editorial.webp",
-    "imageAlt": "Ilustración editorial sobre comunidad, gestos y conexión",
-    "featured": true
+    "takeaways": [
+      "Involucrar desde el inicio",
+      "Probar materiales y recorridos",
+      "Escuchar a la comunidad sorda",
+      "Convertir aprendizajes en criterios permanentes"
+    ],
+    "sources": [
+      {
+        "label": "ONU: libertad de expresión, opinión y acceso a la información",
+        "url": "https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities/article-21-freedom-of-expression-and-opinion-and-access-to-information.html"
+      }
+    ],
+    "image": "blog/participacion-comunitaria.webp",
+    "imageAlt": "Red de personas y organizaciones conectadas en una composición comunitaria",
+    "imageCredit": "Ilustración editorial generada para esta publicación.",
+    "featured": false
+  },
+  {
+    "slug": "cruzando-puentes-instituciones",
+    "title": "Cruzando Puentes: por dónde puede empezar una institución",
+    "category": "Cruzando Puentes",
+    "summary": "Un recorrido posible para pasar de la sensibilización a una práctica cotidiana de accesibilidad comunicacional.",
+    "body": [
+      "Cruzando Puentes expresa una forma de trabajar: acercar personas, instituciones y organizaciones mediante una comunicación más accesible. El punto de partida puede ser una inquietud concreta —una actividad, una atención al público o una propuesta educativa—, pero el objetivo es que el aprendizaje permanezca.",
+      "Primero conviene observar. ¿Qué información se ofrece únicamente de forma oral? ¿Cómo se reciben consultas? ¿Los videos están subtitulados? ¿El equipo sabe cómo pedir y registrar una necesidad de comunicación? Un diagnóstico breve ayuda a elegir prioridades posibles.",
+      "La sensibilización permite revisar ideas y lenguaje. La capacitación agrega herramientas para situaciones reales. Los talleres de Lengua de Señas Argentina abren un camino de aprendizaje que requiere continuidad, práctica y respeto por su dimensión cultural y lingüística.",
+      "Después de cada acción es importante acordar cambios concretos: adaptar una pieza, crear un canal escrito, revisar un protocolo o planificar recursos para el próximo evento. Sin ese paso, la formación puede quedar desconectada del funcionamiento cotidiano.",
+      "La Asociación desarrolla capacitaciones, talleres y proyectos educativos dirigidos a instituciones, organizaciones y a la comunidad. Contactarla es una manera de conversar sobre el contexto, definir un recorrido pertinente y comenzar a construir ese puente."
+    ],
+    "takeaways": [
+      "Observar las barreras actuales",
+      "Definir una prioridad posible",
+      "Capacitar con situaciones reales",
+      "Acordar cambios concretos",
+      "Sostener y revisar el proceso"
+    ],
+    "sources": [],
+    "image": "blog/cruzando-puentes.webp",
+    "imageAlt": "Puentes editoriales que conectan comunidad, familias, educación e instituciones",
+    "imageCredit": "Ilustración editorial generada para esta publicación.",
+    "featured": false
   }
 ]

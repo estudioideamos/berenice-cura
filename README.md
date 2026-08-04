@@ -41,7 +41,7 @@ El panel está disponible en `/admin/`. No incorpora claves en el sitio: solicit
 3. Abrir el panel, completar título, categoría, resumen, contenido e imagen.
 4. Publicar. El panel actualiza `src/data/blog.json`; el commit resultante activa automáticamente GitHub Pages.
 
-Las entradas iniciales son piezas institucionales construidas únicamente con información confirmada en los materiales. No incluyen fechas de evento ni anuncios inventados.
+El sitio incluye diez artículos educativos de extensión media, cada uno con ilustración editorial propia, síntesis infográfica accesible y fuentes públicas cuando corresponde. No incluyen fechas de eventos, testimonios ni anuncios inventados.
 
 ## Editar contenido, imágenes y enlaces
 
@@ -54,6 +54,8 @@ Las entradas iniciales son piezas institucionales construidas únicamente con in
 - Retrato editorial generado para la portada, identificado como imagen generada: `public/assets/berenice-home-editorial.webp`.
 - Ícono flotante de WhatsApp entregado por el cliente: `public/assets/whatsapp.svg`.
 - Ilustraciones editoriales generadas para la portada: `public/assets/home-comunidad-editorial.webp` y `public/assets/home-fondo-conexion.webp`.
+- Publicaciones editables: `src/data/blog.json`. Cada entrada admite `body`, `takeaways`, `sources`, imagen, texto alternativo y crédito.
+- Diez ilustraciones WebP del blog: `public/assets/blog/`. Las piezas generadas están identificadas públicamente como ilustraciones editoriales.
 - Imágenes optimizadas: `public/assets/`.
 - Materiales originales consultados: `source-materials/` —solo local; no se publica el manuscrito ni los archivos de trabajo—.
 
@@ -61,7 +63,7 @@ Los datos editoriales todavía no confirmados —ISBN, editorial, fecha, precio 
 
 ## GitHub Pages
 
-El flujo `.github/workflows/pages.yml` construye y publica las seis páginas al hacer push sobre `main`. Vite calcula automáticamente la ruta base y la URL canónica a partir del nombre del repositorio dentro de GitHub Actions.
+El flujo `.github/workflows/pages.yml` construye y publica las ocho páginas al hacer push sobre `main`. Vite calcula automáticamente la ruta base y la URL canónica a partir del nombre del repositorio dentro de GitHub Actions.
 
 1. En GitHub, abrir **Settings → Pages** y elegir **GitHub Actions** como fuente.
 2. Hacer push a la rama `main`.

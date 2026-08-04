@@ -134,7 +134,8 @@
   align-items: start;
 }
 .blog-entry figure { position: sticky; top: calc(var(--header-height) + 1.5rem); margin: 0; }
-.blog-entry figure img { width: 100%; aspect-ratio: 1.35; object-fit: cover; }
+.blog-entry figure img { width: 100%; aspect-ratio: 1.5; object-fit: cover; }
+.blog-entry figure figcaption { padding: .65rem .75rem; color: var(--ink-soft); border: 1px solid var(--line); border-top: 0; font-size: .55rem; letter-spacing: .04em; }
 .blog-entry__body > p {
   color: var(--ink-soft);
   font-family: var(--serif);
@@ -142,6 +143,17 @@
   line-height: 1.45;
 }
 .blog-entry__body .button { margin-top: 1.5rem; }
+.blog-entry__infographic { padding: clamp(1.5rem,3vw,2.4rem); margin: clamp(2.5rem,5vw,4rem) 0; color: var(--paper); background: var(--ink-deep); }
+.blog-entry__infographic h2 { max-width: 520px; margin: 0 0 1.6rem; color: var(--paper); font-size: clamp(2.2rem,4.2vw,3.8rem); font-weight: 520; letter-spacing: -.055em; line-height: .94; }
+.blog-entry__infographic ol { display: grid; padding: 0; margin: 0; list-style: none; }
+.blog-entry__infographic li { display: grid; grid-template-columns: 42px 1fr; gap: .8rem; align-items: center; min-height: 62px; border-top: 1px solid rgba(251,247,237,.14); }
+.blog-entry__infographic li > span { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid rgba(223,174,88,.6); border-radius: 50%; color: var(--signal); font-size: .5rem; font-weight: 700; }
+.blog-entry__infographic li > strong { color: var(--paper); font-family: var(--sans); font-size: .72rem; font-weight: 600; letter-spacing: .015em; }
+.blog-entry__sources { padding: 1.5rem 0; margin: 2.5rem 0 1rem; border-block: 1px solid var(--line); }
+.blog-entry__sources h2 { margin: 0 0 1rem; color: var(--ink); font-family: var(--sans); font-size: .6rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.blog-entry__sources ul { padding: 0; margin: 0; list-style: none; }
+.blog-entry__sources li + li { margin-top: .7rem; }
+.blog-entry__sources a { color: var(--ink-soft); font-size: .68rem; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 .blog-admin__section { background: var(--paper); }
 .blog-admin__grid {

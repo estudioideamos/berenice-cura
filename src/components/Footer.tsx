@@ -38,7 +38,6 @@ export function Footer() {
           <span className="footer-cta__core" aria-hidden="true">
             <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht-original.png`} width="640" height="896" alt="" />
           </span>
-          <strong>Contactar</strong>
         </a>
       </section>
 

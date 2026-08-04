@@ -15,10 +15,28 @@ export function BlogPage() {
         <article className="blog-entry section">
           <div className="shell blog-entry__grid">
             <figure>
-              <img src={asset(selected.image)} width="1440" height="960" alt={selected.imageAlt} />
+              <img src={asset(selected.image)} width="1536" height="1024" alt={selected.imageAlt} />
+              {selected.imageCredit && <figcaption>{selected.imageCredit}</figcaption>}
             </figure>
             <div className="blog-entry__body">
               {selected.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {selected.takeaways && selected.takeaways.length > 0 && (
+                <section className="blog-entry__infographic" aria-labelledby="blog-takeaways-title">
+                  <p className="eyebrow">En síntesis</p>
+                  <h2 id="blog-takeaways-title">Claves para llevar a la práctica</h2>
+                  <ol>
+                    {selected.takeaways.map((item, index) => (
+                      <li key={item}><span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></li>
+                    ))}
+                  </ol>
+                </section>
+              )}
+              {selected.sources && selected.sources.length > 0 && (
+                <aside className="blog-entry__sources" aria-labelledby="blog-sources-title">
+                  <h2 id="blog-sources-title">Fuentes para seguir leyendo</h2>
+                  <ul>{selected.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label}<span aria-hidden="true"> ↗</span></a></li>)}</ul>
+                </aside>
+              )}
               <a className="button button--ghost" href={pageUrl("blog-y-novedades")}>Volver a Blog y novedades</a>
             </div>
           </div>

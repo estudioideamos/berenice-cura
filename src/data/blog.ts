@@ -6,8 +6,11 @@ export type BlogPost = {
   category: string;
   summary: string;
   body: string[];
+  takeaways?: string[];
+  sources?: Array<{ label: string; url: string }>;
   image: string;
   imageAlt: string;
+  imageCredit?: string;
   featured: boolean;
   publishedAt?: string;
 };
