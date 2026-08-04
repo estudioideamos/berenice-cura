@@ -10,7 +10,7 @@ export const siteNavigation: ReadonlyArray<{ label: string; page: SitePage }> = 
 
 export const associationHero = {
   eyebrow: "Asociación Civil · Tandil",
-  titleLines: ["Comunidad", "Sorda e", "Hipoacúsica", "Tandilense"],
+  titleLines: ["Comunidad Sorda e", "Hipoacúsica Tandilense"],
   statement: "Comunicarnos sin dejar a nadie afuera.",
   description:
     "Promovemos la inclusión y la accesibilidad comunicacional de las personas sordas e hipoacúsicas.",

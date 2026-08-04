@@ -27,8 +27,17 @@ export function Footer() {
           <h2 id="footer-cta-title">Construyamos una comunicación <em>sin barreras.</em></h2>
         </div>
         <a className="footer-cta__orbit" href={pageUrl("contacto")} aria-label="Abrir las opciones de contacto">
-          <span className="footer-cta__ring" aria-hidden="true"><i>COMUNIDAD</i><i>ACCESIBILIDAD</i><i>CONEXIÓN</i></span>
-          <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht-original.png`} width="640" height="896" alt="" aria-hidden="true" />
+          <svg className="footer-cta__orbit-copy" viewBox="0 0 160 160" aria-hidden="true">
+            <defs>
+              <path id="accsht-footer-orbit-path" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0" />
+            </defs>
+            <text>
+              <textPath href="#accsht-footer-orbit-path" startOffset="0" textLength="350" lengthAdjust="spacing">CONTACTAR · COMUNIDAD · ACCESIBILIDAD ·</textPath>
+            </text>
+          </svg>
+          <span className="footer-cta__core" aria-hidden="true">
+            <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht-original.png`} width="640" height="896" alt="" />
+          </span>
           <strong>Contactar</strong>
         </a>
       </section>
