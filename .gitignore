@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.npm-cache/
+tmp/
+source-materials/
+.DS_Store
+*.log
+*.tsbuildinfo
