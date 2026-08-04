@@ -1,5 +1,6 @@
 import { useState, type PointerEvent } from "react";
 import { AssociationBrand } from "./AssociationBrand";
+import { SocialIcon } from "./SocialIcon";
 import { association, book, contact, contactMessages, whatsappUrl } from "../data/content";
 import { pageUrl } from "../utils/routes";
 
@@ -27,7 +28,7 @@ export function Footer() {
         </div>
         <a className="footer-cta__orbit" href={pageUrl("contacto")} aria-label="Abrir las opciones de contacto">
           <span className="footer-cta__ring" aria-hidden="true"><i>COMUNIDAD</i><i>ACCESIBILIDAD</i><i>CONEXIÓN</i></span>
-          <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht.svg`} width="160" height="160" alt="" aria-hidden="true" />
+          <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht-original.png`} width="640" height="896" alt="" aria-hidden="true" />
           <strong>Contactar</strong>
         </a>
       </section>
@@ -37,8 +38,8 @@ export function Footer() {
           <AssociationBrand />
           <p>{association.description}</p>
           <div className="footer-social" aria-label="Redes sociales">
-            <a href={contact.instagram.url} target="_blank" rel="noreferrer" aria-label={`Instagram ${contact.instagram.handle}`}>IG</a>
-            <a href={contact.facebook.url} target="_blank" rel="noreferrer" aria-label={`Facebook ${contact.facebook.label}`}>f</a>
+            <a href={contact.instagram.url} target="_blank" rel="noreferrer" aria-label={`Instagram ${contact.instagram.handle}`}><SocialIcon network="instagram" /></a>
+            <a href={contact.facebook.url} target="_blank" rel="noreferrer" aria-label={`Facebook ${contact.facebook.label}`}><SocialIcon network="facebook" /></a>
           </div>
         </div>
 
@@ -51,6 +52,7 @@ export function Footer() {
             <li><a href={pageUrl("primero-mis-manos")}>Primero Mis Manos</a></li>
             <li><a href={pageUrl("libro")}>{book.title}</a></li>
             <li><a href={pageUrl("berenice")}>Berenice Cura</a></li>
+            <li><a href={pageUrl("blog-y-novedades")}>Blog y novedades</a></li>
           </ul>
         </nav>
 
@@ -81,7 +83,7 @@ export function Footer() {
       <div className="footer-bottom shell">
         <p>© {new Date().getFullYear()} {association.name}.</p>
         <div className="footer-seal" aria-label="ACCSHT, desde 2024">
-          <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht.svg`} width="160" height="160" alt="" aria-hidden="true" />
+          <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht-original.png`} width="640" height="896" alt="" aria-hidden="true" />
           <small>ACCSHT · DESDE 2024</small>
         </div>
         <p>“Primero Mis Manos” · Marca registrada con derechos de autor.</p>

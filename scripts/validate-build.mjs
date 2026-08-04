@@ -11,16 +11,21 @@ const pages = [
   { path: "libro/index.html", title: "Escuchar en otros sentidos | Berenice Cura" },
   { path: "berenice/index.html", title: "Berenice Cura | Accesibilidad comunicacional" },
   { path: "contacto/index.html", title: "Contacto | Comunidad Sorda e Hipoacúsica Tandilense" },
+  { path: "blog-y-novedades/index.html", title: "Blog y novedades | ACCSHT" },
+  { path: "admin/index.html", title: "Administrar novedades | ACCSHT" },
 ];
 const requiredAssets = [
   "book-cover.webp", "book-back.webp", "berenice-cura.webp", "berenice-presentacion.webp",
-  "isotipo-accsht.svg", "logo-primero-mis-manos.webp", "qr-instagram.webp",
+  "isotipo-accsht-original.png", "logo-primero-mis-manos.webp", "qr-instagram.webp",
   "manos-conexion.webp", "home-comunidad-editorial.webp", "home-fondo-conexion.webp",
+  "berenice-home-editorial.webp", "whatsapp.svg",
   "og-asociacion.png", "favicon.png",
 ];
 const sourceFiles = [
   "src/App.tsx", "src/data/content.ts", "src/data/site.ts", "src/utils/routes.ts",
   "src/components/Header.tsx", "src/components/Hero.tsx", "src/components/Footer.tsx",
+  "src/components/EditorialMarquee.tsx", "src/components/SocialIcon.tsx", "src/components/WhatsAppFloat.tsx",
+  "src/components/BlogHighlights.tsx", "src/data/blog.ts", "src/pages/BlogPage.tsx", "src/pages/BlogAdminPage.tsx",
   "src/components/HomeSignalIcon.tsx", "src/components/ListeningAtlas.tsx",
   "src/components/AudienceExplorer.tsx", "src/components/FragmentReader.tsx",
   "src/pages/HomePage.tsx", "src/pages/AssociationPage.tsx", "src/pages/BrandPage.tsx",
@@ -55,6 +60,8 @@ if (!styles.includes("prefers-reduced-motion")) failures.push("Reduced-motion su
 if (!source.includes("aria-current") || !source.includes("Saltar al contenido")) failures.push("Navigation accessibility support is missing");
 if (!source.includes("home-comunidad-editorial.webp") || !source.includes("HomeSignalIcon")) failures.push("Home visual system is missing");
 if (!source.includes("footer-cta__orbit") || !source.includes("aria-controls=\"footer-routes\"")) failures.push("Premium footer or accessible mobile navigation is missing");
+if (!source.includes("EditorialMarquee") || !source.includes("WhatsAppFloat")) failures.push("Editorial marquee or floating WhatsApp contact is missing");
+if (!source.includes("BlogHighlights") || !source.includes("BlogAdminPage")) failures.push("Blog carousel or administration page is missing");
 if (!["ListeningAtlas", "AudienceExplorer", "FragmentReader"].every((name) => source.includes(name))) failures.push("An interactive editorial module is missing");
 
 const distFiles = readdirSync(fromRoot("dist", "assets"));

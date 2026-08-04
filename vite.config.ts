@@ -40,6 +40,8 @@ export default defineConfig({
         libro: resolve(projectRoot, "libro/index.html"),
         berenice: resolve(projectRoot, "berenice/index.html"),
         contacto: resolve(projectRoot, "contacto/index.html"),
+        blog: resolve(projectRoot, "blog-y-novedades/index.html"),
+        admin: resolve(projectRoot, "admin/index.html"),
       },
     },
   },

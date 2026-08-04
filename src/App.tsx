@@ -1,12 +1,17 @@
 import { useEffect } from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { EditorialMarquee } from "./components/EditorialMarquee";
+import { WhatsAppFloat } from "./components/WhatsAppFloat";
+import { BlogHighlights } from "./components/BlogHighlights";
 import { AssociationPage } from "./pages/AssociationPage";
 import { AuthorPage } from "./pages/AuthorPage";
 import { BookPage } from "./pages/BookPage";
 import { BrandPage } from "./pages/BrandPage";
 import { ContactPage } from "./pages/ContactPage";
 import { HomePage } from "./pages/HomePage";
+import { BlogPage } from "./pages/BlogPage";
+import { BlogAdminPage } from "./pages/BlogAdminPage";
 import { currentPage, type SitePage } from "./utils/routes";
 
 const pages: Record<SitePage, () => React.JSX.Element> = {
@@ -16,6 +21,8 @@ const pages: Record<SitePage, () => React.JSX.Element> = {
   libro: BookPage,
   berenice: AuthorPage,
   contacto: ContactPage,
+  "blog-y-novedades": BlogPage,
+  admin: BlogAdminPage,
 };
 
 export function App() {
@@ -61,7 +68,10 @@ export function App() {
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
       <Header />
       <Page />
+      {page === "inicio" && <BlogHighlights />}
+      <EditorialMarquee />
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }

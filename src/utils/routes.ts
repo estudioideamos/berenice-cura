@@ -1,4 +1,4 @@
-export type SitePage = "inicio" | "asociacion" | "primero-mis-manos" | "libro" | "berenice" | "contacto";
+export type SitePage = "inicio" | "asociacion" | "primero-mis-manos" | "libro" | "berenice" | "contacto" | "blog-y-novedades" | "admin";
 
 export const pageUrl = (page: SitePage, hash = "") => {
   const base = import.meta.env.BASE_URL;
@@ -14,5 +14,7 @@ export const currentPage = (): SitePage => {
   if (localPath === "libro") return "libro";
   if (localPath === "berenice") return "berenice";
   if (localPath === "contacto") return "contacto";
+  if (localPath === "blog-y-novedades") return "blog-y-novedades";
+  if (localPath === "admin") return "admin";
   return "inicio";
 };

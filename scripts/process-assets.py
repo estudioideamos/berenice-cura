@@ -41,6 +41,34 @@ def save_webp(image: Image.Image, name: str, max_size: tuple[int, int], quality:
     image.save(OUTPUT / name, "WEBP", quality=quality, method=6)
 
 
+def save_original_association_mark(image: Image.Image) -> None:
+    """Extract the original ACCSHT drawing without redesigning its silhouette."""
+    rgb = image.convert("RGB")
+    # The source artwork places the drawing above the institutional wordmark.
+    # This proportional limit keeps the original mark and excludes the text line.
+    drawing_area = rgb.crop((0, 0, rgb.width, round(rgb.height * 0.91)))
+    difference = ImageChops.difference(drawing_area, Image.new("RGB", drawing_area.size, "white"))
+    mask = difference.convert("L").point(lambda value: 255 if value > 12 else 0)
+    box = mask.getbbox()
+    if box is None:
+        raise ValueError("No se pudo aislar el isotipo original de la asociación")
+
+    padding = 18
+    left, top, right, bottom = box
+    crop_box = (
+        max(0, left - padding),
+        max(0, top - padding),
+        min(drawing_area.width, right + padding),
+        min(drawing_area.height, bottom + padding),
+    )
+    mark = drawing_area.crop(crop_box)
+    alpha_source = ImageChops.difference(mark, Image.new("RGB", mark.size, "white")).convert("L")
+    alpha = alpha_source.point(lambda value: 0 if value < 5 else min(255, (value - 5) * 4))
+    transparent_mark = mark.convert("RGBA")
+    transparent_mark.putalpha(alpha)
+    transparent_mark.save(OUTPUT / "isotipo-accsht-original.png", "PNG", optimize=True)
+
+
 cover = first_pdf_image("portada-ebook.pdf")
 save_webp(cover, "book-cover.webp", (1024, 1536), 86)
 
@@ -54,9 +82,11 @@ author = author_source.crop((505, 24, 1054, 1048))
 save_webp(author, "berenice-cura.webp", (720, 1100), 84)
 save_webp(author_source, "berenice-presentacion.webp", (740, 1050), 80)
 
-association_logo = trim_white(first_pdf_image("logo-asociacion.pdf"), padding=32)
+association_source = first_pdf_image("logo-asociacion.pdf")
+association_logo = trim_white(association_source, padding=32)
 hands_logo = trim_white(first_pdf_image("logo-primero-mis-manos.pdf"), padding=32)
 save_webp(association_logo, "logo-asociacion.webp", (720, 420), 88)
+save_original_association_mark(association_source)
 save_webp(hands_logo, "logo-primero-mis-manos.webp", (720, 420), 88)
 
 for source, target in (

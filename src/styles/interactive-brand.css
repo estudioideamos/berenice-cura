@@ -1,0 +1,151 @@
+/* Original institutional mark, editorial marquees, social icons and direct contact */
+.association-brand > img {
+  width: 48px;
+  height: 62px;
+  object-fit: contain;
+}
+
+.association-brand--compact > img { width: 36px; height: 47px; }
+.hero__identity .association-brand > img { width: 48px; height: 63px; }
+.footer-brand .association-brand > img,
+.footer .association-brand > img { width: 48px; height: 63px; }
+.footer-cta__orbit > img { width: 43px; height: 60px; object-fit: contain; }
+.footer-seal img { width: 29px; height: 40px; object-fit: contain; }
+
+.footer-social svg {
+  width: 19px;
+  height: 19px;
+  overflow: visible;
+}
+.footer-social svg rect,
+.footer-social svg circle:not(.social-icon__dot) {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+.footer-social svg path,
+.footer-social .social-icon__dot { fill: currentColor; }
+
+.editorial-marquee {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-block: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--cream);
+}
+.editorial-marquee__lane { overflow: hidden; }
+.editorial-marquee__lane + .editorial-marquee__lane {
+  border-top: 1px solid rgba(23, 36, 63, .12);
+  color: var(--ink);
+  background: var(--signal);
+}
+.editorial-marquee__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: editorial-marquee 34s linear infinite;
+}
+.editorial-marquee__lane--reverse .editorial-marquee__track {
+  animation-direction: reverse;
+  animation-duration: 29s;
+}
+.editorial-marquee__lane:hover .editorial-marquee__track { animation-play-state: paused; }
+.editorial-marquee__track span {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(1.7rem, 3vw, 3.2rem);
+  padding: .72rem clamp(1.7rem, 3vw, 3.2rem) .82rem 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.2vw, 4.4rem);
+  font-weight: 500;
+  letter-spacing: -.045em;
+  line-height: .92;
+  white-space: nowrap;
+}
+.editorial-marquee__track i {
+  color: var(--signal);
+  font-family: var(--sans);
+  font-size: .34em;
+  font-style: normal;
+}
+.editorial-marquee__lane + .editorial-marquee__lane i { color: var(--paper); }
+@keyframes editorial-marquee { to { transform: translateX(-50%); } }
+
+.whatsapp-float {
+  position: fixed;
+  z-index: 80;
+  right: max(1.1rem, env(safe-area-inset-right));
+  bottom: max(1.1rem, env(safe-area-inset-bottom));
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 50%;
+  color: #fff;
+  background: #25d366;
+  box-shadow: 0 18px 42px rgba(7, 16, 34, .28);
+  text-decoration: none;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.whatsapp-float img { width: 31px; height: 31px; filter: invert(1); }
+.whatsapp-float > span {
+  position: absolute;
+  right: calc(100% + .75rem);
+  padding: .55rem .75rem;
+  border-radius: 999px;
+  opacity: 0;
+  color: var(--paper);
+  background: var(--ink-deep);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  pointer-events: none;
+  transform: translateX(.45rem);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(7, 16, 34, .36);
+}
+.whatsapp-float:hover > span,
+.whatsapp-float:focus-visible > span { opacity: 1; transform: translateX(0); }
+
+.home-people__image figcaption {
+  position: absolute;
+  z-index: 3;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  width: fit-content;
+  max-width: calc(100% - 2.4rem);
+  padding: .55rem .7rem;
+  color: rgba(251,247,237,.82);
+  background: rgba(7,16,34,.78);
+  backdrop-filter: blur(10px);
+  font-size: .49rem;
+  letter-spacing: .08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.home-people__image img {
+  object-position: center;
+  filter: saturate(.9) contrast(1.02);
+}
+
+@media (max-width: 767px) {
+  .association-brand--compact > img { width: 32px; height: 42px; }
+  .editorial-marquee__track span { padding-block: .65rem .74rem; }
+  .whatsapp-float { width: 56px; height: 56px; }
+  .whatsapp-float img { width: 28px; height: 28px; }
+  .whatsapp-float > span { display: none; }
+  .home-people__image img { aspect-ratio: 1.12; object-position: 53% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-marquee__track { animation-play-state: paused !important; }
+  .whatsapp-float,
+  .whatsapp-float > span { transition: none !important; }
+}

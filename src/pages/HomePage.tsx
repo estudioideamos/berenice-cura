@@ -77,9 +77,10 @@ export function HomePage() {
 
       <section className="home-people section" aria-labelledby="home-people-title">
         <div className="shell home-people__grid">
-          <div className="home-people__image">
-            <img src={asset("berenice-presentacion.webp")} width="1024" height="682" loading="lazy" alt="Berenice Cura durante una presentación" />
-          </div>
+          <figure className="home-people__image">
+            <img src={asset("berenice-home-editorial.webp")} width="1536" height="1024" loading="lazy" alt="Retrato editorial de Berenice Cura generado a partir de fotografías reales de referencia" />
+            <figcaption>Retrato editorial generado a partir de fotografías reales de referencia.</figcaption>
+          </figure>
           <div>
             <p className="eyebrow">Personas que impulsan comunidad</p>
             <h2 id="home-people-title">Berenice Cura</h2>

@@ -3,7 +3,7 @@ type AssociationBrandProps = {
   className?: string;
 };
 
-const mark = `${import.meta.env.BASE_URL}assets/isotipo-accsht.svg`;
+const mark = `${import.meta.env.BASE_URL}assets/isotipo-accsht-original.png`;
 
 export function AssociationBrand({ compact = false, className = "" }: AssociationBrandProps) {
   return (

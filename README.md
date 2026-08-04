@@ -27,8 +27,21 @@ npm run preview
 - `/libro/`: presentación, públicos, mockup y fragmentos.
 - `/berenice/`: perfil de Berenice Cura.
 - `/contacto/`: consultas, capacitaciones, actividades y adquisición.
+- `/blog-y-novedades/`: artículos, recursos y novedades de la asociación.
+- `/admin/`: panel estático para publicar entradas e imágenes mediante GitHub.
 
-Cada página cuenta con título, descripción, URL canónica y metadatos sociales propios.
+Cada página pública cuenta con título, descripción, URL canónica y metadatos sociales propios.
+
+## Administrar Blog y novedades
+
+El panel está disponible en `/admin/`. No incorpora claves en el sitio: solicita un token personal de GitHub en cada sesión y lo conserva solo en memoria mientras la página permanece abierta.
+
+1. Crear un token de acceso específico para el repositorio `estudioideamos/berenice-cura`.
+2. Otorgarle únicamente el permiso **Contents: Read and write**.
+3. Abrir el panel, completar título, categoría, resumen, contenido e imagen.
+4. Publicar. El panel actualiza `src/data/blog.json`; el commit resultante activa automáticamente GitHub Pages.
+
+Las entradas iniciales son piezas institucionales construidas únicamente con información confirmada en los materiales. No incluyen fechas de evento ni anuncios inventados.
 
 ## Editar contenido, imágenes y enlaces
 
@@ -37,7 +50,9 @@ Cada página cuenta con título, descripción, URL canónica y metadatos sociale
 - Estructura de cada recorrido: `src/pages/`.
 - Componentes compartidos: `src/components/`.
 - Sistema visual y responsive: `src/styles/`.
-- Isotipo institucional modernizado: `public/assets/isotipo-accsht.svg`.
+- Dibujo institucional fiel al logo original, limpiado y aislado desde el PDF entregado: `public/assets/isotipo-accsht-original.png`.
+- Retrato editorial generado para la portada, identificado como imagen generada: `public/assets/berenice-home-editorial.webp`.
+- Ícono flotante de WhatsApp entregado por el cliente: `public/assets/whatsapp.svg`.
 - Ilustraciones editoriales generadas para la portada: `public/assets/home-comunidad-editorial.webp` y `public/assets/home-fondo-conexion.webp`.
 - Imágenes optimizadas: `public/assets/`.
 - Materiales originales consultados: `source-materials/` —solo local; no se publica el manuscrito ni los archivos de trabajo—.

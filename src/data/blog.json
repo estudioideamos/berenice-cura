@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "cruzando-puentes",
+    "title": "Cruzando Puentes",
+    "category": "Proyecto institucional",
+    "summary": "Una iniciativa que vincula accesibilidad comunicacional, educación y participación para acercar a la comunidad.",
+    "body": [
+      "Cruzando Puentes expresa una forma de trabajar: acercar personas, instituciones y organizaciones a través de una comunicación más accesible.",
+      "La propuesta se integra a las acciones de sensibilización, capacitación y educación que desarrolla la Asociación Civil Comunidad Sorda e Hipoacúsica Tandilense."
+    ],
+    "image": "home-fondo-conexion.webp",
+    "imageAlt": "Composición editorial abstracta inspirada en puentes y conexión",
+    "featured": true
+  },
+  {
+    "slug": "lengua-de-senas-argentina",
+    "title": "Lengua de Señas Argentina",
+    "category": "Formación",
+    "summary": "Talleres y capacitaciones que promueven nuevas formas de comunicación en ámbitos educativos y sociales.",
+    "body": [
+      "La asociación desarrolla talleres de Lengua de Señas Argentina, capacitaciones y actividades de sensibilización dirigidas a instituciones, organizaciones y a la comunidad.",
+      "Estas acciones buscan eliminar barreras de comunicación y fomentar la igualdad de oportunidades para las personas sordas e hipoacúsicas."
+    ],
+    "image": "manos-conexion.webp",
+    "imageAlt": "Manos en una composición visual vinculada con la comunicación",
+    "featured": true
+  },
+  {
+    "slug": "accesibilidad-comunicacional",
+    "title": "Accesibilidad comunicacional",
+    "category": "Comunidad",
+    "summary": "La inclusión se construye cuando todas las personas encuentran una forma real de expresarse y participar.",
+    "body": [
+      "La Asociación Civil Comunidad Sorda e Hipoacúsica Tandilense promueve la inclusión y la accesibilidad comunicacional desde 2024.",
+      "Su objetivo es eliminar barreras de comunicación y garantizar la participación plena de las personas sordas e hipoacúsicas en la sociedad."
+    ],
+    "image": "home-comunidad-editorial.webp",
+    "imageAlt": "Ilustración editorial sobre comunidad, gestos y conexión",
+    "featured": true
+  }
+]
