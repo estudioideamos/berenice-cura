@@ -12,6 +12,38 @@
 .footer-cta__orbit > img { width: 43px; height: 60px; object-fit: contain; }
 .footer-seal img { width: 29px; height: 40px; object-fit: contain; }
 
+.association-brand__type { gap: .18rem; }
+.association-brand__type strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+.association-brand__type small {
+  max-width: 270px;
+  font-size: .5rem;
+  letter-spacing: .105em;
+  line-height: 1.25;
+}
+.association-brand--compact .association-brand__type { gap: .12rem; }
+.association-brand--compact .association-brand__type strong {
+  font-size: .82rem;
+  letter-spacing: -.025em;
+}
+.association-brand--compact .association-brand__type small {
+  max-width: 188px;
+  font-size: .4rem;
+  letter-spacing: .075em;
+  line-height: 1.22;
+}
+.footer-brand .association-brand__type strong {
+  color: var(--paper);
+  font-size: 1.1rem;
+}
+.footer-brand .association-brand__type small {
+  max-width: 280px;
+  color: rgba(251,247,237,.55);
+}
+
 .footer-social svg {
   width: 19px;
   height: 19px;

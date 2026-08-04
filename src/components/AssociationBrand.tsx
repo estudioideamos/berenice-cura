@@ -10,11 +10,8 @@ export function AssociationBrand({ compact = false, className = "" }: Associatio
     <span className={`association-brand${compact ? " association-brand--compact" : ""}${className ? ` ${className}` : ""}`}>
       <img src={mark} width="160" height="160" alt="" aria-hidden="true" />
       <span className="association-brand__type">
-        {compact ? (
-          <><strong>ACCSHT</strong><small>Tandil</small></>
-        ) : (
-          <><strong>Comunidad Sorda</strong><small>e Hipoacúsica Tandilense</small></>
-        )}
+        <strong>Asociación Civil</strong>
+        <small>Comunidad Sorda e Hipoacúsica Tandilense</small>
       </span>
     </span>
   );
