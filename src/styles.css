@@ -1,4 +1,12 @@
+@import "@fontsource/cormorant-garamond/latin-400.css";
+@import "@fontsource/cormorant-garamond/latin-500.css";
+@import "@fontsource/cormorant-garamond/latin-600.css";
+@import "@fontsource/manrope/latin-400.css";
+@import "@fontsource/manrope/latin-500.css";
+@import "@fontsource/manrope/latin-600.css";
+
 @import "./styles/core.css";
 @import "./styles/header-hero.css";
 @import "./styles/sections.css";
 @import "./styles/responsive.css";
+@import "./styles/premium.css";
