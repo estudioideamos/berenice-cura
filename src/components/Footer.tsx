@@ -1,32 +1,90 @@
+import { useState, type PointerEvent } from "react";
 import { AssociationBrand } from "./AssociationBrand";
-import { association, book, contact } from "../data/content";
+import { association, book, contact, contactMessages, whatsappUrl } from "../data/content";
 import { pageUrl } from "../utils/routes";
 
+type FooterPanel = "recorridos" | "canales";
+
 export function Footer() {
+  const [openPanel, setOpenPanel] = useState<FooterPanel | null>(null);
+
+  const moveGlow = (event: PointerEvent<HTMLElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    event.currentTarget.style.setProperty("--footer-x", `${event.clientX - rect.left}px`);
+    event.currentTarget.style.setProperty("--footer-y", `${event.clientY - rect.top}px`);
+  };
+
+  const toggle = (panel: FooterPanel) => setOpenPanel((current) => current === panel ? null : panel);
+
   return (
-    <footer className="footer">
-      <div className="shell footer__grid">
+    <footer className="footer footer--premium" onPointerMove={moveGlow}>
+      <div className="footer__glow" aria-hidden="true" />
+
+      <section className="footer-cta shell" aria-labelledby="footer-cta-title">
         <div>
+          <p className="footer-cta__eyebrow"><span aria-hidden="true" />Una conversación puede abrir un puente</p>
+          <h2 id="footer-cta-title">Construyamos una comunicación <em>sin barreras.</em></h2>
+        </div>
+        <a className="footer-cta__orbit" href={pageUrl("contacto")} aria-label="Abrir las opciones de contacto">
+          <span className="footer-cta__ring" aria-hidden="true"><i>COMUNIDAD</i><i>ACCESIBILIDAD</i><i>CONEXIÓN</i></span>
+          <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht.svg`} width="160" height="160" alt="" aria-hidden="true" />
+          <strong>Contactar</strong>
+        </a>
+      </section>
+
+      <div className="footer-main shell">
+        <div className="footer-brand">
           <AssociationBrand />
-          <p>{association.since} · Tandil</p>
+          <p>{association.description}</p>
+          <div className="footer-social" aria-label="Redes sociales">
+            <a href={contact.instagram.url} target="_blank" rel="noreferrer" aria-label={`Instagram ${contact.instagram.handle}`}>IG</a>
+            <a href={contact.facebook.url} target="_blank" rel="noreferrer" aria-label={`Facebook ${contact.facebook.label}`}>f</a>
+          </div>
         </div>
-        <div>
-          <p className="footer__label">Recorridos</p>
-          <a href={pageUrl("asociacion")}>La asociación</a>
-          <a href={pageUrl("primero-mis-manos")}>Primero Mis Manos</a>
-          <a href={pageUrl("libro")}>{book.title}</a>
-          <a href={pageUrl("berenice")}>Berenice Cura</a>
-        </div>
-        <div>
-          <p className="footer__label">Contacto</p>
-          <a href={`mailto:${contact.email}`}>{contact.email}</a>
-          <a href={`tel:+${contact.phones[1].international}`}>{contact.phones[1].display}</a>
-          <a href={contact.instagram.url} target="_blank" rel="noreferrer">Instagram {contact.instagram.handle}</a>
+
+        <nav className={`footer-nav${openPanel === "recorridos" ? " is-open" : ""}`} aria-label="Recorridos del sitio">
+          <button type="button" aria-expanded={openPanel === "recorridos"} aria-controls="footer-routes" onClick={() => toggle("recorridos")}>
+            <span>Recorridos</span><i aria-hidden="true" />
+          </button>
+          <ul id="footer-routes">
+            <li><a href={pageUrl("asociacion")}>La asociación</a></li>
+            <li><a href={pageUrl("primero-mis-manos")}>Primero Mis Manos</a></li>
+            <li><a href={pageUrl("libro")}>{book.title}</a></li>
+            <li><a href={pageUrl("berenice")}>Berenice Cura</a></li>
+          </ul>
+        </nav>
+
+        <nav className={`footer-nav${openPanel === "canales" ? " is-open" : ""}`} aria-label="Canales de contacto">
+          <button type="button" aria-expanded={openPanel === "canales"} aria-controls="footer-channels" onClick={() => toggle("canales")}>
+            <span>Canales</span><i aria-hidden="true" />
+          </button>
+          <ul id="footer-channels">
+            <li><a href={pageUrl("contacto")}>Contacto</a></li>
+            <li><a href={`mailto:${contact.email}`}>Correo electrónico</a></li>
+            <li><a href={contact.instagram.url} target="_blank" rel="noreferrer">Instagram</a></li>
+            <li><a href={contact.facebook.url} target="_blank" rel="noreferrer">Facebook</a></li>
+          </ul>
+        </nav>
+
+        <div className="footer-contact">
+          <p className="footer-contact__label">Contacto directo</p>
+          <h3>¿Cómo podemos acompañarte?</h3>
+          <a className="footer-contact__whatsapp" href={whatsappUrl(contactMessages.association, 1)} target="_blank" rel="noreferrer">
+            <span>Hablar por WhatsApp</span><i aria-hidden="true">↗</i>
+          </a>
+          <p><a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+          <p>{contact.phones[1].display}</p>
+          <p>Tandil · Argentina</p>
         </div>
       </div>
-      <div className="shell footer__bottom">
+
+      <div className="footer-bottom shell">
         <p>© {new Date().getFullYear()} {association.name}.</p>
-        <p>“Primero Mis Manos” es una marca registrada con derechos de autor.</p>
+        <div className="footer-seal" aria-label="ACCSHT, desde 2024">
+          <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht.svg`} width="160" height="160" alt="" aria-hidden="true" />
+          <small>ACCSHT · DESDE 2024</small>
+        </div>
+        <p>“Primero Mis Manos” · Marca registrada con derechos de autor.</p>
       </div>
     </footer>
   );

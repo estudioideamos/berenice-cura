@@ -15,12 +15,14 @@ const pages = [
 const requiredAssets = [
   "book-cover.webp", "book-back.webp", "berenice-cura.webp", "berenice-presentacion.webp",
   "isotipo-accsht.svg", "logo-primero-mis-manos.webp", "qr-instagram.webp",
-  "manos-conexion.webp", "og-asociacion.png", "favicon.png",
+  "manos-conexion.webp", "home-comunidad-editorial.webp", "home-fondo-conexion.webp",
+  "og-asociacion.png", "favicon.png",
 ];
 const sourceFiles = [
   "src/App.tsx", "src/data/content.ts", "src/data/site.ts", "src/utils/routes.ts",
   "src/components/Header.tsx", "src/components/Hero.tsx", "src/components/Footer.tsx",
-  "src/components/ListeningAtlas.tsx", "src/components/AudienceExplorer.tsx", "src/components/FragmentReader.tsx",
+  "src/components/HomeSignalIcon.tsx", "src/components/ListeningAtlas.tsx",
+  "src/components/AudienceExplorer.tsx", "src/components/FragmentReader.tsx",
   "src/pages/HomePage.tsx", "src/pages/AssociationPage.tsx", "src/pages/BrandPage.tsx",
   "src/pages/BookPage.tsx", "src/pages/AuthorPage.tsx", "src/pages/ContactPage.tsx",
 ];
@@ -47,12 +49,12 @@ for (const asset of requiredAssets) {
   const path = fromRoot("public", "assets", asset);
   if (!existsSync(path) || statSync(path).size === 0) failures.push(`Missing asset: ${asset}`);
 }
-if (/lorem ipsum|href=["']#["']|best seller/i.test(source) || /\bTODO\b/.test(source)) {
-  failures.push("Placeholder, empty link, TODO, or unverified claim found");
-}
+if (/lorem ipsum|href=["']#["']|best seller/i.test(source) || /\bTODO\b/.test(source)) failures.push("Placeholder, empty link, TODO, or unverified claim found");
 if (!source.includes("5492494569921") || !source.includes("5492494245888")) failures.push("International WhatsApp numbers are missing");
 if (!styles.includes("prefers-reduced-motion")) failures.push("Reduced-motion support is missing");
 if (!source.includes("aria-current") || !source.includes("Saltar al contenido")) failures.push("Navigation accessibility support is missing");
+if (!source.includes("home-comunidad-editorial.webp") || !source.includes("HomeSignalIcon")) failures.push("Home visual system is missing");
+if (!source.includes("footer-cta__orbit") || !source.includes("aria-controls=\"footer-routes\"")) failures.push("Premium footer or accessible mobile navigation is missing");
 if (!["ListeningAtlas", "AudienceExplorer", "FragmentReader"].every((name) => source.includes(name))) failures.push("An interactive editorial module is missing");
 
 const distFiles = readdirSync(fromRoot("dist", "assets"));

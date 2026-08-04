@@ -38,6 +38,7 @@ Cada página cuenta con título, descripción, URL canónica y metadatos sociale
 - Componentes compartidos: `src/components/`.
 - Sistema visual y responsive: `src/styles/`.
 - Isotipo institucional modernizado: `public/assets/isotipo-accsht.svg`.
+- Ilustraciones editoriales generadas para la portada: `public/assets/home-comunidad-editorial.webp` y `public/assets/home-fondo-conexion.webp`.
 - Imágenes optimizadas: `public/assets/`.
 - Materiales originales consultados: `source-materials/` —solo local; no se publica el manuscrito ni los archivos de trabajo—.
 
@@ -55,4 +56,4 @@ Para un dominio propio, definir `VITE_SITE_URL` y, si corresponde, `VITE_BASE_PA
 
 ## Accesibilidad
 
-El sitio incluye estructura semántica, jerarquía de encabezados, enlace para saltar al contenido, foco visible, navegación por teclado, estado de página actual, objetivos táctiles amplios, textos alternativos, contraste suficiente y reducción de movimiento mediante `prefers-reduced-motion`.
+El sitio incluye estructura semántica, jerarquía de encabezados, enlace para saltar al contenido, foco visible, navegación por teclado, estado de página actual, objetivos táctiles amplios, textos alternativos, contraste suficiente y reducción de movimiento mediante `prefers-reduced-motion`. El footer incorpora navegación desplegable accesible en mobile.
