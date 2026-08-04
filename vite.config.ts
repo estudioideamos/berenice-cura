@@ -1,6 +1,9 @@
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+const projectRoot = dirname(fileURLToPath(import.meta.url));
 const repository = process.env.GITHUB_REPOSITORY?.split("/")[1];
 const repositoryOwner = process.env.GITHUB_REPOSITORY?.split("/")[0];
 const configuredBase = process.env.VITE_BASE_PATH;
@@ -29,5 +32,15 @@ export default defineConfig({
     target: "es2022",
     cssMinify: true,
     sourcemap: false,
+    rollupOptions: {
+      input: {
+        inicio: resolve(projectRoot, "index.html"),
+        asociacion: resolve(projectRoot, "asociacion/index.html"),
+        primeroMisManos: resolve(projectRoot, "primero-mis-manos/index.html"),
+        libro: resolve(projectRoot, "libro/index.html"),
+        berenice: resolve(projectRoot, "berenice/index.html"),
+        contacto: resolve(projectRoot, "contacto/index.html"),
+      },
+    },
   },
 });

@@ -1,11 +1,11 @@
-export const siteNavigation = [
-  { label: "La asociación", href: "#asociacion" },
-  { label: "Qué hacemos", href: "#acciones" },
-  { label: "Primero Mis Manos", href: "#primero-mis-manos" },
-  { label: "El libro", href: "#el-libro" },
-  { label: "Berenice", href: "#berenice" },
-  { label: "Contacto", href: "#contacto" },
-] as const;
+import type { SitePage } from "../utils/routes";
+
+export const siteNavigation: ReadonlyArray<{ label: string; page: SitePage }> = [
+  { label: "La asociación", page: "asociacion" },
+  { label: "Primero Mis Manos", page: "primero-mis-manos" },
+  { label: "El libro", page: "libro" },
+  { label: "Berenice", page: "berenice" },
+];
 
 export const associationHero = {
   eyebrow: "Asociación Civil · Tandil",

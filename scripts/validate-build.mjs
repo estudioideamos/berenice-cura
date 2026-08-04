@@ -4,49 +4,56 @@ import { fileURLToPath } from "node:url";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const fromRoot = (...parts) => join(root, ...parts);
-const requiredSections = [
-  "asociacion", "acciones", "manifiesto", "primero-mis-manos",
-  "el-libro", "proposito", "berenice", "fragmentos", "contacto",
+const pages = [
+  { path: "index.html", title: "Comunidad Sorda e Hipoacúsica Tandilense | ACCSHT" },
+  { path: "asociacion/index.html", title: "La asociación | Comunidad Sorda e Hipoacúsica Tandilense" },
+  { path: "primero-mis-manos/index.html", title: "Primero Mis Manos | ACCSHT" },
+  { path: "libro/index.html", title: "Escuchar en otros sentidos | Berenice Cura" },
+  { path: "berenice/index.html", title: "Berenice Cura | Accesibilidad comunicacional" },
+  { path: "contacto/index.html", title: "Contacto | Comunidad Sorda e Hipoacúsica Tandilense" },
 ];
 const requiredAssets = [
   "book-cover.webp", "book-back.webp", "berenice-cura.webp", "berenice-presentacion.webp",
-  "logo-asociacion.webp", "logo-primero-mis-manos.webp", "qr-instagram.webp",
+  "isotipo-accsht.svg", "logo-primero-mis-manos.webp", "qr-instagram.webp",
   "manos-conexion.webp", "og-asociacion.png", "favicon.png",
 ];
+const sourceFiles = [
+  "src/App.tsx", "src/data/content.ts", "src/data/site.ts", "src/utils/routes.ts",
+  "src/components/Header.tsx", "src/components/Hero.tsx", "src/components/Footer.tsx",
+  "src/components/ListeningAtlas.tsx", "src/components/AudienceExplorer.tsx", "src/components/FragmentReader.tsx",
+  "src/pages/HomePage.tsx", "src/pages/AssociationPage.tsx", "src/pages/BrandPage.tsx",
+  "src/pages/BookPage.tsx", "src/pages/AuthorPage.tsx", "src/pages/ContactPage.tsx",
+];
 const failures = [];
-const source = [
-  readFileSync(fromRoot("src", "App.tsx"), "utf8"),
-  readFileSync(fromRoot("src", "data", "content.ts"), "utf8"),
-  readFileSync(fromRoot("src", "data", "site.ts"), "utf8"),
-  readFileSync(fromRoot("src", "components", "ListeningAtlas.tsx"), "utf8"),
-  readFileSync(fromRoot("src", "components", "AudienceExplorer.tsx"), "utf8"),
-  readFileSync(fromRoot("src", "components", "FragmentReader.tsx"), "utf8"),
-].join("\n");
-const styles = [
-  "atelier.css", "association-focus.css", "association-mobile-fix.css",
-  "responsive-finish.css", "desktop-navigation.css",
-].map((name) => readFileSync(fromRoot("src", "styles", name), "utf8")).join("\n");
-const html = readFileSync(fromRoot("dist", "index.html"), "utf8");
+const source = sourceFiles.map((path) => readFileSync(fromRoot(...path.split("/")), "utf8")).join("\n");
+const styles = readdirSync(fromRoot("src", "styles"))
+  .filter((name) => name.endsWith(".css"))
+  .map((name) => readFileSync(fromRoot("src", "styles", name), "utf8"))
+  .join("\n");
 
-for (const section of requiredSections) {
-  if (!source.includes(`id="${section}"`)) failures.push(`Missing section: ${section}`);
+for (const page of pages) {
+  const path = fromRoot("dist", ...page.path.split("/"));
+  if (!existsSync(path)) {
+    failures.push(`Missing built page: ${page.path}`);
+    continue;
+  }
+  const html = readFileSync(path, "utf8");
+  if (!html.includes(`<title>${page.title}</title>`)) failures.push(`Wrong title: ${page.path}`);
+  if (/__SITE_URL__|__BASE_URL__/.test(html)) failures.push(`Metadata placeholder remains: ${page.path}`);
+  if (!html.includes('lang="es-AR"') || !html.includes('rel="canonical"')) failures.push(`Metadata incomplete: ${page.path}`);
 }
+
 for (const asset of requiredAssets) {
   const path = fromRoot("public", "assets", asset);
   if (!existsSync(path) || statSync(path).size === 0) failures.push(`Missing asset: ${asset}`);
-}
-if (/__SITE_URL__|__BASE_URL__/.test(html)) failures.push("Metadata placeholders remain in dist/index.html");
-if (!html.includes("Comunidad Sorda e Hipoacúsica Tandilense") || !html.includes("og-asociacion.png")) {
-  failures.push("Association-first metadata is missing");
 }
 if (/lorem ipsum|href=["']#["']|best seller/i.test(source) || /\bTODO\b/.test(source)) {
   failures.push("Placeholder, empty link, TODO, or unverified claim found");
 }
 if (!source.includes("5492494569921") || !source.includes("5492494245888")) failures.push("International WhatsApp numbers are missing");
 if (!styles.includes("prefers-reduced-motion")) failures.push("Reduced-motion support is missing");
-if (!["ListeningAtlas", "AudienceExplorer", "FragmentReader"].every((name) => source.includes(name))) {
-  failures.push("An interactive editorial module is missing");
-}
+if (!source.includes("aria-current") || !source.includes("Saltar al contenido")) failures.push("Navigation accessibility support is missing");
+if (!["ListeningAtlas", "AudienceExplorer", "FragmentReader"].every((name) => source.includes(name))) failures.push("An interactive editorial module is missing");
 
 const distFiles = readdirSync(fromRoot("dist", "assets"));
 if (!distFiles.some((file) => file.endsWith(".css"))) failures.push("Compiled CSS is missing");
@@ -55,11 +62,4 @@ if (failures.length) {
   console.error(failures.join("\n"));
   process.exit(1);
 }
-console.log(JSON.stringify({
-  sections: requiredSections.length,
-  requiredAssets: requiredAssets.length,
-  interactiveModules: 3,
-  distAssets: distFiles.length,
-  htmlBytes: Buffer.byteLength(html),
-  status: "ok",
-}, null, 2));
+console.log(JSON.stringify({ pages: pages.length, requiredAssets: requiredAssets.length, interactiveModules: 3, distAssets: distFiles.length, status: "ok" }, null, 2));

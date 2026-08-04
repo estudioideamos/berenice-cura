@@ -1,22 +1,27 @@
+import { AssociationBrand } from "./AssociationBrand";
 import { association, book, contact } from "../data/content";
+import { pageUrl } from "../utils/routes";
 
 export function Footer() {
   return (
     <footer className="footer">
       <div className="shell footer__grid">
         <div>
-          <p className="footer__title">{association.name}</p>
+          <AssociationBrand />
           <p>{association.since} · Tandil</p>
+        </div>
+        <div>
+          <p className="footer__label">Recorridos</p>
+          <a href={pageUrl("asociacion")}>La asociación</a>
+          <a href={pageUrl("primero-mis-manos")}>Primero Mis Manos</a>
+          <a href={pageUrl("libro")}>{book.title}</a>
+          <a href={pageUrl("berenice")}>Berenice Cura</a>
         </div>
         <div>
           <p className="footer__label">Contacto</p>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
           <a href={`tel:+${contact.phones[1].international}`}>{contact.phones[1].display}</a>
-        </div>
-        <div>
-          <p className="footer__label">También en este sitio</p>
-          <a href="#el-libro">{book.title}</a>
-          <a href="#berenice">Berenice Cura</a>
+          <a href={contact.instagram.url} target="_blank" rel="noreferrer">Instagram {contact.instagram.handle}</a>
         </div>
       </div>
       <div className="shell footer__bottom">
