@@ -88,10 +88,10 @@
   align-items: center;
   gap: clamp(1.25rem, 2vw, 2rem);
   padding: .42rem clamp(1.25rem, 2vw, 2rem) .48rem 0;
-  font-family: var(--serif);
-  font-size: clamp(1.12rem, 1.75vw, 1.85rem);
+  font-family: var(--sans);
+  font-size: clamp(1.05rem, 1.5vw, 1.55rem);
   font-weight: 500;
-  letter-spacing: -.025em;
+  letter-spacing: -.01em;
   line-height: 1;
   white-space: nowrap;
 }

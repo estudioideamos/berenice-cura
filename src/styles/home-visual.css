@@ -31,7 +31,7 @@
 .home-community__visual::before { position: absolute; z-index: 2; inset: 1.2rem; content: ""; border: 1px solid rgba(7,16,34,.22); pointer-events: none; }
 .home-community__visual img { width: 100%; aspect-ratio: 1.5; object-fit: cover; filter: saturate(.86) contrast(1.02); }
 .home-community__visual figcaption { position: absolute; z-index: 3; right: 1.2rem; bottom: 1.2rem; padding: .65rem .8rem; color: var(--paper); background: rgba(7,16,34,.78); backdrop-filter: blur(10px); font-size: .52rem; letter-spacing: .12em; text-transform: uppercase; }
-.home-community__content h2 { max-width: 680px; margin-bottom: 1.8rem; font-size: clamp(3.7rem, 6.5vw, 7rem); font-weight: 520; letter-spacing: -.07em; line-height: .84; }
+.home-community__content h2 { max-width: 420px; margin-bottom: 1.4rem; font-size: clamp(2.3rem, 3.2vw, 3.7rem); font-weight: 520; letter-spacing: -.045em; line-height: 1.06; }
 .home-community__content > p:not(.eyebrow) { max-width: 560px; color: rgba(251,247,237,.66); font-size: .96rem; }
 .home-community__content .button { margin-top: 1.4rem; }
 

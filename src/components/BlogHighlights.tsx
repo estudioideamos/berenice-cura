@@ -1,20 +1,45 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { blogPosts } from "../data/blog";
 import { pageUrl } from "../utils/routes";
 
 const asset = (name: string) => import.meta.env.BASE_URL + "assets/" + name;
+const AUTOPLAY_DELAY = 4500;
 
 export function BlogHighlights() {
   const track = useRef<HTMLDivElement>(null);
+  const paused = useRef(false);
   const highlightedPosts = blogPosts.filter((post) => post.featured).slice(0, 6);
   const visiblePosts = highlightedPosts.length > 0 ? highlightedPosts : blogPosts.slice(0, 6);
   const move = (direction: number) => {
-    const width = track.current?.getBoundingClientRect().width ?? 360;
-    track.current?.scrollBy({ left: direction * width * .82, behavior: "smooth" });
+    const el = track.current;
+    if (!el) return;
+    const width = el.getBoundingClientRect().width;
+    if (direction > 0 && el.scrollLeft + width >= el.scrollWidth - 4) {
+      el.scrollTo({ left: 0, behavior: "smooth" });
+      return;
+    }
+    el.scrollBy({ left: direction * width * .82, behavior: "smooth" });
   };
 
+  useEffect(() => {
+    if (visiblePosts.length < 2) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const timer = window.setInterval(() => {
+      if (!paused.current) move(1);
+    }, AUTOPLAY_DELAY);
+    return () => window.clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [visiblePosts.length]);
+
   return (
-    <section className="blog-preview section" aria-labelledby="blog-preview-title">
+    <section
+      className="blog-preview section"
+      aria-labelledby="blog-preview-title"
+      onMouseEnter={() => { paused.current = true; }}
+      onMouseLeave={() => { paused.current = false; }}
+      onFocus={() => { paused.current = true; }}
+      onBlur={() => { paused.current = false; }}
+    >
       <div className="shell blog-preview__header">
         <div>
           <p className="eyebrow">Blog y novedades</p>

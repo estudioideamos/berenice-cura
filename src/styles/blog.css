@@ -53,13 +53,13 @@
   grid-auto-columns: minmax(300px, 39%);
   grid-auto-flow: column;
   gap: clamp(1.2rem,2.2vw,2rem);
-  padding-bottom: 1rem;
+  padding-bottom: .2rem;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  scrollbar-color: var(--gold) rgba(23,36,63,.08);
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scroll-snap-type: x mandatory;
 }
+.blog-preview__viewport::-webkit-scrollbar { display: none; }
 .blog-preview__viewport .blog-card { scroll-snap-align: start; }
 .blog-preview__footer { display: flex; justify-content: flex-end; margin-top: 2.2rem; }
 
