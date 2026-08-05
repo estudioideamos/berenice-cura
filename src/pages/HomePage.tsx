@@ -39,19 +39,21 @@ export function HomePage() {
         <div className="shell home-paths__grid">
           <a className="home-path home-path--association" href={pageUrl("asociacion")}>
             <span>01 / Eje central</span>
+            <img className="home-path__cover" src={asset("home-asociacion-editorial.webp")} width="683" height="1024" loading="lazy" alt="" aria-hidden="true" />
             <strong>La asociación</strong>
             <p>{association.description}</p>
             <i aria-hidden="true">↗</i>
           </a>
           <a className="home-path home-path--brand" href={pageUrl("primero-mis-manos")}>
             <span>02 / Identidad</span>
+            <img className="home-path__cover" src={asset("home-primero-manos-editorial.webp")} width="683" height="1024" loading="lazy" alt="" aria-hidden="true" />
             <strong>Primero Mis Manos</strong>
             <p>Lenguaje, identidad y conexión desde la Lengua de Señas Argentina.</p>
             <i aria-hidden="true">↗</i>
           </a>
           <a className="home-path home-path--book" href={pageUrl("libro")}>
             <span>03 / Publicación</span>
-            <img src={asset("book-cover.webp")} width="1024" height="1536" loading="lazy" alt="Portada del libro Escuchar en otros sentidos" />
+            <img className="home-path__cover" src={asset("book-cover.webp")} width="1024" height="1536" loading="lazy" alt="Portada del libro Escuchar en otros sentidos" />
             <strong>{book.title}</strong>
             <p>{book.subtitle} · Berenice Cura</p>
             <i aria-hidden="true">↗</i>

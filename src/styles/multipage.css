@@ -94,26 +94,10 @@
 .home-path:hover > i { transform: translate(4px, -4px); }
 .home-path--association { color: var(--paper); background: var(--ink); }
 .home-path--association > p { color: rgba(251,247,237,0.66); }
-.home-path--association::before { position: absolute; right: -15%; bottom: -13%; width: 85%; aspect-ratio: 1; content: ""; border: 1px solid rgba(223,174,88,0.4); border-radius: 50%; }
-.home-path--association::after { position: absolute; right: 18%; bottom: 23%; width: 12px; aspect-ratio: 1; content: ""; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 14px rgba(223,174,88,0.08); }
 .home-path--brand { background: var(--lavender); }
-.home-path--brand::before,
-.home-path--brand::after {
-  position: absolute;
-  top: 2.4rem;
-  content: "";
-  width: 84px;
-  height: 148px;
-  border: 1px solid rgba(23,36,63,.32);
-  border-radius: 60% 60% 45% 45%;
-  transition: transform 500ms cubic-bezier(.2,.8,.2,1);
-}
-.home-path--brand::before { right: 5.2rem; transform: rotate(-26deg); }
-.home-path--brand::after { right: 2.4rem; transform: rotate(152deg); }
-.home-path--brand:hover::before { transform: rotate(-32deg); }
-.home-path--brand:hover::after { transform: rotate(158deg); }
 .home-path--book { color: var(--paper); background: #17233e; }
-.home-path--book img {
+.home-path--book > p { color: rgba(251,247,237,.65); }
+.home-path__cover {
   position: absolute;
   top: 1.8rem;
   right: 1.8rem;
@@ -121,12 +105,11 @@
   aspect-ratio: 2 / 3;
   object-fit: cover;
   border-radius: 2px;
-  box-shadow: 0 26px 50px rgba(0,0,0,.5), 0 4px 14px rgba(0,0,0,.35);
+  box-shadow: 0 26px 50px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.28);
   transform: rotate(2.2deg);
   transition: transform 650ms cubic-bezier(.2,.8,.2,1);
 }
-.home-path--book:hover img { transform: rotate(.4deg) scale(1.025); }
-.home-path--book > p { color: rgba(251,247,237,.65); }
+.home-path:hover .home-path__cover { transform: rotate(.4deg) scale(1.025); }
 
 .home-people { background: var(--cream); }
 .home-people__grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(390px, .72fr); gap: clamp(3.5rem, 7vw, 7rem); align-items: start; }
