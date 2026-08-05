@@ -45,9 +45,12 @@ export function BlogHighlights() {
           <p className="eyebrow">Blog y novedades</p>
           <h2 id="blog-preview-title">Ideas, recursos y acciones que siguen construyendo comunidad.</h2>
         </div>
-        <div className="blog-preview__controls">
-          <button type="button" onClick={() => move(-1)} aria-label="Ver publicaciones anteriores">←</button>
-          <button type="button" onClick={() => move(1)} aria-label="Ver publicaciones siguientes">→</button>
+        <div className="blog-preview__actions">
+          <a className="button button--ghost" href={pageUrl("blog-y-novedades")}>Ver todo el blog <span aria-hidden="true">↗</span></a>
+          <div className="blog-preview__controls">
+            <button type="button" onClick={() => move(-1)} aria-label="Ver publicaciones anteriores">←</button>
+            <button type="button" onClick={() => move(1)} aria-label="Ver publicaciones siguientes">→</button>
+          </div>
         </div>
       </div>
       <div className="blog-preview__viewport shell" ref={track}>
@@ -62,9 +65,6 @@ export function BlogHighlights() {
             <p>{post.summary}</p>
           </article>
         ))}
-      </div>
-      <div className="shell blog-preview__footer">
-        <a className="button button--ghost" href={pageUrl("blog-y-novedades")}>Ver todo el blog <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   );
