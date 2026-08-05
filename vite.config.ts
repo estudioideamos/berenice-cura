@@ -17,6 +17,9 @@ const normalizedSiteUrl = siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`;
 
 export default defineConfig({
   base: normalizedBase,
+  server: {
+    port: Number(process.env.PORT) || 5173,
+  },
   plugins: [
     react(),
     {
