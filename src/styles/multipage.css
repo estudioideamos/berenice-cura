@@ -97,12 +97,35 @@
 .home-path--association::before { position: absolute; right: -15%; bottom: -13%; width: 85%; aspect-ratio: 1; content: ""; border: 1px solid rgba(223,174,88,0.4); border-radius: 50%; }
 .home-path--association::after { position: absolute; right: 18%; bottom: 23%; width: 12px; aspect-ratio: 1; content: ""; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 14px rgba(223,174,88,0.08); }
 .home-path--brand { background: var(--lavender); }
-.home-path--brand img { position: absolute; top: 11%; right: 8%; width: 72%; height: 48%; object-fit: contain; mix-blend-mode: multiply; transition: transform 500ms cubic-bezier(.2,.8,.2,1); }
-.home-path--brand:hover img { transform: rotate(-2deg) scale(1.03); }
+.home-path--brand::before,
+.home-path--brand::after {
+  position: absolute;
+  top: 2.4rem;
+  content: "";
+  width: 84px;
+  height: 148px;
+  border: 1px solid rgba(23,36,63,.32);
+  border-radius: 60% 60% 45% 45%;
+  transition: transform 500ms cubic-bezier(.2,.8,.2,1);
+}
+.home-path--brand::before { right: 5.2rem; transform: rotate(-26deg); }
+.home-path--brand::after { right: 2.4rem; transform: rotate(152deg); }
+.home-path--brand:hover::before { transform: rotate(-32deg); }
+.home-path--brand:hover::after { transform: rotate(158deg); }
 .home-path--book { color: var(--paper); background: #17233e; }
-.home-path--book::after { position: absolute; inset: 0; content: ""; background: linear-gradient(0deg, rgba(7,16,34,.96) 0%, rgba(7,16,34,.16) 68%); }
-.home-path--book img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; opacity: .72; transition: transform 650ms cubic-bezier(.2,.8,.2,1); }
-.home-path--book:hover img { transform: scale(1.035); }
+.home-path--book img {
+  position: absolute;
+  top: 1.8rem;
+  right: 1.8rem;
+  width: 42%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 26px 50px rgba(0,0,0,.5), 0 4px 14px rgba(0,0,0,.35);
+  transform: rotate(2.2deg);
+  transition: transform 650ms cubic-bezier(.2,.8,.2,1);
+}
+.home-path--book:hover img { transform: rotate(.4deg) scale(1.025); }
 .home-path--book > p { color: rgba(251,247,237,.65); }
 
 .home-people { background: var(--cream); }

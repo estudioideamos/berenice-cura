@@ -45,7 +45,6 @@ export function HomePage() {
           </a>
           <a className="home-path home-path--brand" href={pageUrl("primero-mis-manos")}>
             <span>02 / Identidad</span>
-            <img src={asset("logo-primero-mis-manos.webp")} width="720" height="498" loading="lazy" alt="" aria-hidden="true" />
             <strong>Primero Mis Manos</strong>
             <p>Lenguaje, identidad y conexión desde la Lengua de Señas Argentina.</p>
             <i aria-hidden="true">↗</i>
