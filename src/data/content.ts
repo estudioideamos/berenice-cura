@@ -65,11 +65,31 @@ export const audiences = [
 ] as const;
 
 export const fragments = [
-  "Escuchar no siempre comienza con los oídos, sino con la intención.",
-  "Las manos también hablan, sienten y construyen puentes invisibles.",
-  "Cada gesto puede convertirse en una palabra llena de sentido.",
-  "La inclusión comienza cuando todos encuentran su forma de expresarse.",
-  "Y en cada mano que se extiende, existe una oportunidad de conexión real.",
+  {
+    text: "Escuchar no siempre comienza con los oídos, sino con la intención.",
+    image: "libro-fragmento-escuchar.webp",
+    imageAlt: "Ilustración editorial de una persona escuchando con atención bajo un arco al atardecer",
+  },
+  {
+    text: "Las manos también hablan, sienten y construyen puentes invisibles.",
+    image: "libro-fragmento-manos.webp",
+    imageAlt: "Ilustración editorial de dos manos que se acercan entre columnas frente al mar",
+  },
+  {
+    text: "Cada gesto puede convertirse en una palabra llena de sentido.",
+    image: "libro-fragmento-gesto.webp",
+    imageAlt: "Ilustración editorial de una mano haciendo un gesto en Lengua de Señas bajo un arco",
+  },
+  {
+    text: "La inclusión comienza cuando todos encuentran su forma de expresarse.",
+    image: "home-asociacion-editorial.webp",
+    imageAlt: "Ilustración editorial de dos personas comunicándose en Lengua de Señas bajo arcos al atardecer",
+  },
+  {
+    text: "Y en cada mano que se extiende, existe una oportunidad de conexión real.",
+    image: "libro-fragmento-conexion.webp",
+    imageAlt: "Ilustración editorial de un grupo de personas reunidas bajo un arco de noche",
+  },
 ] as const;
 
 export const association = {

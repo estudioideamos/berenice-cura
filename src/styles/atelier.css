@@ -266,11 +266,34 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
 .fragments__header .section-heading { margin-bottom: 4rem; }
 .fragments__header .section-heading h2 { color: var(--ink); }
 .fragments__header > p { margin-bottom: 4rem; font-size: 0.7rem; letter-spacing: 0.06em; }
-.fragment-list { display: grid; padding: 0; margin: 0; list-style: none; border-top: 1px solid rgba(11,23,48,0.16); }
-.fragment-list li { display: grid; grid-template-columns: 3.6rem 1fr; align-items: start; gap: clamp(1.2rem, 3vw, 2.4rem); padding: clamp(1.7rem, 3vw, 2.4rem) 0; border-bottom: 1px solid rgba(11,23,48,0.16); }
-.fragment-list li > span { padding-top: .25rem; font-family: var(--serif); color: var(--gold); font-size: 1.15rem; font-weight: 500; line-height: 1; }
-.fragment-list blockquote { max-width: 780px; margin: 0; padding-left: 1.3rem; border-left: 2px solid var(--gold); }
-.fragment-list blockquote p { margin: 0; font-family: var(--serif); font-size: clamp(1.25rem, 2vw, 1.65rem); font-style: italic; font-weight: 480; line-height: 1.42; letter-spacing: -.01em; }
+.fragment-reader { display: grid; grid-template-columns: minmax(320px, .48fr) minmax(0, .52fr); gap: clamp(3rem, 6vw, 6rem); align-items: center; }
+.fragment-reader__visual { position: relative; margin: 0; }
+.fragment-reader__visual::before { position: absolute; z-index: 2; inset: 1.1rem; content: ""; border: 1px solid rgba(11,23,48,.18); pointer-events: none; }
+.fragment-reader__visual img { width: 100%; aspect-ratio: 1.05; object-fit: cover; filter: saturate(.92) contrast(1.02); animation: fragment-fade-in 550ms ease; }
+.fragment-reader__copy { display: flex; flex-direction: column; gap: clamp(2rem, 4vw, 2.8rem); }
+.fragment-reader__quote { animation: fragment-fade-in 480ms ease; }
+.fragment-reader__quote span { display: block; margin-bottom: 1rem; font-family: var(--serif); color: var(--gold); font-size: 1.3rem; font-weight: 500; line-height: 1; }
+.fragment-reader__quote blockquote { margin: 0; padding-left: 1.4rem; border-left: 2px solid var(--gold); }
+.fragment-reader__quote blockquote p { margin: 0; font-family: var(--serif); font-size: clamp(1.5rem, 2.6vw, 2.2rem); font-style: italic; font-weight: 480; line-height: 1.32; letter-spacing: -.015em; }
+.fragment-reader__controls { display: flex; align-items: center; gap: 1.4rem; }
+.fragment-reader__controls > button {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+.fragment-reader__controls > button:hover { color: var(--paper); background: var(--ink); transform: translateY(-2px); }
+.fragment-reader__dots { display: flex; align-items: center; gap: .6rem; }
+.fragment-reader__dots button { width: 28px; height: 2px; padding: 0; border: 0; background: rgba(11,23,48,.22); cursor: pointer; transition: background-color 180ms ease, width 180ms ease; }
+.fragment-reader__dots button.is-active { width: 40px; background: var(--ink); }
+@keyframes fragment-fade-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
 /* Contact and footer */
 .contact { color: var(--paper); background: #111e38; }
@@ -381,7 +404,7 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
   .hands-brand__content h2 { font-size: clamp(4.5rem, 20vw, 6.2rem); }
   .fragments__header { grid-template-columns: 1fr; gap: 0; }
   .fragments__header > p { margin-top: -2rem; }
-  .fragment-list li { grid-template-columns: 1fr; gap: .6rem; }
+  .fragment-reader { grid-template-columns: 1fr; gap: 2rem; }
   .contact__header { grid-template-columns: 1fr; }
   .contact__qr { width: 100%; }
   .contact__actions { grid-template-columns: 1fr; }
@@ -399,6 +422,6 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-hero-item], .js [data-reveal], .audience-explorer__copy { animation: none !important; transition: none !important; transform: none !important; }
+  [data-hero-item], .js [data-reveal], .audience-explorer__copy, .fragment-reader__visual img, .fragment-reader__quote { animation: none !important; transition: none !important; transform: none !important; }
   .book-stage { transform: none !important; }
 }
