@@ -266,21 +266,11 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
 .fragments__header .section-heading { margin-bottom: 4rem; }
 .fragments__header .section-heading h2 { color: var(--ink); }
 .fragments__header > p { margin-bottom: 4rem; font-size: 0.7rem; letter-spacing: 0.06em; }
-.fragment-reader { display: grid; grid-template-columns: 90px 1fr; border-top: 1px solid rgba(11,23,48,0.2); border-bottom: 1px solid rgba(11,23,48,0.2); }
-.fragment-reader__counter { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; border-right: 1px solid rgba(11,23,48,0.2); font-size: 0.58rem; }
-.fragment-reader__counter i { width: 1px; height: 80px; background: rgba(11,23,48,0.28); }
-.fragment-reader__viewport { position: relative; min-height: 520px; }
-.fragment-reader__viewport blockquote { position: absolute; inset: 0; display: grid; place-content: center; padding: clamp(2rem, 6vw, 6rem); margin: 0; opacity: 0; transform: translateY(24px); pointer-events: none; transition: opacity 420ms ease, transform 500ms cubic-bezier(.2,.8,.2,1); }
-.fragment-reader__viewport blockquote.is-active { opacity: 1; transform: translateY(0); pointer-events: auto; }
-.fragment-reader__viewport p { max-width: 1080px; margin: 0; font-size: clamp(3rem, 6.7vw, 7rem); font-weight: 520; letter-spacing: -0.065em; line-height: 0.9; }
-.fragment-reader__controls { grid-column: 1 / -1; display: grid; height: 64px; grid-template-columns: 64px 1fr 64px; border-top: 1px solid rgba(11,23,48,0.2); }
-.fragment-reader__controls > button { border: 0; color: var(--ink); background: transparent; font-size: 1.2rem; cursor: pointer; }
-.fragment-reader__controls > button:first-child { border-right: 1px solid rgba(11,23,48,0.2); }
-.fragment-reader__controls > button:last-child { border-left: 1px solid rgba(11,23,48,0.2); }
-.fragment-reader__controls > button:hover { color: var(--paper); background: var(--ink); }
-.fragment-reader__dots { display: flex; align-items: center; justify-content: center; gap: 0.7rem; }
-.fragment-reader__dots button { width: 36px; height: 2px; padding: 0; border: 0; background: rgba(11,23,48,0.25); cursor: pointer; }
-.fragment-reader__dots button.is-active { background: var(--ink); }
+.fragment-list { display: grid; padding: 0; margin: 0; list-style: none; border-top: 1px solid rgba(11,23,48,0.16); }
+.fragment-list li { display: grid; grid-template-columns: 3.6rem 1fr; align-items: start; gap: clamp(1.2rem, 3vw, 2.4rem); padding: clamp(1.7rem, 3vw, 2.4rem) 0; border-bottom: 1px solid rgba(11,23,48,0.16); }
+.fragment-list li > span { padding-top: .25rem; font-family: var(--serif); color: var(--gold); font-size: 1.15rem; font-weight: 500; line-height: 1; }
+.fragment-list blockquote { max-width: 780px; margin: 0; padding-left: 1.3rem; border-left: 2px solid var(--gold); }
+.fragment-list blockquote p { margin: 0; font-family: var(--serif); font-size: clamp(1.25rem, 2vw, 1.65rem); font-style: italic; font-weight: 480; line-height: 1.42; letter-spacing: -.01em; }
 
 /* Contact and footer */
 .contact { color: var(--paper); background: #111e38; }
@@ -391,10 +381,7 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
   .hands-brand__content h2 { font-size: clamp(4.5rem, 20vw, 6.2rem); }
   .fragments__header { grid-template-columns: 1fr; gap: 0; }
   .fragments__header > p { margin-top: -2rem; }
-  .fragment-reader { grid-template-columns: 54px 1fr; }
-  .fragment-reader__viewport { min-height: 470px; }
-  .fragment-reader__viewport p { font-size: clamp(2.5rem, 12vw, 4rem); }
-  .fragment-reader__dots button { width: 22px; }
+  .fragment-list li { grid-template-columns: 1fr; gap: .6rem; }
   .contact__header { grid-template-columns: 1fr; }
   .contact__qr { width: 100%; }
   .contact__actions { grid-template-columns: 1fr; }
@@ -412,6 +399,6 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-hero-item], .js [data-reveal], .fragment-reader__viewport blockquote, .audience-explorer__copy { animation: none !important; transition: none !important; transform: none !important; }
+  [data-hero-item], .js [data-reveal], .audience-explorer__copy { animation: none !important; transition: none !important; transform: none !important; }
   .book-stage { transform: none !important; }
 }
