@@ -14,12 +14,13 @@ export function AuthorPage() {
 
       <section className="author section" aria-labelledby="author-story-title">
         <div className="shell author__grid">
-          <div className="author__visual">
-            <div className="author__portrait"><img src={asset("berenice-cura.webp")} width="549" height="1024" alt="Retrato de Berenice Cura sonriendo, con la mano apoyada bajo el rostro" /></div>
-            <div className="author__context"><img src={asset("berenice-presentacion.webp")} width="1024" height="682" loading="lazy" alt="Berenice Cura durante una presentación" /></div>
-            <span className="author__visual-label">Comunicación · educación · accesibilidad</span>
+          <div className="author__visual" data-reveal>
+            <figure className="author__portrait">
+              <img src={asset("berenice-cura.webp")} width="479" height="1024" alt="Retrato de Berenice Cura sonriendo, con la mano apoyada bajo el rostro" />
+              <figcaption>Comunicación · educación · accesibilidad</figcaption>
+            </figure>
           </div>
-          <div className="author__content">
+          <div className="author__content" data-reveal>
             <p className="eyebrow">Su trabajo</p>
             <h2 id="author-story-title">Comunicación como derecho.</h2>
             <p className="author__lead">Desde su experiencia personal con la hipoacusia y su compromiso con la educación, impulsa una sociedad donde la comunicación sea un derecho para todas las personas.</p>
