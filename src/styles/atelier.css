@@ -266,11 +266,11 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
 .fragments__header .section-heading { margin-bottom: 4rem; }
 .fragments__header .section-heading h2 { color: var(--ink); }
 .fragments__header > p { margin-bottom: 4rem; font-size: 0.7rem; letter-spacing: 0.06em; }
-.fragment-reader { display: grid; grid-template-columns: minmax(320px, .48fr) minmax(0, .52fr); gap: clamp(3rem, 6vw, 6rem); align-items: center; }
+.fragment-reader { display: grid; grid-template-columns: minmax(320px, .48fr) minmax(0, .52fr); gap: clamp(3rem, 6vw, 6rem); align-items: stretch; }
 .fragment-reader__visual { position: relative; margin: 0; }
 .fragment-reader__visual::before { position: absolute; z-index: 2; inset: 1.1rem; content: ""; border: 1px solid rgba(11,23,48,.18); pointer-events: none; }
 .fragment-reader__visual img { width: 100%; aspect-ratio: 1.05; object-fit: cover; filter: saturate(.92) contrast(1.02); animation: fragment-fade-in 550ms ease; }
-.fragment-reader__copy { display: flex; flex-direction: column; gap: clamp(2rem, 4vw, 2.8rem); }
+.fragment-reader__copy { display: flex; flex-direction: column; justify-content: space-between; gap: clamp(2rem, 4vw, 2.8rem); }
 .fragment-reader__quote { animation: fragment-fade-in 480ms ease; }
 .fragment-reader__quote span { display: block; margin-bottom: 1rem; font-family: var(--serif); color: var(--gold); font-size: 1.3rem; font-weight: 500; line-height: 1; }
 .fragment-reader__quote blockquote { margin: 0; padding-left: 1.4rem; border-left: 2px solid var(--gold); }

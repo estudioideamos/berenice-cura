@@ -1,15 +1,32 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { fragments } from "../data/content";
 
 const asset = (name: string) => import.meta.env.BASE_URL + "assets/" + name;
+const AUTOPLAY_DELAY = 5000;
 
 export function FragmentReader() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const paused = useRef(false);
   const goTo = (index: number) => setActiveIndex((index + fragments.length) % fragments.length);
   const active = fragments[activeIndex];
 
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const timer = window.setInterval(() => {
+      if (!paused.current) setActiveIndex((current) => (current + 1) % fragments.length);
+    }, AUTOPLAY_DELAY);
+    return () => window.clearInterval(timer);
+  }, []);
+
   return (
-    <div className="fragment-reader" data-reveal>
+    <div
+      className="fragment-reader"
+      data-reveal
+      onMouseEnter={() => { paused.current = true; }}
+      onMouseLeave={() => { paused.current = false; }}
+      onFocus={() => { paused.current = true; }}
+      onBlur={() => { paused.current = false; }}
+    >
       <figure className="fragment-reader__visual" key={activeIndex}>
         <img src={asset(active.image)} width="1024" height="1024" alt={active.imageAlt} loading={activeIndex === 0 ? "eager" : "lazy"} />
       </figure>
