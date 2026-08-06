@@ -9,7 +9,7 @@ export function AuthorPage() {
         index="04"
         eyebrow="Fundadora y presidenta"
         title="Berenice Cura"
-        description="Comunicadora en Lengua de Señas Argentina y referente en accesibilidad comunicacional e inclusión de personas sordas e hipoacúsicas."
+        description="Comunicadora en Lengua de Señas Argentina y referente en accesibilidad comunicacional e inclusión."
       />
 
       <section className="author section" aria-labelledby="author-story-title">

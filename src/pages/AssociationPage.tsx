@@ -12,7 +12,7 @@ export function AssociationPage() {
         index="01"
         eyebrow={`${association.since} · Tandil`}
         title="Una comunidad que cruza puentes."
-        description={association.description}
+        description="Promovemos la inclusión y la accesibilidad comunicacional de las personas sordas e hipoacúsicas de Tandil."
       />
 
       <section className="association-page__mission section" aria-labelledby="mission-title">

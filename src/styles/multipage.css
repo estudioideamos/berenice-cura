@@ -125,7 +125,7 @@
 .page-intro { position: relative; padding-block: clamp(5rem, 10vw, 9rem); overflow: hidden; color: var(--paper); background: var(--ink-deep); }
 .page-intro::before { position: absolute; top: -38%; right: -8%; width: min(62vw, 850px); aspect-ratio: 1; content: ""; border: 1px solid rgba(223,174,88,.22); border-radius: 50%; }
 .page-intro::after { position: absolute; top: 21%; right: 16%; width: 10px; aspect-ratio: 1; content: ""; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 18px rgba(223,174,88,.06); }
-.page-intro__grid { position: relative; z-index: 2; display: grid; grid-template-columns: 70px minmax(0, 1fr) minmax(260px, .38fr); gap: clamp(2rem, 5vw, 6rem); align-items: end; }
+.page-intro__grid { position: relative; z-index: 2; display: grid; min-height: clamp(220px, 24vw, 284px); grid-template-columns: 70px minmax(0, 1fr) minmax(260px, .38fr); gap: clamp(2rem, 5vw, 6rem); align-items: end; }
 .page-intro__index { align-self: start; margin: .25rem 0 0; color: var(--signal); font-size: .64rem; letter-spacing: .18em; }
 .page-intro .eyebrow { color: var(--signal); }
 .page-intro h1 { max-width: 940px; margin: 0; font-size: clamp(4rem, 8vw, 8.7rem); font-weight: 540; letter-spacing: -.075em; line-height: .8; }
