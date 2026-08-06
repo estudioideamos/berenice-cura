@@ -106,6 +106,10 @@ export const association = {
   since: "Desde 2024",
   description:
     "Promueve la inclusión y la accesibilidad comunicacional de las personas sordas e hipoacúsicas. Trabaja para eliminar barreras de comunicación, fomentar la igualdad de oportunidades y garantizar la participación plena.",
+  about: [
+    "La Asociación Civil Comunidad Sorda e Hipoacúsica Tandilense funciona desde el año 2024 y promueve la inclusión y la accesibilidad comunicacional de las personas sordas e hipoacúsicas.",
+    "Desarrolla talleres de Lengua de Señas Argentina (LSA), capacitaciones, actividades de sensibilización y proyectos educativos destinados a instituciones, organizaciones y la comunidad en general. Su objetivo es eliminar las barreras de comunicación, fomentar la igualdad de oportunidades y garantizar la plena participación de las personas sordas en todos los ámbitos de la sociedad.",
+  ],
   activities: [
     "Talleres de Lengua de Señas Argentina",
     "Capacitaciones",

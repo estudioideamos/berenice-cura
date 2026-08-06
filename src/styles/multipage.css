@@ -141,6 +141,8 @@
 .association-page__mission { background: var(--lavender); }
 .association-page__statement { display: grid; grid-template-columns: .35fr 1fr; gap: 3rem; align-items: start; }
 .association-page__statement h2 { max-width: 950px; margin: 0; font-size: clamp(3.2rem, 6.5vw, 6.6rem); font-weight: 540; letter-spacing: -.065em; line-height: .88; }
+.association-page__about { display: grid; gap: 1.1rem; max-width: 720px; margin-top: 2rem; }
+.association-page__about p { margin: 0; color: var(--ink-soft); font-family: var(--serif); font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.55; }
 .association-page__mission .impact-route { margin-top: clamp(4rem, 8vw, 8rem); }
 .association-page__actions { background: var(--paper); }
 .association-page__actions .association__program { margin-top: 0; }

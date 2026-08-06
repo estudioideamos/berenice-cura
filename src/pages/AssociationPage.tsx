@@ -18,7 +18,12 @@ export function AssociationPage() {
       <section className="association-page__mission section" aria-labelledby="mission-title">
         <div className="shell association-page__statement">
           <p className="eyebrow">Misión</p>
-          <h2 id="mission-title">Eliminar barreras. Abrir oportunidades. Hacer posible la participación.</h2>
+          <div>
+            <h2 id="mission-title">Eliminar barreras. Abrir oportunidades. Hacer posible la participación.</h2>
+            <div className="association-page__about">
+              {association.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            </div>
+          </div>
         </div>
         <div className="shell impact-route" aria-label="Ruta hacia una comunicación accesible">
           <div className="impact-route__title"><span>Ruta de impacto</span><strong>{association.concept}</strong></div>
