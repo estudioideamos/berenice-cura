@@ -125,7 +125,7 @@
 .hero--association .hero__coordinate--bottom { right: 2rem; bottom: 1.7rem; }
 .hero--association .hero__edition { color: rgba(251,247,237,.58); }
 .hero--association .hero__legend {
-  height: 58px;
+  height: 48px;
   color: var(--ink);
   background: var(--cream);
 }

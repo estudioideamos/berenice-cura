@@ -14,5 +14,9 @@ export const associationHero = {
   statement: "Comunicarnos sin dejar a nadie afuera.",
   description:
     "Promovemos la inclusión y la accesibilidad comunicacional de las personas sordas e hipoacúsicas.",
-  signals: ["Desde 2024", "Lengua de Señas Argentina", "Accesibilidad comunicacional"],
+  signals: [
+    { label: "Fundada en", value: "2024" },
+    { label: "Comunicamos en", value: "Lengua de Señas Argentina" },
+    { label: "Nuestro enfoque", value: "Accesibilidad comunicacional" },
+  ],
 } as const;

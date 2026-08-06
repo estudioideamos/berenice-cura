@@ -33,9 +33,9 @@
 .home-contact { position: relative; min-height: 330px; overflow: hidden; color: var(--paper); background: var(--ink-deep); }
 .home-contact::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(7,16,34,.98) 0%, rgba(7,16,34,.78) 48%, rgba(7,16,34,.35) 100%); }
 .home-contact__art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.home-contact__grid { position: relative; z-index: 2; min-height: 330px; color: var(--paper); }
-.home-contact__grid p { max-width: 900px; }
-.home-contact__grid a { color: var(--paper); }
+.home-contact__grid { position: relative; z-index: 2; display: flex; min-height: 330px; align-items: center; justify-content: space-between; gap: 2rem; color: var(--paper); }
+.home-contact__grid p { max-width: 900px; margin: 0; font-family: var(--serif); font-size: clamp(1.8rem, 3.8vw, 4rem); letter-spacing: -.04em; line-height: 1; }
+.home-contact__grid a { flex: 0 0 auto; padding: 1rem 0; color: var(--paper); border-bottom: 1px solid currentColor; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
 
 @media (max-width: 1099px) {
   .home-signals ul { grid-template-columns: repeat(2, 1fr); }
@@ -50,8 +50,8 @@
   .home-signals li { min-height: 185px; grid-template-columns: 1fr; grid-template-rows: auto auto auto; padding: 1.1rem; }
   .home-signals li:nth-child(odd) { border-left: 0; }
   .home-signals li:nth-child(even) { border-right: 0; }
-  .home-signal-icon { width: 58px; height: 58px; grid-row: auto; margin-bottom: .7rem; transform: scale(.72); transform-origin: top left; }
-  .home-signals li:hover .home-signal-icon { transform: scale(.72); }
+  .home-signal-icon { width: 44px; height: 44px; grid-row: auto; margin-bottom: .7rem; }
+  .home-signals li:hover .home-signal-icon { transform: none; }
   .home-signals li > p { grid-column: auto; }
   .home-signals li > strong { font-size: 1.75rem; }
   .home-community__grid { gap: 3rem; }
@@ -60,6 +60,7 @@
   .home-community__visual figcaption { right: .8rem; bottom: .8rem; left: .8rem; }
   .home-contact, .home-contact__grid { min-height: 380px; }
   .home-contact::after { background: linear-gradient(0deg, rgba(7,16,34,.96), rgba(7,16,34,.62)); }
+  .home-contact__grid { flex-direction: column; align-items: flex-start; justify-content: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {

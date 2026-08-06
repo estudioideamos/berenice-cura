@@ -2,7 +2,6 @@ import { ListeningAtlas } from "../components/ListeningAtlas";
 import { PageIntro } from "../components/PageIntro";
 import { association, contactMessages, whatsappUrl } from "../data/content";
 import { impactRoute } from "../data/experience";
-import { pageUrl } from "../utils/routes";
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
 
@@ -53,11 +52,6 @@ export function AssociationPage() {
         </div>
         <div className="shell"><ListeningAtlas /></div>
       </section>
-
-      <nav className="next-page shell" aria-label="Continuar recorriendo el sitio">
-        <span>Siguiente recorrido</span>
-        <a href={pageUrl("primero-mis-manos")}>Primero Mis Manos <i aria-hidden="true">→</i></a>
-      </nav>
     </main>
   );
 }

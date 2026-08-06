@@ -35,7 +35,9 @@ export function Hero() {
         </div>
       </div>
       <div className="hero__legend shell" aria-label="Información central de la asociación">
-        {associationHero.signals.map((signal, index) => <span key={signal}>0{index + 1} — {signal}</span>)}
+        {associationHero.signals.map((signal) => (
+          <span key={signal.label}><em>{signal.label}</em>{signal.value}</span>
+        ))}
         <a href={pageUrl("libro")}>El libro dentro del proyecto ↗</a>
       </div>
     </section>

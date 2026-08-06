@@ -3,7 +3,6 @@ import { BookVisual } from "../components/BookVisual";
 import { FragmentReader } from "../components/FragmentReader";
 import { PageIntro } from "../components/PageIntro";
 import { book, contactMessages, whatsappUrl } from "../data/content";
-import { pageUrl } from "../utils/routes";
 
 export function BookPage() {
   return (
@@ -44,11 +43,6 @@ export function BookPage() {
         </div>
         <div className="shell"><FragmentReader /></div>
       </section>
-
-      <nav className="next-page shell" aria-label="Continuar recorriendo el sitio">
-        <span>Siguiente recorrido</span>
-        <a href={pageUrl("berenice")}>Berenice Cura <i aria-hidden="true">→</i></a>
-      </nav>
     </main>
   );
 }

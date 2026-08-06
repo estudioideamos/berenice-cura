@@ -1,5 +1,4 @@
 import { PageIntro } from "../components/PageIntro";
-import { pageUrl } from "../utils/routes";
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
 
@@ -34,11 +33,6 @@ export function AuthorPage() {
           </div>
         </div>
       </section>
-
-      <nav className="next-page shell" aria-label="Continuar recorriendo el sitio">
-        <span>Conocé el eje central</span>
-        <a href={pageUrl("asociacion")}>La asociación <i aria-hidden="true">→</i></a>
-      </nav>
     </main>
   );
 }

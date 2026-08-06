@@ -171,8 +171,9 @@ h1, h2, h3, blockquote { font-family: var(--serif); font-optical-sizing: auto; }
 .hero__coordinate { position: absolute; z-index: 3; color: rgba(251,247,237,0.62); font-size: 0.54rem; letter-spacing: 0.14em; text-transform: uppercase; }
 .hero__coordinate--top { top: 2rem; left: 2rem; }
 .hero__coordinate--bottom { right: 2rem; bottom: 1.7rem; }
-.hero__legend { display: grid; height: 58px; grid-template-columns: repeat(4, 1fr); border-right: 1px solid var(--line); border-left: 1px solid var(--line); }
-.hero__legend span { display: flex; align-items: center; padding-inline: 1rem; border-right: 1px solid var(--line); color: var(--ink-soft); font-size: 0.56rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.hero__legend { display: grid; height: 48px; grid-template-columns: repeat(4, 1fr); border-right: 1px solid var(--line); border-left: 1px solid var(--line); }
+.hero__legend span { display: flex; flex-direction: column; justify-content: center; gap: .12rem; padding-inline: 1rem; border-right: 1px solid var(--line); color: var(--ink); font-size: .66rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.1; }
+.hero__legend span em { color: var(--ink-soft); font-style: normal; font-size: .48rem; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; }
 .hero__legend span:last-child { border-right: 0; }
 
 /* Listening atlas */

@@ -1,6 +1,5 @@
 import { PageIntro } from "../components/PageIntro";
 import { association } from "../data/content";
-import { pageUrl } from "../utils/routes";
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
 
@@ -39,11 +38,6 @@ export function BrandPage() {
           </div>
         </div>
       </section>
-
-      <nav className="next-page shell" aria-label="Continuar recorriendo el sitio">
-        <span>Siguiente recorrido</span>
-        <a href={pageUrl("libro")}>El libro <i aria-hidden="true">→</i></a>
-      </nav>
     </main>
   );
 }
