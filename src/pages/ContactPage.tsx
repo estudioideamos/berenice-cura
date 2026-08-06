@@ -10,7 +10,7 @@ export function ContactPage() {
         index="05"
         eyebrow="Abrir una conversación"
         title="Construyamos comunicación accesible"
-        description="Elegí el motivo de tu consulta y comunicate directamente con la asociación para resolverla juntos."
+        description="Elegí el motivo de tu consulta y comunicate directamente con la asociación."
       />
 
       <section className="contact contact-page__options section" aria-labelledby="contact-options-title">

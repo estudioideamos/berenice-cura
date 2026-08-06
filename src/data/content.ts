@@ -4,7 +4,7 @@ export const book = {
   coverLine: "Tu vida puede ser posible sin escuchar",
   author: "Berenice Cura",
   description:
-    "Una invitación a comprender la hipoacusia y la sordera, y a descubrir otras formas de escuchar el mundo.",
+    "Una invitación a comprender la sordera y descubrir otras formas de escuchar el mundo.",
   purpose:
     "El libro reúne reflexiones y herramientas para ayudar a docentes, familias e instituciones a derribar barreras comunicacionales y construir una educación verdaderamente inclusiva.",
   topics: [

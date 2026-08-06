@@ -10,7 +10,7 @@ export function BrandPage() {
         index="02"
         eyebrow="Identidad · Lengua de Señas Argentina"
         title="Primero Mis Manos"
-        description="Las manos como lenguaje, identidad y puente: una iniciativa ligada a la Lengua de Señas Argentina."
+        description="Las manos como lenguaje, identidad y puente hacia la Lengua de Señas Argentina."
       />
 
       <section className="brand-page__feature section" aria-labelledby="brand-meaning-title">

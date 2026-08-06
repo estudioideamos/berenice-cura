@@ -122,14 +122,14 @@
 
 /* Page opening */
 .internal-page { padding-top: var(--header-height); }
-.page-intro { position: relative; padding-block: clamp(5rem, 10vw, 9rem); overflow: hidden; color: var(--paper); background: var(--ink-deep); }
+.page-intro { position: relative; padding-block: clamp(3.2rem, 5.5vw, 5rem); overflow: hidden; color: var(--paper); background: var(--ink-deep); }
 .page-intro::before { position: absolute; top: -38%; right: -8%; width: min(62vw, 850px); aspect-ratio: 1; content: ""; border: 1px solid rgba(223,174,88,.22); border-radius: 50%; }
 .page-intro::after { position: absolute; top: 21%; right: 16%; width: 10px; aspect-ratio: 1; content: ""; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 18px rgba(223,174,88,.06); }
-.page-intro__grid { position: relative; z-index: 2; display: grid; min-height: clamp(220px, 24vw, 284px); grid-template-columns: 70px minmax(0, 1fr) minmax(260px, .38fr); gap: clamp(2rem, 5vw, 6rem); align-items: end; }
+.page-intro__grid { position: relative; z-index: 2; display: grid; min-height: clamp(160px, 14vw, 190px); grid-template-columns: 70px minmax(0, 1fr) minmax(260px, .38fr); gap: clamp(2rem, 5vw, 6rem); align-items: end; }
 .page-intro__index { align-self: start; margin: .25rem 0 0; color: var(--signal); font-size: .64rem; letter-spacing: .18em; }
 .page-intro .eyebrow { color: var(--signal); }
-.page-intro h1 { max-width: 940px; margin: 0; font-size: clamp(4rem, 8vw, 8.7rem); font-weight: 540; letter-spacing: -.075em; line-height: .8; }
-.page-intro__description { margin: 0 0 .45rem; color: rgba(251,247,237,.68); font-size: clamp(.95rem, 1.4vw, 1.14rem); }
+.page-intro h1 { max-width: 900px; margin: 0; font-size: clamp(3rem, 5.6vw, 5.8rem); font-weight: 540; letter-spacing: -.065em; line-height: .86; }
+.page-intro__description { margin: 0 0 .45rem; color: rgba(251,247,237,.68); font-size: clamp(.85rem, 1.15vw, .96rem); line-height: 1.4; }
 
 .next-page { display: grid; grid-template-columns: .45fr 1fr; align-items: end; padding-block: clamp(4rem, 7vw, 7rem); border-top: 1px solid var(--line); }
 .next-page > span { color: var(--ink-soft); font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; }

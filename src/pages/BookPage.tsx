@@ -10,7 +10,7 @@ export function BookPage() {
       <PageIntro
         index="03"
         eyebrow="Una publicación dentro del proyecto"
-        title={`${book.title}: ${book.subtitle}`}
+        title={book.title}
         description={book.description}
       />
 
