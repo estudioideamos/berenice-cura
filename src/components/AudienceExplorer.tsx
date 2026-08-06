@@ -26,10 +26,12 @@ export function AudienceExplorer() {
         <div className="audience-explorer__orbit" aria-hidden="true">
           <span>{active.number}</span>
         </div>
-        <p>El libro propone para</p>
-        <h3>{active.title}</h3>
-        <div className="audience-explorer__line" aria-hidden="true" />
-        <blockquote>{active.text}</blockquote>
+        <div className="audience-explorer__copy" key={active.number}>
+          <p>El libro propone para</p>
+          <h3>{active.title}</h3>
+          <div className="audience-explorer__line" aria-hidden="true" />
+          <blockquote>{active.text}</blockquote>
+        </div>
       </div>
     </div>
   );
