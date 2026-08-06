@@ -16,7 +16,7 @@ export function AuthorPage() {
         <div className="shell author__grid">
           <div className="author__visual" data-reveal>
             <figure className="author__portrait">
-              <img src={asset("berenice-cura.webp")} width="479" height="1024" alt="Retrato de Berenice Cura sonriendo, con la mano apoyada bajo el rostro" />
+              <img src={asset("berenice-cura-retrato.webp")} width="479" height="1024" alt="Retrato de Berenice Cura sonriendo, con la mano apoyada bajo el rostro" />
               <figcaption>Comunicación · educación · accesibilidad</figcaption>
             </figure>
           </div>

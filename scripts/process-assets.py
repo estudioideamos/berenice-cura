@@ -78,9 +78,10 @@ back = wrap.crop((0, 0, 770, wrap.height))
 save_webp(back, "book-back.webp", (760, 1240), 84)
 
 author_source = Image.open(SOURCE / "presentacion-berenice.jpg").convert("RGB")
-author = author_source.crop((505, 24, 1054, 1048))
-save_webp(author, "berenice-cura.webp", (720, 1100), 84)
-save_webp(author_source, "berenice-presentacion.webp", (740, 1050), 80)
+# Left edge nudged in from the original (505,24,1054,1048) crop to exclude
+# the event poster lettering that was bleeding into frame on that side.
+author = author_source.crop((575, 24, 1054, 1048))
+save_webp(author, "berenice-cura-retrato.webp", (720, 1100), 84)
 
 association_source = first_pdf_image("logo-asociacion.pdf")
 association_logo = trim_white(association_source, padding=32)

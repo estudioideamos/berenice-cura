@@ -15,7 +15,7 @@ const pages = [
   { path: "admin/index.html", title: "Administrar novedades | ACCSHT" },
 ];
 const requiredAssets = [
-  "book-cover.webp", "book-back.webp", "berenice-cura.webp", "berenice-presentacion.webp",
+  "book-cover.webp", "book-back.webp", "berenice-cura-retrato.webp",
   "isotipo-accsht-original.png", "logo-primero-mis-manos.webp", "qr-instagram.webp",
   "manos-conexion.webp", "home-comunidad-editorial.webp", "home-fondo-conexion.webp",
   "berenice-home-editorial.webp", "whatsapp.svg",

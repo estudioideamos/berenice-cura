@@ -171,7 +171,7 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
 .author__visual::after { position: absolute; z-index: 1; top: -10%; right: -14%; width: 62%; aspect-ratio: 1; content: ""; border: 1px solid var(--gold); border-radius: 50%; }
 .author__portrait { position: relative; z-index: 2; margin: 0; }
 .author__portrait::before { position: absolute; z-index: 2; inset: 1.1rem; content: ""; border: 1px solid rgba(11,23,48,.18); pointer-events: none; }
-.author__portrait img { width: 100%; aspect-ratio: 0.78; object-fit: cover; object-position: center 15%; filter: saturate(0.85) contrast(1.03); }
+.author__portrait img { width: 100%; aspect-ratio: 0.62; object-fit: cover; object-position: center 10%; filter: saturate(0.85) contrast(1.03); }
 .author__portrait figcaption {
   position: absolute;
   z-index: 3;
