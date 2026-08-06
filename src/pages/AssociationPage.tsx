@@ -41,11 +41,32 @@ export function AssociationPage() {
             </ul>
             <a className="button button--line" href={whatsappUrl(contactMessages.association, 1)} target="_blank" rel="noreferrer">Contactar a la asociación <span aria-hidden="true">↗</span></a>
           </div>
-          <div className="association__gallery" aria-label="Materiales de sensibilización">
-            <figure className="gallery-card gallery-card--large"><img src={asset("sin-subtitulos.webp")} width="720" height="1020" loading="lazy" alt="Pieza de sensibilización sobre el derecho a contar con subtítulos" /><figcaption>Accesibilidad en la comunicación</figcaption></figure>
-            <figure className="gallery-card"><img src={asset("derechos-personas-discapacidad.webp")} width="720" height="1002" loading="lazy" alt="Pieza educativa sobre derechos de las personas con discapacidad" /><figcaption>Derechos y participación</figcaption></figure>
-            <figure className="gallery-card"><img src={asset("todos-tenemos-derechos.webp")} width="714" height="996" loading="lazy" alt="Pieza educativa titulada Todos tenemos derechos" /><figcaption>Sensibilización comunitaria</figcaption></figure>
-          </div>
+          <ol className="association__resources" aria-label="Materiales de sensibilización">
+            <li>
+              <span aria-hidden="true">01</span>
+              <div>
+                <strong>Accesibilidad en la comunicación</strong>
+                <p>Por qué la falta de subtítulos vulnera el derecho a la información y a la participación plena.</p>
+                <a href={asset("sin-subtitulos.webp")} target="_blank" rel="noreferrer">Ver material completo <span aria-hidden="true">↗</span></a>
+              </div>
+            </li>
+            <li>
+              <span aria-hidden="true">02</span>
+              <div>
+                <strong>Derechos y participación</strong>
+                <p>Los diez derechos de las personas con discapacidad auditiva, explicados de forma clara.</p>
+                <a href={asset("derechos-personas-discapacidad.webp")} target="_blank" rel="noreferrer">Ver material completo <span aria-hidden="true">↗</span></a>
+              </div>
+            </li>
+            <li>
+              <span aria-hidden="true">03</span>
+              <div>
+                <strong>Sensibilización comunitaria</strong>
+                <p>Una guía visual para conocer y ejercer estos derechos en el día a día.</p>
+                <a href={asset("todos-tenemos-derechos.webp")} target="_blank" rel="noreferrer">Ver material completo <span aria-hidden="true">↗</span></a>
+              </div>
+            </li>
+          </ol>
         </div>
       </section>
 
