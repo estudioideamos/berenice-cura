@@ -147,20 +147,39 @@
 .association-page__actions h2 { font-size: clamp(3rem, 5vw, 5.3rem); font-weight: 540; letter-spacing: -.06em; line-height: .9; }
 
 /* Primero Mis Manos */
-.brand-page__feature { color: var(--paper); background: #12203c; }
-.brand-page__grid { display: grid; grid-template-columns: minmax(380px, .85fr) minmax(0, 1.15fr); gap: clamp(5rem, 10vw, 11rem); align-items: center; }
-.brand-page__logo { position: relative; display: grid; min-height: 570px; place-items: center; padding: 4rem; overflow: hidden; color: var(--ink); background: var(--paper); }
-.brand-page__logo > span { position: absolute; top: 1.3rem; left: 1.3rem; font-size: .54rem; letter-spacing: .14em; text-transform: uppercase; }
-.brand-page__logo::after { position: absolute; right: -28%; bottom: -32%; width: 80%; aspect-ratio: 1; content: ""; border: 1px solid rgba(188,139,67,.45); border-radius: 50%; }
-.brand-page__logo img { width: min(100%, 460px); mix-blend-mode: multiply; }
-.brand-page__grid h2 { max-width: 780px; font-size: clamp(3.5rem, 6.5vw, 7rem); font-weight: 540; letter-spacing: -.07em; line-height: .88; }
-.brand-page__grid > div:last-child > p:not(.eyebrow) { max-width: 650px; color: rgba(251,247,237,.68); font-size: 1.05rem; }
-.brand-page__grid small { display: block; max-width: 650px; padding-top: 1rem; margin-top: 2.5rem; border-top: 1px solid rgba(251,247,237,.18); color: rgba(251,247,237,.5); font-size: .62rem; letter-spacing: .1em; }
+.brand-page__feature { color: var(--paper); background: #12203c; overflow: hidden; }
+.brand-page__grid { display: grid; grid-template-columns: minmax(320px, .85fr) minmax(0, 1.15fr); gap: clamp(4rem, 8vw, 8rem); align-items: center; }
+.brand-page__visual { position: relative; margin: 0; }
+.brand-page__visual::before { position: absolute; z-index: 2; inset: 1.1rem; content: ""; border: 1px solid rgba(251,247,237,.28); pointer-events: none; }
+.brand-page__visual img { width: 100%; aspect-ratio: .667; object-fit: cover; border-radius: 2px; }
+.brand-page__visual figcaption {
+  position: absolute;
+  z-index: 3;
+  left: 1.1rem;
+  bottom: 1.1rem;
+  padding: .6rem .85rem;
+  color: var(--paper);
+  background: rgba(7,16,34,.82);
+  backdrop-filter: blur(10px);
+  font-size: .5rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.brand-page__grid h2 { max-width: 620px; margin-bottom: 1.4rem; font-size: clamp(2.3rem, 3.3vw, 3.8rem); font-weight: 540; letter-spacing: -.05em; line-height: 1.08; }
+.brand-page__lead { max-width: 560px; color: rgba(251,247,237,.7); font-size: clamp(1rem, 1.3vw, 1.15rem); line-height: 1.55; }
+.brand-page__pillars { display: grid; gap: 0; padding: 0; margin: 2.2rem 0 0; list-style: none; border-top: 1px solid rgba(251,247,237,.16); }
+.brand-page__pillars li { display: grid; grid-template-columns: 2.4rem 1fr; align-items: start; gap: 1.1rem; padding: 1.15rem 0; border-bottom: 1px solid rgba(251,247,237,.16); }
+.brand-page__pillars li > span { position: relative; top: .2rem; display: block; width: 11px; aspect-ratio: 1; border: 1px solid var(--gold); border-radius: 50%; }
+.brand-page__pillars li > span::after { position: absolute; inset: 3px; content: ""; border-radius: 50%; background: var(--gold); }
+.brand-page__pillars strong { display: block; margin-bottom: .3rem; color: var(--paper); font-family: var(--sans); font-size: .84rem; font-weight: 700; letter-spacing: -.01em; }
+.brand-page__pillars p { margin: 0; color: rgba(251,247,237,.62); font-size: .76rem; line-height: 1.45; }
+.brand-page__grid small { display: block; margin-top: 1.6rem; color: rgba(251,247,237,.42); font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; }
 .brand-page__bridge { background: var(--blue-grey); }
 .brand-page__bridge-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .55fr); gap: clamp(4rem, 9vw, 9rem); align-items: center; }
 .brand-page__bridge img { width: 100%; aspect-ratio: 1.45; object-fit: cover; }
-.brand-page__bridge h2 { font-size: clamp(3.5rem, 7vw, 7rem); font-weight: 540; letter-spacing: -.07em; line-height: .85; }
-.brand-page__bridge p:not(.eyebrow) { color: var(--ink-soft); font-family: var(--serif); font-size: clamp(1.35rem, 2.2vw, 2rem); line-height: 1.35; }
+.brand-page__bridge h2 { max-width: 480px; margin-bottom: 1.2rem; font-size: clamp(2.6rem, 4.4vw, 4.6rem); font-weight: 540; letter-spacing: -.055em; line-height: .96; }
+.brand-page__bridge p:not(.eyebrow) { max-width: 480px; color: var(--ink-soft); font-family: var(--serif); font-size: clamp(1.2rem, 1.8vw, 1.55rem); line-height: 1.4; }
+.brand-page__bridge .button { margin-top: 1.6rem; }
 
 /* Book */
 .book-page__presentation { color: var(--paper); background: #12203c; }
@@ -207,7 +226,7 @@
   .home-path--association { grid-column: 1 / -1; min-height: 390px; }
   .home-people__grid, .brand-page__grid, .brand-page__bridge-grid { grid-template-columns: 1fr; }
   .home-people__image { order: 2; }
-  .brand-page__logo { width: min(100%, 620px); }
+  .brand-page__visual { width: min(100%, 480px); margin-inline: auto; }
   .page-intro__grid { grid-template-columns: 50px minmax(0, 1fr); }
   .page-intro__description { grid-column: 2; max-width: 680px; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
@@ -237,9 +256,7 @@
   .page-intro::before { top: -5%; right: -65%; width: 125vw; }
   .association-page__statement { grid-template-columns: 1fr; gap: 1rem; }
   .association-page__statement h2 { font-size: clamp(3rem, 13vw, 4.8rem); }
-  .brand-page__grid { gap: 4rem; }
-  .brand-page__logo { min-height: 390px; padding: 2rem; }
-  .brand-page__grid h2 { font-size: clamp(3rem, 13vw, 5rem); }
+  .brand-page__grid { gap: 3rem; }
   .brand-page__bridge-grid { gap: 3rem; }
   .brand-page__bridge img { aspect-ratio: .95; }
   .book-page__presentation .book-section__content h2 { font-size: clamp(3rem, 13vw, 5rem); }

@@ -25,6 +25,15 @@ export const book = {
   },
 } as const;
 
+export const brand = {
+  registration: "Registro N.º 3.470.308 · Acta N.º 4.182.539",
+  pillars: [
+    { label: "Comunicación", detail: "Un gesto que se entiende sin necesidad de traducirlo." },
+    { label: "Lengua de Señas Argentina", detail: "La lengua natural y propia de la comunidad sorda." },
+    { label: "Conexión humana", detail: "Puentes entre personas, más allá de cómo se expresen." },
+  ],
+} as const;
+
 export const navigation = [
   { label: "El libro", href: "#el-libro" },
   { label: "Su propósito", href: "#proposito" },
