@@ -275,6 +275,10 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
 .fragment-reader__quote span { display: block; margin-bottom: 1rem; font-family: var(--serif); color: var(--gold); font-size: 1.3rem; font-weight: 500; line-height: 1; }
 .fragment-reader__quote blockquote { margin: 0; padding-left: 1.4rem; border-left: 2px solid var(--gold); }
 .fragment-reader__quote blockquote p { margin: 0; font-family: var(--serif); font-size: clamp(1.5rem, 2.6vw, 2.2rem); font-style: italic; font-weight: 480; line-height: 1.32; letter-spacing: -.015em; }
+.fragment-reader__byline { display: flex; align-items: center; gap: .8rem; padding-left: 1.4rem; margin-top: 1.5rem; }
+.fragment-reader__byline img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 12%; filter: saturate(.85) contrast(1.03); }
+.fragment-reader__byline span { display: flex; flex-direction: column; gap: .2rem; font-family: var(--sans); font-size: .78rem; font-weight: 700; color: var(--ink); }
+.fragment-reader__byline span i { font-family: var(--sans); font-size: .68rem; font-weight: 500; font-style: normal; color: var(--ink-soft); }
 .fragment-reader__controls { display: flex; align-items: center; gap: 1.4rem; }
 .fragment-reader__controls > button {
   display: grid;

@@ -34,6 +34,10 @@ export function FragmentReader() {
         <div className="fragment-reader__quote" key={activeIndex}>
           <span aria-hidden="true">{String(activeIndex + 1).padStart(2, "0")}</span>
           <blockquote><p>“{active.text}”</p></blockquote>
+          <div className="fragment-reader__byline">
+            <img src={asset("berenice-cura-retrato.webp")} width="64" height="64" loading="lazy" alt="" aria-hidden="true" />
+            <span>Berenice Cura<i>Autora de “Escuchar en otros sentidos”</i></span>
+          </div>
         </div>
         <div className="fragment-reader__controls">
           <button type="button" onClick={() => goTo(activeIndex - 1)} aria-label="Fragmento anterior">←</button>
