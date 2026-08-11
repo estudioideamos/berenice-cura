@@ -11,7 +11,12 @@
     padding: 0;
     border: 0;
     background: transparent;
+    opacity: 1;
+    visibility: visible;
   }
+  .primary-nav__glow,
+  .primary-nav__contact { display: none; }
+  .primary-nav__footer { flex-direction: row; align-items: center; gap: 0; }
 
   .primary-nav ul {
     display: flex;
@@ -24,14 +29,26 @@
 
   .primary-nav li {
     border: 0;
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
+  .primary-nav li > span { display: none; }
 
-  .primary-nav li a {
+  #primary-navigation.primary-nav li a {
     position: relative;
     display: flex;
     align-items: center;
     min-height: 42px;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: .86rem;
+    font-weight: 620;
+    letter-spacing: .01em;
   }
+  .primary-nav li a:hover,
+  .primary-nav li a:focus-visible,
+  .primary-nav li a[aria-current="page"] { color: var(--ink); transform: none; }
 
   .primary-nav li a::before {
     position: absolute;
