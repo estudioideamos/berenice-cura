@@ -14,25 +14,28 @@
 
 .association-brand__type { gap: .18rem; }
 .association-brand__type strong {
-  font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: -.012em;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 560;
+  letter-spacing: -.015em;
 }
 .association-brand__type small {
   max-width: 270px;
+  color: var(--ink-soft);
   font-size: .5rem;
-  letter-spacing: .105em;
+  font-weight: 600;
+  letter-spacing: .12em;
   line-height: 1.25;
 }
-.association-brand--compact .association-brand__type { gap: .12rem; }
+.association-brand--compact .association-brand__type { gap: .1rem; }
 .association-brand--compact .association-brand__type strong {
-  font-size: .78rem;
-  letter-spacing: -.008em;
+  font-size: .92rem;
+  letter-spacing: -.01em;
 }
 .association-brand--compact .association-brand__type small {
   max-width: 188px;
-  font-size: .5rem;
-  letter-spacing: .075em;
+  font-size: .48rem;
+  letter-spacing: .09em;
   line-height: 1.22;
 }
 .footer-brand .association-brand__type strong {

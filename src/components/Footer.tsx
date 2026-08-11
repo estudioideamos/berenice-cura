@@ -36,7 +36,7 @@ export function Footer() {
             </text>
           </svg>
           <span className="footer-cta__core" aria-hidden="true">
-            <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht-original.png`} width="640" height="896" alt="" />
+            <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht-clean.png`} width="640" height="896" alt="" />
           </span>
         </a>
       </section>
@@ -91,7 +91,7 @@ export function Footer() {
       <div className="footer-bottom shell">
         <p>© {new Date().getFullYear()} {association.name}.</p>
         <div className="footer-seal" aria-label="ACCSHT, desde 2024">
-          <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht-original.png`} width="640" height="896" alt="" aria-hidden="true" />
+          <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht-clean.png`} width="640" height="896" alt="" aria-hidden="true" />
           <small>ASOCIACIÓN CIVIL · DESDE 2024</small>
         </div>
         <p>“Primero Mis Manos” · Marca registrada con derechos de autor.</p>
