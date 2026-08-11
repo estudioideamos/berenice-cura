@@ -1,10 +1,10 @@
-import { ConceptTagIcon, type ConceptIcon } from "../components/AssociationIcons";
+import { Icon, type IconName } from "../components/Icons";
 import { PageIntro } from "../components/PageIntro";
 import { pageUrl } from "../utils/routes";
 import { association, brand } from "../data/content";
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
-const pillarIcons: ConceptIcon[] = ["comunicacion", "lsa", "conexion"];
+const pillarIcons: IconName[] = ["comunicacion", "manos", "conexion"];
 
 export function BrandPage() {
   return (
@@ -29,7 +29,7 @@ export function BrandPage() {
             <ul className="brand-page__pillars">
               {brand.pillars.map((pillar, index) => (
                 <li key={pillar.label}>
-                  <span aria-hidden="true"><ConceptTagIcon type={pillarIcons[index]} /></span>
+                  <span aria-hidden="true"><Icon type={pillarIcons[index]} /></span>
                   <div>
                     <strong>{pillar.label}</strong>
                     <p>{pillar.detail}</p>

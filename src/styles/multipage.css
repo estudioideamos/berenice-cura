@@ -203,9 +203,37 @@
 
 /* Contact */
 .contact-page__options { padding-top: clamp(5rem, 8vw, 8rem); }
+.contact-page__form { background: var(--paper); }
+.contact-page__form-grid { display: grid; grid-template-columns: minmax(280px, .42fr) minmax(0, .58fr); gap: clamp(3rem, 7vw, 7rem); align-items: start; }
+.contact-page__form-grid h2 { max-width: 460px; margin: 0 0 1rem; font-size: clamp(2rem, 2.8vw, 3rem); font-weight: 540; letter-spacing: -.04em; line-height: 1.1; }
+.contact-page__form-grid > div:first-child > p:not(.eyebrow) { max-width: 420px; color: var(--ink-soft); font-size: .92rem; line-height: 1.55; }
+.contact-form { display: grid; gap: 1.3rem; max-width: 560px; }
+.contact-form label { display: grid; gap: .5rem; color: var(--ink); font-size: .64rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: .85rem 1rem;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 450;
+  letter-spacing: normal;
+  text-transform: none;
+  transition: border-color 200ms ease;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus { border-color: var(--gold); outline: none; }
+.contact-form textarea { resize: vertical; }
+.contact-form button { justify-self: start; margin-top: .3rem; }
+.contact-form__status { margin: 0; padding: .8rem 1rem; border-left: 3px solid var(--gold); background: var(--cream); font-size: .78rem; }
 .contact-page__direct { color: var(--ink); background: var(--lavender); }
 .contact-page__direct-grid { display: grid; grid-template-columns: 1fr minmax(260px, .36fr); gap: clamp(4rem, 9vw, 9rem); align-items: center; }
-.contact-page__direct h2 { max-width: 780px; margin-bottom: 3rem; font-size: clamp(3.5rem, 7vw, 7rem); font-weight: 540; letter-spacing: -.07em; line-height: .86; }
+.contact-page__direct h2 { max-width: 500px; margin-bottom: 1.8rem; font-size: clamp(2rem, 2.8vw, 3.1rem); font-weight: 540; letter-spacing: -.04em; line-height: 1.1; }
 .contact-page__direct dl { margin: 0; border-top: 1px solid var(--line); }
 .contact-page__direct dl > div { display: grid; grid-template-columns: 170px 1fr; gap: 1rem; padding: 1.3rem 0; border-bottom: 1px solid var(--line); }
 .contact-page__direct dt { color: var(--gold); font-size: .6rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
@@ -268,6 +296,7 @@
   .brand-page__bridge img { aspect-ratio: .95; }
   .book-page__presentation .book-section__content h2 { font-size: clamp(3rem, 13vw, 5rem); }
   .book-page .fragments__header > div h2 { font-size: clamp(3rem, 13vw, 5rem); }
+  .contact-page__form-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .contact-page__direct-grid { grid-template-columns: 1fr; }
   .contact-page__direct dl > div { grid-template-columns: 1fr; gap: .5rem; }
   .contact-page__direct dd { flex-direction: column; align-items: flex-start; }

@@ -1,3 +1,4 @@
+import { ContactForm } from "../components/ContactForm";
 import { PageIntro } from "../components/PageIntro";
 import { contact, contactMessages, whatsappUrl } from "../data/content";
 
@@ -20,6 +21,17 @@ export function ContactPage() {
           <a className="contact-card" href={whatsappUrl(contactMessages.training, 1)} target="_blank" rel="noreferrer"><span>02 / Capacitaciones</span><strong>Solicitar información</strong><small>Accesibilidad y Lengua de Señas Argentina</small><i aria-hidden="true">↗</i></a>
           <a className="contact-card" href={whatsappUrl(contactMessages.activity)} target="_blank" rel="noreferrer"><span>03 / Actividades</span><strong>Invitar a Berenice</strong><small>Encuentros y sensibilización</small><i aria-hidden="true">↗</i></a>
           <a className="contact-card" href={whatsappUrl(contactMessages.book)} target="_blank" rel="noreferrer"><span>04 / Libro</span><strong>Consultar por un ejemplar</strong><small>WhatsApp · {contact.phones[0].display}</small><i aria-hidden="true">↗</i></a>
+        </div>
+      </section>
+
+      <section className="contact-page__form section" aria-labelledby="contact-form-title">
+        <div className="shell contact-page__form-grid">
+          <div data-reveal>
+            <p className="eyebrow">Escribinos</p>
+            <h2 id="contact-form-title">Contanos en qué podemos ayudarte.</h2>
+            <p>Completá el formulario y se abre WhatsApp con tu mensaje listo para enviar a la asociación.</p>
+          </div>
+          <div data-reveal><ContactForm /></div>
         </div>
       </section>
 

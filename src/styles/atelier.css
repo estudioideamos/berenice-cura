@@ -252,7 +252,8 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
 .association__resources li > div > span { display: block; margin-bottom: .4rem; color: var(--gold); font-family: var(--serif); font-size: .95rem; font-weight: 500; line-height: 1; }
 .association__resources strong { display: block; margin-bottom: .5rem; font-family: var(--sans); font-size: .92rem; font-weight: 700; letter-spacing: -.01em; }
 .association__resources p { max-width: 440px; margin: 0 0 .8rem; color: var(--ink-soft); font-size: .8rem; line-height: 1.5; }
-.association__resources a { color: var(--ink); font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.association__resources button { display: inline-flex; align-items: center; gap: .35rem; padding: 0; border: 0; color: var(--ink); background: none; font-family: var(--sans); font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; cursor: pointer; }
+.association__resources button:hover { color: var(--gold); }
 
 /* Brand */
 .hands-brand { overflow: hidden; color: var(--paper); background: var(--ink-deep); }

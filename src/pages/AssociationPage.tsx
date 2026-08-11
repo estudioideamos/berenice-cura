@@ -1,12 +1,14 @@
-import { ActivityIcon, ImpactRouteIcon, type ActivityIcon as ActivityIconType, type ImpactIcon } from "../components/AssociationIcons";
+import { useState } from "react";
+import { Icon, type IconName } from "../components/Icons";
+import { ImageLightbox } from "../components/ImageLightbox";
 import { ListeningAtlas } from "../components/ListeningAtlas";
 import { PageIntro } from "../components/PageIntro";
 import { association, contactMessages, whatsappUrl } from "../data/content";
 import { impactRoute } from "../data/experience";
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
-const impactIcons: ImpactIcon[] = ["reconocer", "acercar", "construir", "participar"];
-const activityIcons: ActivityIconType[] = ["talleres", "capacitaciones", "sensibilizacion", "proyectos"];
+const impactIcons: IconName[] = ["reconocer", "conexion", "construir", "participar"];
+const activityIcons: IconName[] = ["manos", "capacitaciones", "sensibilizacion", "proyectos"];
 const resources = [
   {
     title: "Accesibilidad en la comunicación",
@@ -26,6 +28,8 @@ const resources = [
 ] as const;
 
 export function AssociationPage() {
+  const [openResource, setOpenResource] = useState<(typeof resources)[number] | null>(null);
+
   return (
     <main id="contenido" className="internal-page">
       <PageIntro
@@ -55,7 +59,7 @@ export function AssociationPage() {
             {impactRoute.map((step, index) => (
               <li key={step.number}>
                 <span aria-hidden="true">{step.number}</span>
-                <ImpactRouteIcon type={impactIcons[index]} />
+                <Icon type={impactIcons[index]} />
                 <strong>{step.label}</strong>
                 <p>{step.text}</p>
               </li>
@@ -72,7 +76,7 @@ export function AssociationPage() {
             <ul className="association__activities">
               {association.activities.map((activity, index) => (
                 <li key={activity}>
-                  <span aria-hidden="true"><ActivityIcon type={activityIcons[index]} /></span>
+                  <span aria-hidden="true"><Icon type={activityIcons[index]} /></span>
                   {activity}
                 </li>
               ))}
@@ -87,7 +91,7 @@ export function AssociationPage() {
                   <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                   <strong>{resource.title}</strong>
                   <p>{resource.text}</p>
-                  <a href={asset(resource.image)} target="_blank" rel="noreferrer">Ver material completo <span aria-hidden="true">↗</span></a>
+                  <button type="button" onClick={() => setOpenResource(resource)}>Ver material completo <span aria-hidden="true">↗</span></button>
                 </div>
               </li>
             ))}
@@ -103,6 +107,15 @@ export function AssociationPage() {
         </div>
         <div className="shell"><ListeningAtlas /></div>
       </section>
+
+      {openResource ? (
+        <ImageLightbox
+          src={asset(openResource.image)}
+          alt={openResource.title}
+          caption={openResource.title}
+          onClose={() => setOpenResource(null)}
+        />
+      ) : null}
     </main>
   );
 }
