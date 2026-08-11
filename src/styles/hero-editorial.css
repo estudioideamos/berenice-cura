@@ -184,7 +184,7 @@
   .hero--association .hero__identity .association-brand__type small { max-width: 190px; font-size: .5rem; }
   .hero--association .hero__identity > p { font-size: .5rem; }
   .hero--association .hero__question { margin-bottom: .8rem; font-size: 1.15rem; }
-  .hero--association h1 { max-width: 940px; font-size: clamp(3.4rem, 4.15vw, 5rem); line-height: .9; }
+  .hero--association h1 { max-width: 940px; font-size: 5rem; line-height: .9; }
   .hero--association .hero__mission { max-width: 590px; margin-top: .85rem; font-size: .78rem; }
   .hero--association .hero__actions { margin-top: 1rem; }
   .hero--association .hero__actions .button { min-height: 42px; padding-block: .68rem; }

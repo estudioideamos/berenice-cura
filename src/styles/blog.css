@@ -171,12 +171,14 @@ span.blog-pagination__arrow { opacity: .3; }
 .blog-entry figure img { width: 100%; aspect-ratio: 1.5; object-fit: cover; }
 .blog-entry figure figcaption { padding: .65rem .75rem; color: var(--ink-soft); border: 1px solid var(--line); border-top: 0; font-size: .5rem; letter-spacing: .04em; }
 .blog-entry__body > p {
+  max-width: 640px;
   color: var(--ink-soft);
   font-family: var(--serif);
-  font-size: clamp(2.2rem, 2.2vw, 2.6rem);
-  line-height: 1.45;
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+  line-height: 1.7;
 }
-.blog-entry__body .button { margin-top: 1.5rem; }
+.blog-entry__body > p + p { margin-top: 1.3rem; }
+.blog-entry__body .button { margin-top: 2rem; }
 .blog-entry__infographic { padding: clamp(1.5rem,3vw,2.4rem); margin: clamp(2.5rem,5vw,4rem) 0; color: var(--paper); background: var(--ink-deep); }
 .blog-entry__infographic h2 { max-width: 520px; margin: 0 0 1.6rem; color: var(--paper); font-size: clamp(2.2rem, 4.2vw, 3.8rem); font-weight: 520; letter-spacing: -.008em; line-height: .94; }
 .blog-entry__infographic ol { display: grid; padding: 0; margin: 0; list-style: none; }
