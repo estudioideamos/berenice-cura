@@ -88,7 +88,7 @@
   font-family: var(--serif);
   font-size: clamp(3.35rem, 13vw, 7.8rem);
   font-weight: 400;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.035em;
   line-height: 0.83;
 }
 .hero h1 span, .hero h1 em { display: block; }

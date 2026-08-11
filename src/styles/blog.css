@@ -30,7 +30,7 @@
   margin: 0;
   font-size: clamp(3.2rem,6.4vw,6.7rem);
   font-weight: 520;
-  letter-spacing: -.067em;
+  letter-spacing: -.032em;
   line-height: .88;
 }
 .blog-preview__actions { display: flex; flex-direction: column; align-items: flex-end; gap: .9rem; }
@@ -112,7 +112,7 @@
   margin-bottom: .7rem;
   font-size: clamp(1.3rem,1.6vw,1.75rem);
   font-weight: 560;
-  letter-spacing: -.02em;
+  letter-spacing: -.006em;
   line-height: 1.12;
 }
 .blog-card h3 a { text-decoration: none; }
@@ -178,7 +178,7 @@ span.blog-pagination__arrow { opacity: .3; }
 }
 .blog-entry__body .button { margin-top: 1.5rem; }
 .blog-entry__infographic { padding: clamp(1.5rem,3vw,2.4rem); margin: clamp(2.5rem,5vw,4rem) 0; color: var(--paper); background: var(--ink-deep); }
-.blog-entry__infographic h2 { max-width: 520px; margin: 0 0 1.6rem; color: var(--paper); font-size: clamp(2.2rem,4.2vw,3.8rem); font-weight: 520; letter-spacing: -.055em; line-height: .94; }
+.blog-entry__infographic h2 { max-width: 520px; margin: 0 0 1.6rem; color: var(--paper); font-size: clamp(2.2rem,4.2vw,3.8rem); font-weight: 520; letter-spacing: -.008em; line-height: .94; }
 .blog-entry__infographic ol { display: grid; padding: 0; margin: 0; list-style: none; }
 .blog-entry__infographic li { display: grid; grid-template-columns: 42px 1fr; gap: .8rem; align-items: center; min-height: 62px; border-top: 1px solid rgba(251,247,237,.14); }
 .blog-entry__infographic li > span { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid rgba(223,174,88,.6); border-radius: 50%; color: var(--signal); font-size: .5rem; font-weight: 700; }
@@ -203,7 +203,7 @@ span.blog-pagination__arrow { opacity: .3; }
   border: 1px solid var(--line);
   background: var(--cream);
 }
-.blog-admin aside h2 { font-size: clamp(2.4rem,4vw,4rem); font-weight: 520; letter-spacing: -.055em; line-height: .94; }
+.blog-admin aside h2 { font-size: clamp(2.4rem,4vw,4rem); font-weight: 520; letter-spacing: -.008em; line-height: .94; }
 .blog-admin aside > p:not(.eyebrow) { color: var(--ink-soft); font-size: .78rem; }
 .blog-admin aside > a { display: block; padding: .9rem 0; border-top: 1px solid var(--line); font-size: .7rem; font-weight: 700; text-decoration: none; }
 .blog-admin form { display: grid; gap: 1.4rem; }

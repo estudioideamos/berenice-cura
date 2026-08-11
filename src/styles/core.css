@@ -101,7 +101,7 @@ p { text-wrap: pretty; }
   font-family: var(--serif);
   font-size: clamp(3.4rem, 7.2vw, 7rem);
   font-weight: 520;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.03em;
   line-height: 0.87;
 }
 .section-heading__description {
