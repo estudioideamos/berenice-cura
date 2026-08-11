@@ -5,14 +5,19 @@
 
   .primary-nav {
     position: static;
+    inset: auto;
+    z-index: auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: 1.5rem;
     padding: 0;
     border: 0;
     background: transparent;
     opacity: 1;
     visibility: visible;
+    overflow: visible;
   }
   .primary-nav__glow,
   .primary-nav__contact { display: none; }
