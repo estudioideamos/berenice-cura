@@ -1,8 +1,10 @@
+import { ConceptTagIcon, type ConceptIcon } from "../components/AssociationIcons";
 import { PageIntro } from "../components/PageIntro";
 import { pageUrl } from "../utils/routes";
 import { association, brand } from "../data/content";
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
+const pillarIcons: ConceptIcon[] = ["comunicacion", "lsa", "conexion"];
 
 export function BrandPage() {
   return (
@@ -17,7 +19,7 @@ export function BrandPage() {
       <section className="brand-page__feature section" aria-labelledby="brand-meaning-title">
         <div className="shell brand-page__grid">
           <figure className="brand-page__visual" data-reveal>
-            <img src={asset("home-primero-manos-editorial.webp")} width="683" height="1024" alt="Ilustración editorial de dos manos formando un corazón con Lengua de Señas" />
+            <img src={asset("primero-mis-manos-editorial.webp")} width="1536" height="1536" alt="Ilustración editorial de dos manos formando un corazón enmarcadas en un arco" />
             <figcaption>{brand.registration}</figcaption>
           </figure>
           <div data-reveal>
@@ -25,9 +27,9 @@ export function BrandPage() {
             <h2 id="brand-meaning-title">Las manos también hablan, sienten y construyen puentes.</h2>
             <p className="brand-page__lead">El concepto reúne comunicación, Lengua de Señas Argentina y conexión humana. También enlaza la identidad de la asociación con el libro de Berenice Cura.</p>
             <ul className="brand-page__pillars">
-              {brand.pillars.map((pillar) => (
+              {brand.pillars.map((pillar, index) => (
                 <li key={pillar.label}>
-                  <span aria-hidden="true" />
+                  <span aria-hidden="true"><ConceptTagIcon type={pillarIcons[index]} /></span>
                   <div>
                     <strong>{pillar.label}</strong>
                     <p>{pillar.detail}</p>
