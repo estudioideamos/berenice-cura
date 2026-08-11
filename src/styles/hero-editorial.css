@@ -78,7 +78,7 @@
 .hero--association h1 {
   max-width: 1060px;
   margin: 0;
-  font-size: clamp(4.4rem, 5.2vw, 7.4rem);
+  font-size: clamp(2rem, 5.2vw, 7.4rem);
   font-weight: 520;
   letter-spacing: -.03em;
   line-height: .87;
