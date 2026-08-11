@@ -118,7 +118,7 @@
 .home-people__image img { width: 100%; aspect-ratio: 1.35; object-fit: cover; filter: saturate(.76) contrast(1.04); }
 .home-people__grid h2 { margin-bottom: 1.2rem; font-size: clamp(4rem, 6.7vw, 7rem); font-weight: 540; letter-spacing: -.065em; line-height: .86; }
 .home-people__grid > div:last-child { padding-top: .15rem; }
-.home-people__grid > div:last-child > p:not(.eyebrow) { max-width: 540px; color: var(--ink-soft); font-family: var(--serif); font-size: clamp(1.3rem, 1.95vw, 1.75rem); line-height: 1.38; }
+.home-people__grid > div:last-child > p:not(.eyebrow) { max-width: 540px; color: var(--ink-soft); font-family: var(--sans); font-weight: 500; font-size: clamp(1.05rem, 1.4vw, 1.3rem); line-height: 1.5; }
 
 /* Page opening */
 .internal-page { padding-top: var(--header-height); }
@@ -146,7 +146,7 @@
 .association-page__visual figcaption { position: absolute; z-index: 3; left: 1.1rem; bottom: 1.1rem; padding: .6rem .85rem; color: var(--paper); background: rgba(11,23,48,.82); backdrop-filter: blur(10px); font-size: .52rem; letter-spacing: .13em; text-transform: uppercase; }
 .association-page__statement h2 { max-width: 560px; margin: 0; font-size: clamp(2rem, 2.8vw, 3.1rem); font-weight: 540; letter-spacing: -.04em; line-height: 1.1; }
 .association-page__about { display: grid; gap: 1.1rem; max-width: 560px; margin-top: 1.6rem; }
-.association-page__about p { margin: 0; color: var(--ink-soft); font-family: var(--serif); font-size: clamp(1rem, 1.3vw, 1.15rem); line-height: 1.55; }
+.association-page__about p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: clamp(1rem, 1.3vw, 1.15rem); line-height: 1.6; }
 .association-page__mission .impact-route { margin-top: clamp(4rem, 8vw, 8rem); }
 .association-page__actions { background: var(--paper); }
 .association-page__actions .association__program { margin-top: 0; }
@@ -186,7 +186,7 @@
 .brand-page__bridge img { width: 100%; aspect-ratio: 1.45; object-fit: cover; box-shadow: 0 28px 54px -22px rgba(11,23,48,.4); transition: transform 650ms cubic-bezier(.2,.8,.2,1); }
 .brand-page__bridge img:hover { transform: scale(1.02); }
 .brand-page__bridge h2 { max-width: 480px; margin-bottom: 1.2rem; font-size: clamp(2.6rem, 4.4vw, 4.6rem); font-weight: 540; letter-spacing: -.055em; line-height: .96; }
-.brand-page__bridge p:not(.eyebrow) { max-width: 480px; color: var(--ink-soft); font-family: var(--serif); font-size: clamp(1.2rem, 1.8vw, 1.55rem); line-height: 1.4; }
+.brand-page__bridge p:not(.eyebrow) { max-width: 480px; color: var(--ink-soft); font-family: var(--sans); font-weight: 500; font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.55; }
 .brand-page__bridge .button { margin-top: 1.6rem; }
 
 /* Book */
