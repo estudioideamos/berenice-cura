@@ -16,7 +16,7 @@
   --signal: #dfae58;
   --line: rgba(11, 23, 48, 0.18);
   --shell: min(1380px, calc(100% - clamp(2rem, 5vw, 6rem)));
-  --serif: "Bodoni Moda Variable", "Bodoni Moda", Didot, serif;
+  --serif: "Fraunces Variable", "Fraunces", Didot, serif;
   --sans: "Manrope Variable", "Manrope", Arial, sans-serif;
   --header-height: 78px;
   --scroll-progress: 0;
@@ -38,6 +38,7 @@ body {
   font-family: var(--sans);
   font-size: 1rem;
   line-height: 1.65;
+  font-optical-sizing: auto;
 }
 
 body::selection { color: var(--paper); background: var(--ink); }
@@ -48,7 +49,7 @@ button, input, textarea, select { font: inherit; }
 :focus-visible { outline: 3px solid #ca983d; outline-offset: 4px; }
 h1, h2, h3, p, blockquote, figure { margin-top: 0; }
 h1, h2, h3 { text-wrap: balance; }
-h1, h2, h3, blockquote { font-family: var(--serif); font-optical-sizing: auto; }
+h1, h2, h3, blockquote { font-family: var(--serif); }
 p { text-wrap: pretty; }
 
 .shell { width: var(--shell); margin-inline: auto; }
