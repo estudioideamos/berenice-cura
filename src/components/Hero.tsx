@@ -28,7 +28,7 @@ export function Hero() {
           </div>
         </div>
         <div className="hero__media" data-hero-item>
-          <img className="hero__artwork" src={asset("hero-manos-editorial-v2.webp")} width="1600" height="1600" alt="Ilustración editorial de dos manos que se acercan entre líneas doradas y nubes" />
+          <img className="hero__artwork" src={asset("manos-conexion.webp")} width="1536" height="1024" alt="Ilustración editorial de dos manos que se acercan" />
           <div className="hero__concept" aria-hidden="true"><span>Proyecto e iniciativa</span><strong>{association.concept}</strong></div>
           <div className="hero__coordinate hero__coordinate--top" aria-hidden="true">38°20′S / 59°08′O</div>
           <div className="hero__coordinate hero__coordinate--bottom" aria-hidden="true">Tandil · Argentina</div>
