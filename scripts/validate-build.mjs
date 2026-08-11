@@ -17,7 +17,7 @@ const pages = [
 const requiredAssets = [
   "book-cover.webp", "book-back.webp", "berenice-cura-retrato.webp",
   "isotipo-accsht-original.png", "qr-instagram.webp", "home-primero-manos-editorial.webp", "primero-mis-manos-editorial.webp",
-  "manos-conexion.webp", "home-comunidad-editorial.webp", "home-fondo-conexion.webp", "asociacion-mision.webp",
+  "manos-conexion.webp", "hero-manos-editorial.webp", "home-comunidad-editorial.webp", "home-fondo-conexion.webp", "asociacion-mision.webp",
   "berenice-home-editorial.webp", "home-asociacion-editorial.webp", "home-primero-manos-editorial.webp",
   "libro-fragmento-escuchar.webp", "libro-fragmento-manos.webp",
   "libro-fragmento-gesto.webp", "libro-fragmento-conexion.webp", "whatsapp.svg",
