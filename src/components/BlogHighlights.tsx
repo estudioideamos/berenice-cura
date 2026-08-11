@@ -13,12 +13,15 @@ export function BlogHighlights() {
   const move = (direction: number) => {
     const el = track.current;
     if (!el) return;
-    const width = el.getBoundingClientRect().width;
-    if (direction > 0 && el.scrollLeft + width >= el.scrollWidth - 4) {
+    const card = el.querySelector<HTMLElement>(".blog-card");
+    if (!card) return;
+    const gap = parseFloat(getComputedStyle(el).columnGap || "0");
+    const step = card.getBoundingClientRect().width + gap;
+    if (direction > 0 && el.scrollLeft + el.getBoundingClientRect().width >= el.scrollWidth - 4) {
       el.scrollTo({ left: 0, behavior: "smooth" });
       return;
     }
-    el.scrollBy({ left: direction * width * .82, behavior: "smooth" });
+    el.scrollBy({ left: direction * step, behavior: "smooth" });
   };
 
   useEffect(() => {
