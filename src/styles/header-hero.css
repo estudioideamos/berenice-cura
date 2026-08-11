@@ -17,10 +17,10 @@
 }
 .site-header__inner { display: flex; height: 100%; align-items: center; justify-content: space-between; }
 .wordmark { display: flex; flex-direction: column; text-decoration: none; }
-.wordmark span { font-family: var(--serif); font-size: 1rem; line-height: 1.1; }
+.wordmark span { font-family: var(--serif); font-size: .95rem; line-height: 1.1; }
 .wordmark small {
   color: var(--ink-soft);
-  font-size: 0.58rem;
+  font-size: .65rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -78,7 +78,7 @@
   margin-bottom: 1.2rem;
   color: var(--ink-soft);
   font-family: var(--serif);
-  font-size: clamp(1.35rem, 4vw, 2.25rem);
+  font-size: clamp(2.2rem, 4vw, 2.6rem);
   font-style: italic;
   line-height: 1.18;
 }
@@ -86,7 +86,7 @@
 .hero h1 {
   margin-bottom: 1.2rem;
   font-family: var(--serif);
-  font-size: clamp(3.35rem, 13vw, 7.8rem);
+  font-size: clamp(3.4rem, 13vw, 7.8rem);
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 0.83;
@@ -96,13 +96,13 @@
 .hero__cover-line {
   margin-bottom: 0.3rem;
   font-family: var(--serif);
-  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-size: clamp(.95rem, 2.2vw, 2.2rem);
   font-style: italic;
 }
 .hero__author {
   margin-bottom: 2rem;
   color: var(--ink-soft);
-  font-size: 0.88rem;
+  font-size: .95rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -115,7 +115,7 @@
   right: -0.5rem;
   margin: 0;
   color: var(--ink-soft);
-  font-size: 0.62rem;
+  font-size: .65rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -147,7 +147,7 @@
   align-items: center;
   gap: 0.75rem;
   transform: translateX(-50%);
-  font-size: 0.68rem;
+  font-size: .65rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-decoration: none;
@@ -229,7 +229,7 @@
   border-bottom: 1px solid currentColor;
   color: inherit;
   background: transparent;
-  font-size: 0.76rem;
+  font-size: .78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;

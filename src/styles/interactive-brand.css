@@ -14,7 +14,7 @@
 
 .association-brand__type { gap: .18rem; }
 .association-brand__type strong {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: -.012em;
 }
@@ -26,18 +26,18 @@
 }
 .association-brand--compact .association-brand__type { gap: .12rem; }
 .association-brand--compact .association-brand__type strong {
-  font-size: .82rem;
+  font-size: .78rem;
   letter-spacing: -.008em;
 }
 .association-brand--compact .association-brand__type small {
   max-width: 188px;
-  font-size: .4rem;
+  font-size: .5rem;
   letter-spacing: .075em;
   line-height: 1.22;
 }
 .footer-brand .association-brand__type strong {
   color: var(--paper);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 .footer-brand .association-brand__type small {
   max-width: 280px;
@@ -69,8 +69,8 @@
 .editorial-marquee__lane { overflow: hidden; }
 .editorial-marquee__lane + .editorial-marquee__lane {
   border-top: 1px solid rgba(23, 36, 63, .12);
-  color: var(--ink);
-  background: var(--signal);
+  color: var(--ink-soft);
+  background: rgba(223, 174, 88, .07);
 }
 .editorial-marquee__track {
   display: flex;
@@ -89,19 +89,19 @@
   gap: clamp(1.25rem, 2vw, 2rem);
   padding: .42rem clamp(1.25rem, 2vw, 2rem) .48rem 0;
   font-family: var(--sans);
-  font-size: clamp(1.05rem, 1.5vw, 1.55rem);
+  font-size: clamp(.85rem, 1vw, 1.05rem);
   font-weight: 500;
   letter-spacing: -.002em;
   line-height: 1;
   white-space: nowrap;
+  opacity: .78;
 }
 .editorial-marquee__track i {
-  color: var(--signal);
+  color: var(--gold);
   font-family: var(--sans);
   font-size: .34em;
   font-style: normal;
 }
-.editorial-marquee__lane + .editorial-marquee__lane i { color: var(--paper); }
 @keyframes editorial-marquee { to { transform: translateX(-50%); } }
 
 .whatsapp-float {
@@ -130,7 +130,7 @@
   opacity: 0;
   color: var(--paper);
   background: var(--ink-deep);
-  font-size: .66rem;
+  font-size: .65rem;
   font-weight: 700;
   letter-spacing: .05em;
   pointer-events: none;
@@ -157,7 +157,7 @@
   color: rgba(251,247,237,.82);
   background: rgba(7,16,34,.78);
   backdrop-filter: blur(10px);
-  font-size: .49rem;
+  font-size: .5rem;
   letter-spacing: .08em;
   line-height: 1.35;
   text-transform: uppercase;
@@ -169,7 +169,7 @@
 
 @media (max-width: 767px) {
   .association-brand--compact > img { width: 32px; height: 42px; }
-  .editorial-marquee__track span { padding-block: .38rem .44rem; font-size: 1.05rem; }
+  .editorial-marquee__track span { padding-block: .38rem .44rem; font-size: .95rem; }
   .whatsapp-float { width: 56px; height: 56px; }
   .whatsapp-float img { width: 28px; height: 28px; }
   .whatsapp-float > span { display: none; }

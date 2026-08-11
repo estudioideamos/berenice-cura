@@ -28,7 +28,7 @@
 .blog-index__heading h2 {
   max-width: 940px;
   margin: 0;
-  font-size: clamp(3.2rem,6.4vw,6.7rem);
+  font-size: clamp(3.4rem, 6.4vw, 6.6rem);
   font-weight: 520;
   letter-spacing: -.032em;
   line-height: .88;
@@ -97,20 +97,20 @@
   color: var(--ink);
   background: var(--signal);
   border-radius: 50%;
-  font-size: .54rem;
+  font-size: .5rem;
   font-weight: 700;
 }
 .blog-card > p:first-of-type {
   margin-bottom: .7rem;
   color: var(--gold);
-  font-size: .57rem;
+  font-size: .5rem;
   font-weight: 700;
   letter-spacing: .15em;
   text-transform: uppercase;
 }
 .blog-card h3 {
   margin-bottom: .7rem;
-  font-size: clamp(1.3rem,1.6vw,1.75rem);
+  font-size: clamp(2.2rem, 1.6vw, 2.6rem);
   font-weight: 560;
   letter-spacing: -.006em;
   line-height: 1.12;
@@ -169,25 +169,25 @@ span.blog-pagination__arrow { opacity: .3; }
 }
 .blog-entry figure { position: sticky; top: calc(var(--header-height) + 1.5rem); margin: 0; }
 .blog-entry figure img { width: 100%; aspect-ratio: 1.5; object-fit: cover; }
-.blog-entry figure figcaption { padding: .65rem .75rem; color: var(--ink-soft); border: 1px solid var(--line); border-top: 0; font-size: .55rem; letter-spacing: .04em; }
+.blog-entry figure figcaption { padding: .65rem .75rem; color: var(--ink-soft); border: 1px solid var(--line); border-top: 0; font-size: .5rem; letter-spacing: .04em; }
 .blog-entry__body > p {
   color: var(--ink-soft);
   font-family: var(--serif);
-  font-size: clamp(1.3rem,2.2vw,1.9rem);
+  font-size: clamp(2.2rem, 2.2vw, 2.6rem);
   line-height: 1.45;
 }
 .blog-entry__body .button { margin-top: 1.5rem; }
 .blog-entry__infographic { padding: clamp(1.5rem,3vw,2.4rem); margin: clamp(2.5rem,5vw,4rem) 0; color: var(--paper); background: var(--ink-deep); }
-.blog-entry__infographic h2 { max-width: 520px; margin: 0 0 1.6rem; color: var(--paper); font-size: clamp(2.2rem,4.2vw,3.8rem); font-weight: 520; letter-spacing: -.008em; line-height: .94; }
+.blog-entry__infographic h2 { max-width: 520px; margin: 0 0 1.6rem; color: var(--paper); font-size: clamp(2.2rem, 4.2vw, 3.8rem); font-weight: 520; letter-spacing: -.008em; line-height: .94; }
 .blog-entry__infographic ol { display: grid; padding: 0; margin: 0; list-style: none; }
 .blog-entry__infographic li { display: grid; grid-template-columns: 42px 1fr; gap: .8rem; align-items: center; min-height: 62px; border-top: 1px solid rgba(251,247,237,.14); }
 .blog-entry__infographic li > span { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid rgba(223,174,88,.6); border-radius: 50%; color: var(--signal); font-size: .5rem; font-weight: 700; }
-.blog-entry__infographic li > strong { color: var(--paper); font-family: var(--sans); font-size: .72rem; font-weight: 600; letter-spacing: .015em; }
+.blog-entry__infographic li > strong { color: var(--paper); font-family: var(--sans); font-size: .78rem; font-weight: 600; letter-spacing: .015em; }
 .blog-entry__sources { padding: 1.5rem 0; margin: 2.5rem 0 1rem; border-block: 1px solid var(--line); }
-.blog-entry__sources h2 { margin: 0 0 1rem; color: var(--ink); font-family: var(--sans); font-size: .6rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.blog-entry__sources h2 { margin: 0 0 1rem; color: var(--ink); font-family: var(--sans); font-size: .65rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
 .blog-entry__sources ul { padding: 0; margin: 0; list-style: none; }
 .blog-entry__sources li + li { margin-top: .7rem; }
-.blog-entry__sources a { color: var(--ink-soft); font-size: .68rem; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.blog-entry__sources a { color: var(--ink-soft); font-size: .65rem; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
 .blog-admin__section { background: var(--paper); }
 .blog-admin__grid {
@@ -203,9 +203,9 @@ span.blog-pagination__arrow { opacity: .3; }
   border: 1px solid var(--line);
   background: var(--cream);
 }
-.blog-admin aside h2 { font-size: clamp(2.4rem,4vw,4rem); font-weight: 520; letter-spacing: -.008em; line-height: .94; }
+.blog-admin aside h2 { font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 520; letter-spacing: -.008em; line-height: .94; }
 .blog-admin aside > p:not(.eyebrow) { color: var(--ink-soft); font-size: .78rem; }
-.blog-admin aside > a { display: block; padding: .9rem 0; border-top: 1px solid var(--line); font-size: .7rem; font-weight: 700; text-decoration: none; }
+.blog-admin aside > a { display: block; padding: .9rem 0; border-top: 1px solid var(--line); font-size: .65rem; font-weight: 700; text-decoration: none; }
 .blog-admin form { display: grid; gap: 1.4rem; }
 .blog-admin label { display: grid; gap: .55rem; color: var(--ink); font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .blog-admin input,
@@ -216,18 +216,18 @@ span.blog-pagination__arrow { opacity: .3; }
   padding: .9rem 1rem;
   color: var(--ink);
   background: var(--cream);
-  font-size: .9rem;
+  font-size: .95rem;
   font-weight: 450;
   letter-spacing: normal;
   text-transform: none;
 }
 .blog-admin textarea { resize: vertical; }
-.blog-admin label small { color: var(--ink-soft); font-size: .6rem; font-weight: 500; letter-spacing: normal; text-transform: none; }
+.blog-admin label small { color: var(--ink-soft); font-size: .65rem; font-weight: 500; letter-spacing: normal; text-transform: none; }
 .blog-admin__row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.2rem; }
 .blog-admin__check { display: flex !important; min-height: 52px; align-items: center; grid-template-columns: auto 1fr; align-self: end; }
 .blog-admin__check input { width: 22px; height: 22px; }
 .blog-admin form > .button { justify-self: start; min-width: 190px; }
-.blog-admin__status { padding: 1rem; margin: 0; border-left: 3px solid var(--gold); background: var(--cream); font-size: .75rem; }
+.blog-admin__status { padding: 1rem; margin: 0; border-left: 3px solid var(--gold); background: var(--cream); font-size: .78rem; }
 .blog-admin__status--error { border-color: #a53b3b; }
 .blog-admin__status--success { border-color: #2c7a5a; }
 
