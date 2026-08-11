@@ -67,7 +67,7 @@
 .home-paths__header h2 {
   max-width: 850px;
   margin: 0;
-  font-size: clamp(3.4rem, 7vw, 7.4rem);
+  font-size: clamp(2rem, 7vw, 7.4rem);
   font-weight: 540;
   letter-spacing: -0.035em;
   line-height: 0.86;

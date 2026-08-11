@@ -28,7 +28,7 @@
 .blog-index__heading h2 {
   max-width: 1000px;
   margin: 0;
-  font-size: clamp(3.4rem, 6.4vw, 6.6rem);
+  font-size: clamp(2rem, 6.4vw, 6.6rem);
   font-weight: 520;
   letter-spacing: -.032em;
   line-height: .88;
