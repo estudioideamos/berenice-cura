@@ -46,7 +46,8 @@
   position: relative;
   z-index: 3;
   display: flex;
-  width: min(100% - 2rem, 1080px);
+  width: min(100vw - 2rem, 1080px);
+  max-width: none;
   min-height: 0;
   align-items: flex-start;
   justify-content: center;
@@ -78,7 +79,7 @@
 .hero--association h1 {
   max-width: 1060px;
   margin: 0;
-  font-size: clamp(2rem, 5.2vw, 7.4rem);
+  font-size: clamp(2rem, 7.2vw, 7.4rem);
   font-weight: 520;
   letter-spacing: -.03em;
   line-height: .87;

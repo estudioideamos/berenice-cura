@@ -23,6 +23,8 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
 .primary-nav li a:hover,
 .primary-nav li a:focus-visible { color: var(--ink); }
 .primary-nav .button { padding-inline: 1.25rem; color: var(--paper); }
+.primary-nav .button:hover,
+.primary-nav .button:focus-visible { color: var(--ink); }
 
 /* Hero */
 .hero {
