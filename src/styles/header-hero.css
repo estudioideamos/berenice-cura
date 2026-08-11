@@ -48,7 +48,7 @@
 }
 .menu-toggle[aria-expanded="true"] > span:nth-of-type(2) { transform: translateY(3.5px) rotate(45deg); }
 .menu-toggle[aria-expanded="true"] > span:nth-of-type(3) { transform: translateY(-3.5px) rotate(-45deg); }
-.site-header--menu-open { border-bottom-color: transparent; background: transparent; backdrop-filter: none; }
+.site-header.site-header--menu-open { border-bottom-color: transparent; background: transparent; backdrop-filter: none; }
 .site-header--menu-open .wordmark .association-brand__type strong,
 .site-header--menu-open .wordmark .association-brand__type small { color: var(--paper); }
 .site-header--menu-open .menu-toggle { border-color: rgba(251,247,237,.4); color: var(--paper); }
