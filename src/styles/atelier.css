@@ -12,7 +12,16 @@ html { scroll-padding-top: calc(var(--header-height) + 1rem); }
 .wordmark span { font-family: var(--serif); font-size: 2.2rem; font-weight: 600; letter-spacing: -0.018em; }
 .wordmark small { margin-top: 0.12rem; font-size: .5rem; letter-spacing: 0.22em; }
 .primary-nav ul { gap: clamp(0.75rem, 1.35vw, 1.45rem); }
-.primary-nav li a { font-size: .78rem; font-weight: 620; letter-spacing: 0.01em; }
+.primary-nav li a {
+  color: var(--ink-soft);
+  font-size: .68rem;
+  font-weight: 650;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  transition: color 220ms ease;
+}
+.primary-nav li a:hover,
+.primary-nav li a:focus-visible { color: var(--ink); }
 .primary-nav .button { padding-inline: 1.25rem; color: var(--paper); }
 
 /* Hero */

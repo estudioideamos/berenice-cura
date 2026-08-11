@@ -45,7 +45,7 @@
 .wordmark span { font-family: inherit; font-size: inherit; line-height: inherit; }
 .wordmark small { margin: 0; }
 .primary-nav a[aria-current="page"] { color: #875f24; }
-.primary-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.primary-nav a[aria-current="page"]::after { right: 0; left: 0; }
 
 .hero__identity { align-items: center; }
 .hero__identity > .association-brand { padding-right: 1.2rem; border-right: 1px solid var(--line); }

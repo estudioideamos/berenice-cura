@@ -7,7 +7,7 @@
     position: static;
     display: flex;
     align-items: center;
-    gap: 1.15rem;
+    gap: 1.5rem;
     padding: 0;
     border: 0;
     background: transparent;
@@ -16,8 +16,10 @@
   .primary-nav ul {
     display: flex;
     align-items: center;
-    gap: clamp(0.75rem, 1.2vw, 1.35rem);
+    gap: clamp(1.1rem, 1.7vw, 1.9rem);
     margin: 0;
+    padding-right: 1.6rem;
+    border-right: 1px solid var(--line);
   }
 
   .primary-nav li {
@@ -26,26 +28,45 @@
 
   .primary-nav li a {
     position: relative;
+    display: flex;
+    align-items: center;
     min-height: 42px;
+  }
+
+  .primary-nav li a::before {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    width: 3px;
+    aspect-ratio: 1;
+    content: "";
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0;
+    transform: translateX(-50%) scale(.4);
+    transition: opacity 220ms ease, transform 220ms ease;
   }
 
   .primary-nav li a::after {
     position: absolute;
-    right: 0;
+    right: 50%;
     bottom: 6px;
-    left: 0;
+    left: 50%;
     height: 1px;
     content: "";
     background: var(--gold);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 180ms ease;
+    transition: left 260ms cubic-bezier(.22,1,.36,1), right 260ms cubic-bezier(.22,1,.36,1);
   }
 
   .primary-nav li a:hover::after,
   .primary-nav li a:focus-visible::after {
-    transform: scaleX(1);
-    transform-origin: left;
+    right: 0;
+    left: 0;
+  }
+
+  .primary-nav a[aria-current="page"]::before {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
   }
 
   .primary-nav .button {
