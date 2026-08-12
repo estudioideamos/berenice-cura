@@ -161,23 +161,17 @@ span.blog-pagination__arrow { opacity: .3; }
 .blog-pagination__pages span[aria-current="page"] { color: var(--paper); background: var(--ink); }
 
 .blog-entry { background: var(--paper); }
-.blog-entry__grid {
-  display: grid;
-  grid-template-columns: minmax(0,1.15fr) minmax(320px,.65fr);
-  gap: clamp(3.5rem,8vw,8rem);
-  align-items: start;
-}
-.blog-entry figure { position: sticky; top: calc(var(--header-height) + 1.5rem); margin: 0; }
-.blog-entry figure img { width: 100%; aspect-ratio: 1.5; object-fit: cover; }
-.blog-entry figure figcaption { padding: .65rem .75rem; color: var(--ink-soft); border: 1px solid var(--line); border-top: 0; font-size: .5rem; letter-spacing: .04em; }
+.blog-entry__hero { margin: 0 0 clamp(3rem,6vw,5rem); }
+.blog-entry__hero img { width: 100%; aspect-ratio: 2.1; object-fit: cover; }
+.blog-entry__hero figcaption { padding: .65rem .75rem; color: var(--ink-soft); border: 1px solid var(--line); border-top: 0; font-size: .5rem; letter-spacing: .04em; }
+.blog-entry__body { max-width: 740px; }
 .blog-entry__body > p {
-  max-width: 640px;
   color: var(--ink-soft);
-  font-family: var(--serif);
-  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
-  line-height: 1.7;
+  font-family: var(--sans);
+  font-size: clamp(1.12rem, 1.3vw, 1.28rem);
+  line-height: 1.78;
 }
-.blog-entry__body > p + p { margin-top: 1.3rem; }
+.blog-entry__body > p + p { margin-top: 1.5rem; }
 .blog-entry__body .button { margin-top: 2rem; }
 .blog-entry__infographic { padding: clamp(1.5rem,3vw,2.4rem); margin: clamp(2.5rem,5vw,4rem) 0; color: var(--paper); background: var(--ink-deep); }
 .blog-entry__infographic h2 { max-width: 520px; margin: 0 0 1.6rem; color: var(--paper); font-size: clamp(2.2rem, 4.2vw, 3.8rem); font-weight: 520; letter-spacing: -.008em; line-height: .94; }
@@ -235,9 +229,7 @@ span.blog-pagination__arrow { opacity: .3; }
 
 @media (max-width: 900px) {
   .blog-preview__viewport { grid-auto-columns: minmax(290px,75%); }
-  .blog-entry__grid,
   .blog-admin__grid { grid-template-columns: 1fr; }
-  .blog-entry figure,
   .blog-admin aside { position: static; }
 }
 
