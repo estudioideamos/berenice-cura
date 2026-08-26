@@ -13,6 +13,7 @@ import { HomePage } from "./pages/HomePage";
 import { BlogPage } from "./pages/BlogPage";
 import { BlogAdminPage } from "./pages/BlogAdminPage";
 import { StorePage } from "./pages/StorePage";
+import { ProductPage } from "./pages/ProductPage";
 import { CollaborationsPage } from "./pages/CollaborationsPage";
 import { currentPage, type SitePage } from "./utils/routes";
 
@@ -25,6 +26,8 @@ const pages: Record<SitePage, () => React.JSX.Element> = {
   contacto: ContactPage,
   "blog-y-novedades": BlogPage,
   tienda: StorePage,
+  "tienda/escuchar-en-otros-sentidos": ProductPage,
+  "tienda/luna-y-el-puente-de-las-manos": ProductPage,
   colaboraciones: CollaborationsPage,
   admin: BlogAdminPage,
 };

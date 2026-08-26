@@ -45,6 +45,8 @@ export default defineConfig({
         contacto: resolve(projectRoot, "contacto/index.html"),
         blog: resolve(projectRoot, "blog-y-novedades/index.html"),
         tienda: resolve(projectRoot, "tienda/index.html"),
+        tiendaLibro: resolve(projectRoot, "tienda/escuchar-en-otros-sentidos/index.html"),
+        tiendaLuna: resolve(projectRoot, "tienda/luna-y-el-puente-de-las-manos/index.html"),
         colaboraciones: resolve(projectRoot, "colaboraciones/index.html"),
         admin: resolve(projectRoot, "admin/index.html"),
       },

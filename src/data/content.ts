@@ -1,3 +1,5 @@
+import type { SitePage } from "../utils/routes";
+
 export const book = {
   title: "Escuchar en otros sentidos",
   subtitle: "Primero mis manos",
@@ -21,9 +23,57 @@ export const book = {
     publisher: null,
     publicationDate: null,
     price: null,
-    purchaseUrl: null,
+    purchaseUrl: "https://mpago.la/1q8ca7k",
   },
 } as const;
+
+export type Product = {
+  slug: string;
+  page: SitePage;
+  title: string;
+  subtitle: string;
+  author: string;
+  audience: string;
+  description: string;
+  longDescription: string;
+  moral?: string;
+  topics: readonly string[];
+  image: string;
+  paymentUrl: string;
+};
+
+export const products: readonly Product[] = [
+  {
+    slug: "escuchar-en-otros-sentidos",
+    page: "tienda/escuchar-en-otros-sentidos",
+    title: book.title,
+    subtitle: book.subtitle,
+    author: book.author,
+    audience: "Docentes, familias e instituciones",
+    description: book.description,
+    longDescription: book.purpose,
+    topics: book.topics,
+    image: "book-cover.webp",
+    paymentUrl: "https://mpago.la/1q8ca7k",
+  },
+  {
+    slug: "luna-y-el-puente-de-las-manos",
+    page: "tienda/luna-y-el-puente-de-las-manos",
+    title: "Luna y el puente de las manos",
+    subtitle: "Cuento infantil",
+    author: "Berenice Cura",
+    audience: "Niñas, niños y familias",
+    description:
+      "Luna es una nena sorda que ve el mundo de una manera especial. Un cuento sobre cómo su clase aprende a comunicarse en Lengua de Señas Argentina y construye, entre todos, un puente donde antes había silencio.",
+    longDescription:
+      "Con la ayuda de su maestra, los compañeros de Luna empiezan a aprender señas simples —hola, gracias, amigo, jugar, te quiero— y descubren que se puede contar historias, cantar y jugar con las manos, el rostro y la mirada. Todo termina en una gran feria de la inclusión, donde Luna cuenta un cuento con señas frente a toda la escuela.",
+    moral:
+      "Cada persona se comunica de una manera diferente. Cuando aprendemos a comprender al otro, construimos un mundo donde todos pueden participar, hacer amigos y sentirse incluidos.",
+    topics: ["Primera infancia", "Lengua de Señas Argentina", "Inclusión escolar", "Comunicación"],
+    image: "luna-editorial-placeholder.webp",
+    paymentUrl: "https://mpago.la/1Q3o92S",
+  },
+] as const;
 
 export const brand = {
   registration: "Registro N.º 3.470.308 · Acta N.º 4.182.539",

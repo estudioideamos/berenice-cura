@@ -1,15 +1,8 @@
-import { Icon, type IconName } from "../components/Icons";
 import { PageIntro } from "../components/PageIntro";
+import { products, contactMessages, whatsappUrl } from "../data/content";
 import { pageUrl } from "../utils/routes";
-import { book, contactMessages, whatsappUrl } from "../data/content";
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
-
-const pillars: Array<{ icon: IconName; label: string; detail: string }> = [
-  { icon: "identidad", label: "Autora", detail: `${book.author}, fundadora de la asociación y comunicadora en Lengua de Señas Argentina.` },
-  { icon: "comunicacion", label: "Contenido", detail: "Reflexiones y herramientas para docentes, familias e instituciones." },
-  { icon: "conexion", label: "Disponibilidad", detail: "Edición coordinada directamente con la asociación." },
-];
 
 export function StorePage() {
   return (
@@ -18,35 +11,24 @@ export function StorePage() {
         index="07"
         eyebrow="Publicaciones · Materiales"
         title="Tienda"
-        description="Accedé al libro de Berenice Cura y a los materiales que la asociación pone a disposición de instituciones y familias."
+        description="Accedé a las publicaciones de Berenice Cura y a los materiales que la asociación pone a disposición de instituciones y familias."
       />
 
-      <section className="brand-page__feature section" aria-labelledby="store-book-title">
-        <div className="shell brand-page__grid">
-          <figure className="brand-page__visual" data-reveal>
-            <img src={asset("tienda-editorial.webp")} width="1536" height="1536" alt="Ilustración editorial de un libro abierto con luz cálida" />
-            <figcaption>Escuchar en otros sentidos · Primero mis manos</figcaption>
-          </figure>
-          <div data-reveal>
-            <p className="eyebrow">El libro</p>
-            <h2 id="store-book-title">Escuchar en otros sentidos, disponible para vos.</h2>
-            <p className="brand-page__lead">{book.description}</p>
-            <ul className="brand-page__pillars">
-              {pillars.map((pillar) => (
-                <li key={pillar.label}>
-                  <span aria-hidden="true"><Icon type={pillar.icon} /></span>
-                  <div>
-                    <strong>{pillar.label}</strong>
-                    <p>{pillar.detail}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <div className="store-page__actions">
-              <a className="button button--signal" href={whatsappUrl(contactMessages.book)} target="_blank" rel="noreferrer">Consultar por el libro <span aria-hidden="true">↗</span></a>
-              <a className="text-link" href={pageUrl("libro")}>Conocer el libro en profundidad <span aria-hidden="true">→</span></a>
-            </div>
-            <small>Precio y disponibilidad a confirmar · Edición coordinada con la asociación.</small>
+      <section className="store-catalog section" aria-labelledby="store-catalog-title">
+        <div className="shell">
+          <h2 id="store-catalog-title" className="sr-only">Publicaciones disponibles</h2>
+          <div className="store-grid">
+            {products.map((product) => (
+              <a className="store-card" key={product.slug} href={pageUrl(product.page)} data-reveal>
+                <div className="store-card__cover">
+                  <img src={asset(product.image)} width="1536" height="1536" loading="lazy" alt={`Ilustración de tapa de ${product.title}`} />
+                </div>
+                <p className="eyebrow">{product.subtitle}</p>
+                <strong>{product.title}</strong>
+                <p>{product.description}</p>
+                <span className="store-card__cta">Ver publicación <span aria-hidden="true">→</span></span>
+              </a>
+            ))}
           </div>
         </div>
       </section>
