@@ -39,6 +39,8 @@ export type Product = {
   moral?: string;
   topics: readonly string[];
   image: string;
+  imageWidth: number;
+  imageHeight: number;
   paymentUrl: string;
 };
 
@@ -54,6 +56,8 @@ export const products: readonly Product[] = [
     longDescription: book.purpose,
     topics: book.topics,
     image: "book-cover.webp",
+    imageWidth: 1024,
+    imageHeight: 1536,
     paymentUrl: "https://mpago.la/1q8ca7k",
   },
   {
@@ -70,7 +74,9 @@ export const products: readonly Product[] = [
     moral:
       "Cada persona se comunica de una manera diferente. Cuando aprendemos a comprender al otro, construimos un mundo donde todos pueden participar, hacer amigos y sentirse incluidos.",
     topics: ["Primera infancia", "Lengua de Señas Argentina", "Inclusión escolar", "Comunicación"],
-    image: "luna-editorial-placeholder.webp",
+    image: "luna-cover.webp",
+    imageWidth: 1024,
+    imageHeight: 1495,
     paymentUrl: "https://mpago.la/1Q3o92S",
   },
 ] as const;

@@ -20,7 +20,7 @@ export function ProductPage() {
       <section className="brand-page__feature section" aria-labelledby="product-title">
         <div className="shell brand-page__grid">
           <figure className="brand-page__visual" data-reveal>
-            <img src={asset(product.image)} width="1536" height="1536" alt={`Ilustración de tapa de ${product.title}`} />
+            <img src={asset(product.image)} width={product.imageWidth} height={product.imageHeight} alt={`Tapa de ${product.title}`} />
             <figcaption>{product.author}</figcaption>
           </figure>
           <div data-reveal>
