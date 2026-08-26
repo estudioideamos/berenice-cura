@@ -187,7 +187,11 @@
 .brand-page__feature .text-link:hover { text-decoration-color: var(--paper); }
 .store-page__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.8rem; margin-top: 2.2rem; }
 .collab-cta { margin-top: 2.2rem; min-height: 58px; padding-inline: 1.8rem; font-size: .72rem; }
+.product-page__note { max-width: 480px; margin: .9rem 0 0; color: rgba(251,247,237,.55); font-size: .72rem; line-height: 1.55; }
+.product-page__note a { color: rgba(251,247,237,.85); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.product-page__note a:hover { color: var(--paper); }
 .product-page__moral { max-width: 560px; padding-left: 1.3rem; margin: 1.8rem 0 0; border-left: 2px solid var(--gold); color: rgba(251,247,237,.78); font-family: var(--serif); font-size: clamp(1.1rem, 1.5vw, 1.35rem); font-style: italic; line-height: 1.45; }
+.product-page__price { margin: 2rem 0 0; color: var(--gold); font-family: var(--serif); font-size: 1.9rem; font-weight: 540; letter-spacing: -.01em; line-height: 1; }
 .product-topics { display: flex; flex-wrap: wrap; gap: .55rem; padding: 0; margin: 2rem 0 0; list-style: none; }
 .product-topics li { padding: .5rem .95rem; border: 1px solid rgba(251,247,237,.24); border-radius: 999px; color: rgba(251,247,237,.75); font-family: var(--sans); font-size: .68rem; font-weight: 600; letter-spacing: .01em; }
 .product-page__back { display: inline-flex; margin-top: 2rem; }
@@ -202,6 +206,8 @@
 .store-card .eyebrow { margin-bottom: .5rem; }
 .store-card strong { display: block; margin-bottom: .6rem; font-family: var(--serif); font-size: clamp(1.4rem, 2vw, 1.8rem); font-weight: 540; letter-spacing: -.01em; line-height: 1.1; }
 .store-card > p { margin: 0 0 1.1rem; color: var(--ink-soft); font-size: .85rem; line-height: 1.5; }
+.store-card__footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto; }
+.store-card__price { color: var(--gold); font-family: var(--serif); font-size: 1.05rem; font-weight: 540; }
 .store-card__cta { display: inline-flex; align-items: center; gap: .4rem; color: var(--ink); font-family: var(--sans); font-size: .7rem; font-weight: 700; letter-spacing: .04em; text-decoration: underline; text-underline-offset: 3px; transition: gap 220ms ease; }
 .store-card:hover .store-card__cta { gap: .7rem; }
 .brand-page__bridge { background: var(--blue-grey); }

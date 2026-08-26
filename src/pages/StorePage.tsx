@@ -26,7 +26,10 @@ export function StorePage() {
                 <p className="eyebrow">{product.subtitle}</p>
                 <strong>{product.title}</strong>
                 <p>{product.description}</p>
-                <span className="store-card__cta">Ver publicación <span aria-hidden="true">→</span></span>
+                <div className="store-card__footer">
+                  {product.price ? <span className="store-card__price">{product.price}</span> : null}
+                  <span className="store-card__cta">Ver publicación <span aria-hidden="true">→</span></span>
+                </div>
               </a>
             ))}
           </div>

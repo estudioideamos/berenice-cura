@@ -22,7 +22,7 @@ export const book = {
     isbn: null,
     publisher: null,
     publicationDate: null,
-    price: null,
+    price: "$30.000 ARS",
     purchaseUrl: "https://mpago.la/1q8ca7k",
   },
 } as const;
@@ -37,6 +37,7 @@ export type Product = {
   description: string;
   longDescription: string;
   moral?: string;
+  price?: string;
   topics: readonly string[];
   image: string;
   imageWidth: number;
@@ -54,6 +55,7 @@ export const products: readonly Product[] = [
     audience: "Docentes, familias e instituciones",
     description: book.description,
     longDescription: book.purpose,
+    price: book.pendingDetails.price,
     topics: book.topics,
     image: "book-cover.webp",
     imageWidth: 1024,
@@ -73,6 +75,7 @@ export const products: readonly Product[] = [
       "Con la ayuda de su maestra, los compañeros de Luna empiezan a aprender señas simples —hola, gracias, amigo, jugar, te quiero— y descubren que se puede contar historias, cantar y jugar con las manos, el rostro y la mirada. Todo termina en una gran feria de la inclusión, donde Luna cuenta un cuento con señas frente a toda la escuela.",
     moral:
       "Cada persona se comunica de una manera diferente. Cuando aprendemos a comprender al otro, construimos un mundo donde todos pueden participar, hacer amigos y sentirse incluidos.",
+    price: "$10.000 ARS",
     topics: ["Primera infancia", "Lengua de Señas Argentina", "Inclusión escolar", "Comunicación"],
     image: "luna-cover.webp",
     imageWidth: 1024,
@@ -210,4 +213,5 @@ export const contactMessages = {
   training: "Hola, quisiera solicitar información sobre una capacitación.",
   association: "Hola, quisiera contactar a la Asociación Civil Comunidad Sorda e Hipoacúsica Tandilense.",
   materials: "Hola, quisiera consultar por los materiales de sensibilización para mi institución.",
+  receipt: "Hola, ya realicé el pago en la tienda. Te comparto el comprobante para coordinar la entrega.",
 } as const;

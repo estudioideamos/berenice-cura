@@ -1,5 +1,5 @@
 import { PageIntro } from "../components/PageIntro";
-import { products } from "../data/content";
+import { contact, contactMessages, products, whatsappUrl } from "../data/content";
 import { currentPage, pageUrl } from "../utils/routes";
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
@@ -33,8 +33,15 @@ export function ProductPage() {
             <ul className="product-topics">
               {product.topics.map((topic) => <li key={topic}>{topic}</li>)}
             </ul>
+            {product.price ? <p className="product-page__price">{product.price}</p> : null}
             <a className="button button--signal collab-cta" href={product.paymentUrl} target="_blank" rel="noreferrer">Comprar por Mercado Pago <span aria-hidden="true">↗</span></a>
-            <small>Pago seguro a través de Mercado Pago.</small>
+            <p className="product-page__note">
+              Pago seguro a través de Mercado Pago. Una vez realizado, envianos el comprobante por{" "}
+              <a href={whatsappUrl(contactMessages.receipt, 1)} target="_blank" rel="noreferrer">WhatsApp</a>{" "}
+              o por{" "}
+              <a href={`mailto:${contact.email}`}>correo electrónico</a>{" "}
+              para coordinar la entrega.
+            </p>
             <a className="text-link product-page__back" href={pageUrl("tienda")}><span aria-hidden="true">←</span> Volver a la tienda</a>
           </div>
         </div>
