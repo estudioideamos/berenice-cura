@@ -61,6 +61,8 @@ export function Footer() {
             <li><a href={pageUrl("libro")}>{book.title}</a></li>
             <li><a href={pageUrl("berenice")}>Berenice Cura</a></li>
             <li><a href={pageUrl("blog-y-novedades")}>Blog y novedades</a></li>
+            <li><a href={pageUrl("tienda")}>Tienda</a></li>
+            <li><a href={pageUrl("colaboraciones")}>Colaboraciones</a></li>
           </ul>
         </nav>
 

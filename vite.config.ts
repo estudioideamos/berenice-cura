@@ -44,6 +44,8 @@ export default defineConfig({
         berenice: resolve(projectRoot, "berenice/index.html"),
         contacto: resolve(projectRoot, "contacto/index.html"),
         blog: resolve(projectRoot, "blog-y-novedades/index.html"),
+        tienda: resolve(projectRoot, "tienda/index.html"),
+        colaboraciones: resolve(projectRoot, "colaboraciones/index.html"),
         admin: resolve(projectRoot, "admin/index.html"),
       },
     },

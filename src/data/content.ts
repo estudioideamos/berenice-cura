@@ -143,6 +143,8 @@ export const contact = {
   },
 } as const;
 
+export const donationUrl = "https://link.mercadopago.com.ar/accshtcontribucion";
+
 export const whatsappUrl = (message: string, phoneIndex = 0) =>
   `https://wa.me/${contact.phones[phoneIndex].international}?text=${encodeURIComponent(message)}`;
 
@@ -151,4 +153,5 @@ export const contactMessages = {
   activity: "Hola, quisiera invitar a Berenice Cura a una actividad.",
   training: "Hola, quisiera solicitar información sobre una capacitación.",
   association: "Hola, quisiera contactar a la Asociación Civil Comunidad Sorda e Hipoacúsica Tandilense.",
+  materials: "Hola, quisiera consultar por los materiales de sensibilización para mi institución.",
 } as const;

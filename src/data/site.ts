@@ -6,6 +6,8 @@ export const siteNavigation: ReadonlyArray<{ label: string; page: SitePage }> = 
   { label: "El libro", page: "libro" },
   { label: "Berenice", page: "berenice" },
   { label: "Blog y novedades", page: "blog-y-novedades" },
+  { label: "Tienda", page: "tienda" },
+  { label: "Colaboraciones", page: "colaboraciones" },
 ];
 
 export const associationHero = {

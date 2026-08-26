@@ -12,6 +12,8 @@ import { ContactPage } from "./pages/ContactPage";
 import { HomePage } from "./pages/HomePage";
 import { BlogPage } from "./pages/BlogPage";
 import { BlogAdminPage } from "./pages/BlogAdminPage";
+import { StorePage } from "./pages/StorePage";
+import { CollaborationsPage } from "./pages/CollaborationsPage";
 import { currentPage, type SitePage } from "./utils/routes";
 
 const pages: Record<SitePage, () => React.JSX.Element> = {
@@ -22,6 +24,8 @@ const pages: Record<SitePage, () => React.JSX.Element> = {
   berenice: AuthorPage,
   contacto: ContactPage,
   "blog-y-novedades": BlogPage,
+  tienda: StorePage,
+  colaboraciones: CollaborationsPage,
   admin: BlogAdminPage,
 };
 

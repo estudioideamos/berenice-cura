@@ -181,6 +181,12 @@
 .brand-page__pillars strong { display: block; margin-bottom: .3rem; color: var(--paper); font-family: var(--sans); font-size: .78rem; font-weight: 700; letter-spacing: -.002em; }
 .brand-page__pillars p { margin: 0; color: rgba(251,247,237,.62); font-size: .78rem; line-height: 1.45; }
 .brand-page__grid small { display: block; margin-top: 1.6rem; color: rgba(251,247,237,.42); font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; }
+.brand-page__feature .button--signal:hover,
+.collab-cta:hover { color: var(--paper); background: transparent; }
+.brand-page__feature .text-link { color: var(--paper); text-decoration: underline; text-decoration-color: rgba(251,247,237,.4); text-underline-offset: 4px; }
+.brand-page__feature .text-link:hover { text-decoration-color: var(--paper); }
+.store-page__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.8rem; margin-top: 2.2rem; }
+.collab-cta { margin-top: 2.2rem; min-height: 58px; padding-inline: 1.8rem; font-size: .72rem; }
 .brand-page__bridge { background: var(--blue-grey); }
 .brand-page__bridge-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .55fr); gap: clamp(4rem, 9vw, 9rem); align-items: center; }
 .brand-page__bridge img { width: 100%; aspect-ratio: 1.45; object-fit: cover; box-shadow: 0 28px 54px -22px rgba(11,23,48,.4); transition: transform 650ms cubic-bezier(.2,.8,.2,1); }

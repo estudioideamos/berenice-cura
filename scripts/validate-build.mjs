@@ -12,11 +12,14 @@ const pages = [
   { path: "berenice/index.html", title: "Berenice Cura | Accesibilidad comunicacional" },
   { path: "contacto/index.html", title: "Contacto | Comunidad Sorda e Hipoacúsica Tandilense" },
   { path: "blog-y-novedades/index.html", title: "Blog y novedades | ACCSHT" },
+  { path: "tienda/index.html", title: "Tienda | Comunidad Sorda e Hipoacúsica Tandilense" },
+  { path: "colaboraciones/index.html", title: "Colaboraciones | Comunidad Sorda e Hipoacúsica Tandilense" },
   { path: "admin/index.html", title: "Administrar novedades | ACCSHT" },
 ];
 const requiredAssets = [
   "book-cover.webp", "book-back.webp", "berenice-cura-retrato.webp",
   "isotipo-accsht-clean.png", "qr-instagram.webp", "primero-mis-manos-editorial.webp",
+  "tienda-editorial.webp", "colaboraciones-editorial.webp",
   "manos-conexion.webp", "home-comunidad-editorial.webp", "home-fondo-conexion.webp", "asociacion-mision.webp",
   "berenice-home-editorial.webp", "home-asociacion-editorial.webp",
   "libro-fragmento-escuchar.webp", "libro-fragmento-manos.webp",
