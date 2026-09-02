@@ -22,7 +22,7 @@ const pages = [
 const requiredAssets = [
   "book-cover.webp", "book-back.webp", "berenice-cura-retrato.webp",
   "isotipo-accsht-clean.png", "qr-instagram.webp", "primero-mis-manos-editorial.webp",
-  "tienda-editorial.webp", "colaboraciones-editorial.webp", "luna-cover.webp", "mi-mama-poster.webp",
+  "tienda-editorial.webp", "colaboraciones-editorial.webp", "luna-cover.webp", "mi-mama-cover.webp",
   "manos-conexion.webp", "home-comunidad-editorial.webp", "home-fondo-conexion.webp", "asociacion-mision.webp",
   "berenice-home-editorial.webp", "home-asociacion-editorial.webp",
   "libro-fragmento-escuchar.webp", "libro-fragmento-manos.webp",

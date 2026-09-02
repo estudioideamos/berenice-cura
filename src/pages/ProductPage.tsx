@@ -4,9 +4,15 @@ import { currentPage, pageUrl } from "../utils/routes";
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
 
+const youtubeEmbedId = (url: string) => {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([\w-]{11})/);
+  return match ? match[1] : null;
+};
+
 export function ProductPage() {
   const page = currentPage();
   const product = products.find((item) => item.page === page) ?? products[0];
+  const trailerId = product.trailerUrl ? youtubeEmbedId(product.trailerUrl) : null;
 
   return (
     <main id="contenido" className="internal-page store-page">
@@ -42,7 +48,7 @@ export function ProductPage() {
             {product.price ? <p className="product-page__price">{product.price}</p> : null}
             <div className="product-page__actions">
               {product.trailerUrl ? (
-                <a className="button button--line" href={product.trailerUrl} target="_blank" rel="noreferrer">Ver el adelanto <span aria-hidden="true">▶</span></a>
+                <a className="button button--line" href={product.trailerUrl} target="_blank" rel="noreferrer">Ver en YouTube <span aria-hidden="true">↗</span></a>
               ) : null}
               <a className="button button--signal collab-cta" href={product.paymentUrl} target="_blank" rel="noreferrer">Comprar por Mercado Pago <span aria-hidden="true">↗</span></a>
             </div>
@@ -57,6 +63,24 @@ export function ProductPage() {
           </div>
         </div>
       </section>
+
+      {trailerId ? (
+        <section className="product-trailer section" aria-labelledby="product-trailer-title">
+          <div className="shell">
+            <p className="eyebrow">Adelanto</p>
+            <h2 id="product-trailer-title">Mirá el adelanto de {product.title}</h2>
+            <div className="product-trailer__frame" data-reveal>
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${trailerId}`}
+                title={`Adelanto de ${product.title}`}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }
