@@ -25,14 +25,24 @@ export function ProductPage() {
 
       <section className="brand-page__feature section" aria-labelledby="product-title">
         <div className="shell brand-page__grid">
-          <figure className="brand-page__visual" data-reveal>
-            <img
-              src={asset(product.image)}
-              width={product.imageWidth}
-              height={product.imageHeight}
-              alt={`Tapa de ${product.title}`}
-              style={{ aspectRatio: `${product.imageWidth} / ${product.imageHeight}` }}
-            />
+          <figure className={`brand-page__visual${trailerId ? " brand-page__visual--video" : ""}`} data-reveal>
+            {trailerId ? (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${trailerId}`}
+                title={`Adelanto de ${product.title}`}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            ) : (
+              <img
+                src={asset(product.image)}
+                width={product.imageWidth}
+                height={product.imageHeight}
+                alt={`Tapa de ${product.title}`}
+                style={{ aspectRatio: `${product.imageWidth} / ${product.imageHeight}` }}
+              />
+            )}
             <figcaption>{product.author}</figcaption>
           </figure>
           <div data-reveal>
@@ -63,24 +73,6 @@ export function ProductPage() {
           </div>
         </div>
       </section>
-
-      {trailerId ? (
-        <section className="product-trailer section" aria-labelledby="product-trailer-title">
-          <div className="shell">
-            <p className="eyebrow">Adelanto</p>
-            <h2 id="product-trailer-title">Mirá el adelanto de {product.title}</h2>
-            <div className="product-trailer__frame" data-reveal>
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${trailerId}`}
-                title={`Adelanto de ${product.title}`}
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </section>
-      ) : null}
     </main>
   );
 }

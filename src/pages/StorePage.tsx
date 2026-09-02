@@ -27,7 +27,6 @@ export function StorePage() {
                     height={product.imageHeight}
                     loading="lazy"
                     alt={`Tapa de ${product.title}`}
-                    style={{ aspectRatio: `${product.imageWidth} / ${product.imageHeight}` }}
                   />
                 </div>
                 <p className="eyebrow">{product.subtitle}</p>
