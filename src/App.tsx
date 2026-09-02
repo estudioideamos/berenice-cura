@@ -28,6 +28,7 @@ const pages: Record<SitePage, () => React.JSX.Element> = {
   tienda: StorePage,
   "tienda/escuchar-en-otros-sentidos": ProductPage,
   "tienda/luna-y-el-puente-de-las-manos": ProductPage,
+  "tienda/mi-mama": ProductPage,
   colaboraciones: CollaborationsPage,
   admin: BlogAdminPage,
 };

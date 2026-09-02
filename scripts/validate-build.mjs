@@ -15,13 +15,14 @@ const pages = [
   { path: "tienda/index.html", title: "Tienda | Comunidad Sorda e Hipoacúsica Tandilense" },
   { path: "tienda/escuchar-en-otros-sentidos/index.html", title: "Escuchar en otros sentidos | Tienda ACCSHT" },
   { path: "tienda/luna-y-el-puente-de-las-manos/index.html", title: "Luna y el puente de las manos | Tienda ACCSHT" },
+  { path: "tienda/mi-mama/index.html", title: "Mi Mamá | Tienda ACCSHT" },
   { path: "colaboraciones/index.html", title: "Colaboraciones | Comunidad Sorda e Hipoacúsica Tandilense" },
   { path: "admin/index.html", title: "Administrar novedades | ACCSHT" },
 ];
 const requiredAssets = [
   "book-cover.webp", "book-back.webp", "berenice-cura-retrato.webp",
   "isotipo-accsht-clean.png", "qr-instagram.webp", "primero-mis-manos-editorial.webp",
-  "tienda-editorial.webp", "colaboraciones-editorial.webp", "luna-cover.webp",
+  "tienda-editorial.webp", "colaboraciones-editorial.webp", "luna-cover.webp", "mi-mama-poster.webp",
   "manos-conexion.webp", "home-comunidad-editorial.webp", "home-fondo-conexion.webp", "asociacion-mision.webp",
   "berenice-home-editorial.webp", "home-asociacion-editorial.webp",
   "libro-fragmento-escuchar.webp", "libro-fragmento-manos.webp",

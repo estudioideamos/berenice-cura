@@ -9,6 +9,7 @@ export type SitePage =
   | "tienda"
   | "tienda/escuchar-en-otros-sentidos"
   | "tienda/luna-y-el-puente-de-las-manos"
+  | "tienda/mi-mama"
   | "colaboraciones"
   | "admin";
 
@@ -30,6 +31,7 @@ export const currentPage = (): SitePage => {
   if (localPath === "tienda") return "tienda";
   if (localPath === "tienda/escuchar-en-otros-sentidos") return "tienda/escuchar-en-otros-sentidos";
   if (localPath === "tienda/luna-y-el-puente-de-las-manos") return "tienda/luna-y-el-puente-de-las-manos";
+  if (localPath === "tienda/mi-mama") return "tienda/mi-mama";
   if (localPath === "colaboraciones") return "colaboraciones";
   if (localPath === "admin") return "admin";
   return "inicio";

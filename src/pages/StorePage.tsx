@@ -21,7 +21,14 @@ export function StorePage() {
             {products.map((product) => (
               <a className="store-card" key={product.slug} href={pageUrl(product.page)} data-reveal>
                 <div className="store-card__cover">
-                  <img src={asset(product.image)} width={product.imageWidth} height={product.imageHeight} loading="lazy" alt={`Tapa de ${product.title}`} />
+                  <img
+                    src={asset(product.image)}
+                    width={product.imageWidth}
+                    height={product.imageHeight}
+                    loading="lazy"
+                    alt={`Tapa de ${product.title}`}
+                    style={{ aspectRatio: `${product.imageWidth} / ${product.imageHeight}` }}
+                  />
                 </div>
                 <p className="eyebrow">{product.subtitle}</p>
                 <strong>{product.title}</strong>

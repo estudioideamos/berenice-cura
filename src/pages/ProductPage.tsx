@@ -20,7 +20,13 @@ export function ProductPage() {
       <section className="brand-page__feature section" aria-labelledby="product-title">
         <div className="shell brand-page__grid">
           <figure className="brand-page__visual" data-reveal>
-            <img src={asset(product.image)} width={product.imageWidth} height={product.imageHeight} alt={`Tapa de ${product.title}`} />
+            <img
+              src={asset(product.image)}
+              width={product.imageWidth}
+              height={product.imageHeight}
+              alt={`Tapa de ${product.title}`}
+              style={{ aspectRatio: `${product.imageWidth} / ${product.imageHeight}` }}
+            />
             <figcaption>{product.author}</figcaption>
           </figure>
           <div data-reveal>
@@ -34,7 +40,12 @@ export function ProductPage() {
               {product.topics.map((topic) => <li key={topic}>{topic}</li>)}
             </ul>
             {product.price ? <p className="product-page__price">{product.price}</p> : null}
-            <a className="button button--signal collab-cta" href={product.paymentUrl} target="_blank" rel="noreferrer">Comprar por Mercado Pago <span aria-hidden="true">↗</span></a>
+            <div className="product-page__actions">
+              {product.trailerUrl ? (
+                <a className="button button--line" href={product.trailerUrl} target="_blank" rel="noreferrer">Ver el adelanto <span aria-hidden="true">▶</span></a>
+              ) : null}
+              <a className="button button--signal collab-cta" href={product.paymentUrl} target="_blank" rel="noreferrer">Comprar por Mercado Pago <span aria-hidden="true">↗</span></a>
+            </div>
             <p className="product-page__note">
               Pago seguro a través de Mercado Pago. Una vez realizado, envianos el comprobante por{" "}
               <a href={whatsappUrl(contactMessages.receipt, 1)} target="_blank" rel="noreferrer">WhatsApp</a>{" "}
