@@ -15,6 +15,7 @@ import { BlogAdminPage } from "./pages/BlogAdminPage";
 import { StorePage } from "./pages/StorePage";
 import { ProductPage } from "./pages/ProductPage";
 import { CollaborationsPage } from "./pages/CollaborationsPage";
+import { useSmoothScroll } from "./hooks/useSmoothScroll";
 import { currentPage, type SitePage } from "./utils/routes";
 
 const pages: Record<SitePage, () => React.JSX.Element> = {
@@ -36,6 +37,8 @@ const pages: Record<SitePage, () => React.JSX.Element> = {
 export function App() {
   const page = currentPage();
   const Page = pages[page];
+
+  useSmoothScroll();
 
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
