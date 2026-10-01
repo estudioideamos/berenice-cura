@@ -15,6 +15,29 @@ const siteUrl = process.env.VITE_SITE_URL
     : "http://localhost:5173/");
 const normalizedSiteUrl = siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`;
 
+// GitHub Pages serves static files only — there's no way to set real HTTP
+// response headers (no _headers file, no server config access), so this is
+// delivered as a <meta http-equiv> tag instead. That means `frame-ancestors`
+// is NOT enforced (the CSP spec requires that directive to come from an
+// actual header; browsers silently ignore it in a meta tag), so this does
+// NOT provide clickjacking protection — only a header-capable host in front
+// of Pages (e.g. Cloudflare) could add that. Everything else below (script,
+// style, connect, frame-src for the embedded YouTube trailer, etc.) is fully
+// enforced via meta.
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "script-src 'self'",
+  "style-src 'self' 'unsafe-inline'", // React's style={{...}} + Vite's emitted CSS
+  "img-src 'self' data:",
+  "font-src 'self' data:", // Vite inlines some small font-subset files as data: URIs
+  "connect-src 'self' https://api.github.com", // /admin/ reads & writes blog.json via the GitHub API
+  "frame-src https://www.youtube-nocookie.com",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "upgrade-insecure-requests",
+].join("; ");
+
 export default defineConfig({
   base: normalizedBase,
   server: {
@@ -28,6 +51,28 @@ export default defineConfig({
         return html
           .replaceAll("__SITE_URL__", normalizedSiteUrl)
           .replaceAll("__BASE_URL__", normalizedBase);
+      },
+    },
+    {
+      // Build-only: a dev-mode CSP this strict would block Vite's own HMR
+      // client (inline/eval-based), so it's injected into the production
+      // output exclusively.
+      name: "security-headers",
+      apply: "build",
+      // `order: "pre"` + inserting right after <meta charset> (which must
+      // stay the very first thing in <head> per spec) so the CSP still
+      // lands ahead of every script/link tag — a meta-tag CSP only governs
+      // resources parsed after it.
+      transformIndexHtml: {
+        order: "pre",
+        handler(html) {
+          return html.replace(
+            /<meta charset="UTF-8"\s*\/?>/i,
+            (match) => `${match}\n`
+              + `    <meta http-equiv="Content-Security-Policy" content="${contentSecurityPolicy}" />\n`
+              + `    <meta name="referrer" content="strict-origin-when-cross-origin" />`,
+          );
+        },
       },
     },
   ],
