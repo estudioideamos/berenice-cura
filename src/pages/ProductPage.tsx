@@ -29,7 +29,7 @@ export function ProductPage() {
             {trailerId ? (
               <iframe
                 src={`https://www.youtube-nocookie.com/embed/${trailerId}`}
-                title={`Adelanto de ${product.title}`}
+                title={`Video de ${product.title}`}
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -61,15 +61,19 @@ export function ProductPage() {
               {product.trailerUrl ? (
                 <a className="button button--line" href={product.trailerUrl} target="_blank" rel="noreferrer">Ver en YouTube <span aria-hidden="true">↗</span></a>
               ) : null}
-              <a className="button button--signal collab-cta" href={product.paymentUrl} target="_blank" rel="noreferrer">Comprar por Mercado Pago <span aria-hidden="true">↗</span></a>
+              {product.paymentUrl ? (
+                <a className="button button--signal collab-cta" href={product.paymentUrl} target="_blank" rel="noreferrer">Comprar por Mercado Pago <span aria-hidden="true">↗</span></a>
+              ) : null}
             </div>
-            <p className="product-page__note">
-              Pago seguro a través de Mercado Pago. Una vez realizado, envianos el comprobante por{" "}
-              <a href={whatsappUrl(contactMessages.receipt, 1)} target="_blank" rel="noreferrer">WhatsApp</a>{" "}
-              o por{" "}
-              <a href={`mailto:${contact.email}`}>correo electrónico</a>{" "}
-              para coordinar la entrega.
-            </p>
+            {product.paymentUrl ? (
+              <p className="product-page__note">
+                Pago seguro a través de Mercado Pago. Una vez realizado, envianos el comprobante por{" "}
+                <a href={whatsappUrl(contactMessages.receipt, 1)} target="_blank" rel="noreferrer">WhatsApp</a>{" "}
+                o por{" "}
+                <a href={`mailto:${contact.email}`}>correo electrónico</a>{" "}
+                para coordinar la entrega.
+              </p>
+            ) : null}
             <a className="text-link product-page__back" href={pageUrl("tienda")}><span aria-hidden="true">←</span> Volver a la tienda</a>
           </div>
         </div>

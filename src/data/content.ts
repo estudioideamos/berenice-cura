@@ -42,7 +42,7 @@ export type Product = {
   image: string;
   imageWidth: number;
   imageHeight: number;
-  paymentUrl: string;
+  paymentUrl?: string;
   trailerUrl?: string;
 };
 
@@ -93,12 +93,10 @@ export const products: readonly Product[] = [
     description: "Existen otras maneras de comunicarse.",
     longDescription:
       "Un documental dirigido por Morena Lucía Santivañez que explora el vínculo entre una madre y su hija a través de otras formas de comunicación, invitando a repensar los afectos y la escucha desde otros sentidos.",
-    price: "$15.000 ARS",
     topics: ["Documental", "Comunicación", "Vínculos familiares", "Accesibilidad"],
     image: "mi-mama-thumb.webp",
     imageWidth: 422,
     imageHeight: 620,
-    paymentUrl: "https://mpago.la/2Q7tKAH",
     trailerUrl: "https://youtu.be/Jii0aYuaQPk",
   },
 ] as const;
