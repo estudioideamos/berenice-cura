@@ -94,9 +94,9 @@ export const products: readonly Product[] = [
     longDescription:
       "Un documental dirigido por Morena Lucía Santivañez que explora el vínculo entre una madre y su hija a través de otras formas de comunicación, invitando a repensar los afectos y la escucha desde otros sentidos.",
     topics: ["Documental", "Comunicación", "Vínculos familiares", "Accesibilidad"],
-    image: "mi-mama-thumb.webp",
-    imageWidth: 422,
-    imageHeight: 620,
+    image: "mi-mama-poster.webp",
+    imageWidth: 1131,
+    imageHeight: 1600,
     trailerUrl: "https://youtu.be/Jii0aYuaQPk",
   },
 ] as const;
