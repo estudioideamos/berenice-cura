@@ -103,11 +103,11 @@
 .footer-contact > p a { color: inherit; }
 
 .footer-bottom { display: grid; min-height: 100px; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; padding-block: 1.2rem 1.5rem; border-top: 1px solid rgba(251,247,237,.12); }
-.footer-bottom > p { margin: 0; color: rgba(251,247,237,.38); font-size: .5rem; }
-.footer-bottom > p:last-child { justify-self: end; text-align: right; }
+.footer-bottom > p { margin: 0; color: rgba(251,247,237,.72); font-size: .8rem; line-height: 1.5; }
+.footer-bottom > p:last-child { justify-self: end; padding-right: 4.2rem; text-align: right; } /* deja libre el boton flotante */
 .footer-seal { display: grid; place-items: center; gap: .25rem; color: var(--signal); }
 .footer-seal img { width: 40px; height: 40px; }
-.footer-seal small { color: rgba(251,247,237,.55); font-size: .5rem; font-weight: 700; letter-spacing: .19em; white-space: nowrap; }
+.footer-seal small { color: rgba(251,247,237,.78); font-size: .72rem; font-weight: 700; letter-spacing: .14em; white-space: nowrap; }
 
 @media (max-width: 1099px) {
   .footer-main { grid-template-columns: 1fr 1fr; }
@@ -138,8 +138,8 @@
   .footer-contact { grid-column: auto; margin-top: 0; padding: 2rem 0 0; border: 0; border-top: 1px solid rgba(251,247,237,.13); background: transparent; text-align: center; }
   .footer-contact h3 { max-width: none; margin-inline: auto; }
   .footer-contact__whatsapp { justify-content: center; }
-  .footer-bottom { grid-template-columns: 1fr; justify-items: center; gap: 1.3rem; padding-block: 2rem; text-align: center; }
-  .footer-bottom > p:last-child { justify-self: center; text-align: center; }
+  .footer-bottom { grid-template-columns: 1fr; justify-items: center; gap: 1.3rem; padding-block: 2rem 6rem; text-align: center; }
+  .footer-bottom > p:last-child { justify-self: center; padding-right: 0; text-align: center; }
   .footer-seal { order: -1; }
 }
 
