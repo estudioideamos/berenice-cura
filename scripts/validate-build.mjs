@@ -32,7 +32,7 @@ const requiredAssets = [
   "blog/mitos-comunicacion.webp", "blog/actividades-accesibles.webp",
   "blog/contenidos-digitales-accesibles.webp", "blog/escuchar-otros-sentidos.webp",
   "blog/participacion-comunitaria.webp", "blog/cruzando-puentes.webp",
-  "og-asociacion.png", "favicon.png",
+  "og-asociacion.png", "favicon.svg", "apple-touch-icon.png",
 ];
 const sourceFiles = [
   "src/App.tsx", "src/data/content.ts", "src/data/site.ts", "src/utils/routes.ts",

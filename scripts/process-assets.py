@@ -133,12 +133,6 @@ draw.text((72, 435), "Un libro de Berenice Cura", font=sans, fill="#17243f")
 draw.text((72, 488), "Comunicación accesible · LSA · inclusión", font=sans_small, fill="#49566d")
 og.save(OUTPUT / "og-berenice-cura.png", "PNG", optimize=True)
 
-favicon = Image.new("RGB", (96, 96), "#17243f")
-favicon_draw = ImageDraw.Draw(favicon)
-favicon_draw.ellipse((17, 30, 79, 66), outline="#e9e4da", width=5)
-favicon_draw.ellipse((40, 37, 56, 59), fill="#b49761")
-favicon.save(OUTPUT / "favicon.png", "PNG", optimize=True)
-
 print("Assets generated:")
 for asset in sorted(OUTPUT.iterdir()):
     print(f"- {asset.name}: {asset.stat().st_size} bytes")
