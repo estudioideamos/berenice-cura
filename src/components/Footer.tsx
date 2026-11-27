@@ -96,7 +96,12 @@ export function Footer() {
           <img src={`${import.meta.env.BASE_URL}assets/isotipo-accsht-clean.png`} width="640" height="896" alt="" aria-hidden="true" />
           <small>ASOCIACIÓN CIVIL · DESDE 2024</small>
         </div>
-        <p>“Primero Mis Manos” · Marca registrada con derechos de autor.</p>
+        <p className="footer-credit">
+          <span>Un puente digital creado por</span>
+          <a href="https://ideamos.com.ar" target="_blank" rel="noopener">
+            <img src={`${import.meta.env.BASE_URL}assets/ideamos-logo.webp`} width="870" height="213" loading="lazy" alt="Ideamos" />
+          </a>
+        </p>
       </div>
     </footer>
   );

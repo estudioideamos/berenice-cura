@@ -105,6 +105,10 @@
 .footer-bottom { display: grid; min-height: 100px; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; padding-block: 1.2rem 1.5rem; border-top: 1px solid rgba(251,247,237,.12); }
 .footer-bottom > p { margin: 0; color: rgba(251,247,237,.72); font-size: .8rem; line-height: 1.5; }
 .footer-bottom > p:last-child { justify-self: end; padding-right: 4.2rem; text-align: right; } /* deja libre el boton flotante */
+.footer-credit { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: .35rem .75rem; }
+.footer-credit a { display: inline-flex; padding-block: .5rem; opacity: .9; transition: opacity 220ms ease, transform 220ms ease; }
+.footer-credit a:hover, .footer-credit a:focus-visible { opacity: 1; transform: translateY(-2px); }
+.footer-credit img { width: 98px; height: auto; }
 .footer-seal { display: grid; place-items: center; gap: .25rem; color: var(--signal); }
 .footer-seal img { width: 40px; height: 40px; }
 .footer-seal small { color: rgba(251,247,237,.78); font-size: .72rem; font-weight: 700; letter-spacing: .14em; white-space: nowrap; }
@@ -140,6 +144,7 @@
   .footer-contact__whatsapp { justify-content: center; }
   .footer-bottom { grid-template-columns: 1fr; justify-items: center; gap: 1.3rem; padding-block: 2rem 6rem; text-align: center; }
   .footer-bottom > p:last-child { justify-self: center; padding-right: 0; text-align: center; }
+  .footer-credit { justify-content: center; }
   .footer-seal { order: -1; }
 }
 
