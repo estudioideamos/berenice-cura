@@ -9,8 +9,9 @@ const repositoryOwner = process.env.GITHUB_REPOSITORY?.split("/")[0];
 const configuredBase = process.env.VITE_BASE_PATH;
 const base = configuredBase ?? (repository ? `/${repository}/` : "/");
 const normalizedBase = base.endsWith("/") ? base : `${base}/`;
-const siteUrl = process.env.VITE_SITE_URL
-  ?? (repository && repositoryOwner
+// Pages reports http:// until "Enforce HTTPS" is on; public URLs must be https.
+const siteUrl = process.env.VITE_SITE_URL?.replace(/^http:\/\//, "https://")
+  ??(repository && repositoryOwner
     ? `https://${repositoryOwner}.github.io${normalizedBase}`
     : "http://localhost:5173/");
 const normalizedSiteUrl = siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`;
