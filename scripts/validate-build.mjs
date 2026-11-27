@@ -24,7 +24,7 @@ const requiredAssets = [
   "isotipo-accsht-clean.png", "qr-instagram.webp", "primero-mis-manos-editorial.webp",
   "tienda-editorial.webp", "colaboraciones-editorial.webp", "luna-cover.webp", "mi-mama-cover.webp", "mi-mama-thumb.webp",
   "manos-conexion.webp", "home-comunidad-editorial.webp", "home-fondo-conexion.webp", "asociacion-mision.webp",
-  "berenice-home-editorial.webp", "home-asociacion-editorial.webp",
+  "berenice-accsht.webp","home-asociacion-editorial.webp",
   "libro-fragmento-escuchar.webp", "libro-fragmento-manos.webp",
   "libro-fragmento-gesto.webp", "libro-fragmento-conexion.webp", "whatsapp.svg",
   "blog/accesibilidad-comunicacional.webp", "blog/lengua-de-senas-argentina.webp",

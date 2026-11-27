@@ -148,36 +148,12 @@
 .whatsapp-float:hover > span,
 .whatsapp-float:focus-visible > span { opacity: 1; transform: translateX(0); }
 
-.home-people__image figcaption {
-  position: absolute;
-  z-index: 3;
-  right: 1.2rem;
-  bottom: 1.2rem;
-  left: 1.2rem;
-  width: fit-content;
-  max-width: calc(100% - 2.4rem);
-  padding: .55rem .7rem;
-  color: rgba(251,247,237,.82);
-  background: rgba(7,16,34,.78);
-  backdrop-filter: blur(10px);
-  font-size: .5rem;
-  letter-spacing: .08em;
-  line-height: 1.35;
-  text-transform: uppercase;
-}
-.home-people__image img {
-  object-position: center;
-  filter: saturate(.9) contrast(1.02);
-}
-
 @media (max-width: 767px) {
   .association-brand--compact > img { width: 32px; height: 42px; }
   .editorial-marquee__track span { padding-block: .38rem .44rem; font-size: .95rem; }
   .whatsapp-float { width: 56px; height: 56px; }
   .whatsapp-float img { width: 28px; height: 28px; }
-  .whatsapp-float > span { display: none; }
-  .home-people__image img { aspect-ratio: 1.12; object-position: 53% center; }
-}
+  .whatsapp-float > span { display: none; }}
 
 @media (prefers-reduced-motion: reduce) {
   .editorial-marquee__track { animation-play-state: paused !important; }

@@ -79,8 +79,7 @@ export function HomePage() {
       <section className="home-people section" aria-labelledby="home-people-title">
         <div className="shell home-people__grid">
           <figure className="home-people__image">
-            <img src={asset("berenice-home-editorial.webp")} width="1536" height="1024" loading="lazy" alt="Retrato editorial de Berenice Cura generado a partir de fotografías reales de referencia" />
-            <figcaption>Retrato editorial generado a partir de fotografías reales de referencia.</figcaption>
+            <img src={asset("berenice-accsht.webp")} width="1200" height="1190" loading="lazy" alt="Berenice Cura sonriendo, con gorra de Primero Mis Manos y remera de la Asociación Civil Comunidad Sorda e Hipoacúsica Tandilense" />
           </figure>
           <div>
             <p className="eyebrow">Personas que impulsan comunidad</p>
